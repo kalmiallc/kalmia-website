@@ -5,6 +5,7 @@ import ClientList from '@components/ClientList.astro';
 import { ui, type Locale } from '@lib/i18n';
 import { site } from '@lib/site';
 import type { PageEntry } from '@lib/content';
+import { professionalServiceLd } from '@lib/seo';
 
 interface Props {
   locale: Locale;
@@ -17,7 +18,7 @@ if (d.template !== 'home') throw new Error('Napačna predloga.');
 const t = ui(locale);
 ---
 
-<BaseLayout locale={locale} title={d.title} description={d.description} variant="home">
+<BaseLayout locale={locale} title={d.title} description={d.description} variant="home" translationKey={`page:${d.translationKey}`} jsonLd={[professionalServiceLd()]}>
   <div class="container">
     <div class="intro">
       <div class="intro-copy">

@@ -1,8 +1,22 @@
 {
   "name": "Kalmia d.o.o.",
   "legalName": "Kalmia, d. o. o.",
+  "description": "Digitalizacijski partner podjetij že več kot 10 let. Gradimo poslovne sisteme in aplikacije, uvajamo AI agente in ekipe učimo učinkovito uporabljati AI.",
+  "industries": [
+    "proizvodnja",
+    "trgovina",
+    "turizem",
+    "zdravstvo",
+    "infrastruktura"
+  ],
+  "areaServed": "SI",
   "url": "https://kalmia.si",
-  "address": { "street": "Kapucinski trg 7", "postalCode": "4220", "city": "Škofja Loka", "country": "SI" },
+  "address": {
+    "street": "Kapucinski trg 7",
+    "postalCode": "4220",
+    "city": "Škofja Loka",
+    "country": "SI"
+  },
   "vatId": "SI55684530",
   "email": "info@kalmia.si",
   "phone": null,
@@ -10,5 +24,25 @@
   "linkedin": "https://www.linkedin.com/company/kalmialtd",
   "logo": "/brand/kalmia-logo.svg",
   "logoOnDark": "/brand/kalmia-logo-white.svg",
-  "clients": ["Extreme Vital", "ETI", "Modra zavarovalnica", "Iskraemeco", "Big Bang", "Kontron", "Donat", "Weiler Abrasives", "Medis", "Smučarska zveza Slovenije", "Cestel", "Metronik", "GO-ST", "UVC Solutions", "ORO Orodjarna", "Mestna občina Kranj", "Digital Receptionist", "Slovenia Explorer"]
+  "ogImage": "/og/default.png",
+  "clients": [
+    "Extreme Vital",
+    "ETI",
+    "Modra zavarovalnica",
+    "Iskraemeco",
+    "Big Bang",
+    "Kontron",
+    "Donat",
+    "Weiler Abrasives",
+    "Medis",
+    "Smučarska zveza Slovenije",
+    "Cestel",
+    "Metronik",
+    "GO-ST",
+    "UVC Solutions",
+    "ORO Orodjarna",
+    "Mestna občina Kranj",
+    "Digital Receptionist",
+    "Slovenia Explorer"
+  ]
 }

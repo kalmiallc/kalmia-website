@@ -42,7 +42,7 @@ export async function routesFor(locale: Locale): Promise<Route[]> {
       'cases',
       (e) => entryLocale(e) === locale && !e.data.hidden && !e.data.draft
     );
-    for (const entry of cases) {
+    for (const entry of cases.sort((a, b) => a.data.order - b.data.order)) {
       routes.push({
         params: { slug: `${casesList.data.slug}/${entry.data.slug}` },
         props: { kind: 'case', locale, entry, listPage: casesList },

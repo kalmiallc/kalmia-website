@@ -11,6 +11,8 @@ import CtaSection from '@components/CtaSection.astro';
 import { getFaq, type PageEntry } from '@lib/content';
 import { inlineAccent } from '@lib/format';
 import type { Locale } from '@lib/i18n';
+import { absoluteUrl, faqLd, serviceLd } from '@lib/seo';
+import { plain } from '@lib/format';
 
 interface Props {
   locale: Locale;
@@ -21,9 +23,13 @@ const { locale, entry } = Astro.props;
 const d = entry.data;
 if (d.template !== 'lokalna-ai') throw new Error('Napačna predloga.');
 const faq = await getFaq(locale, d.faq);
+const jsonLd = [
+  serviceLd({ name: d.breadcrumb ?? d.hero.h1, description: plain(d.hero.lead), url: absoluteUrl(Astro.url.pathname) }),
+  ...(faq ? [faqLd(faq.items)] : []),
+];
 ---
 
-<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]} translationKey={`page:${d.translationKey}`} jsonLd={jsonLd}>
   <div class="container hero">
     <div class="hero-copy">
       {d.hero.eyebrow && <div class="eyebrow">{d.hero.eyebrow}</div>}
@@ -88,7 +94,7 @@ const faq = await getFaq(locale, d.faq);
     <StepList steps={d.process.steps} />
   </Section>
 
-  <Faq locale={locale} title={faq.title} items={faq.items} borderTop />
+  {faq && <Faq locale={locale} title={faq.title} items={faq.items} borderTop />}
 
   <CtaSection locale={locale} title={d.cta.title} text={d.cta.text} eyebrow={d.cta.eyebrow} buttonLabel={d.cta.button} layout={d.cta.layout} />
 </BaseLayout>

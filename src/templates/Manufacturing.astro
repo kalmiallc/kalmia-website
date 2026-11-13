@@ -45,7 +45,7 @@ const nextHref = await pagePath(locale, d.next.page);
 const nextTitle = d.next.title ?? indexRows(locale).find((r) => r.key === d.next.page)?.title ?? d.next.page;
 ---
 
-<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]} translationKey={`page:${d.translationKey}`}>
   <div class="container hero">
     <div class="hero-copy">
       <h1 class="hero-h1">{d.hero.h1}</h1>

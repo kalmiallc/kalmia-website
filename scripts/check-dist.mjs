@@ -10,6 +10,8 @@
  *  - zunanja povezava v novem zavihku brez rel="noopener",
  *  - preskok v hierarhiji naslovov (npr. H2 → H4),
  *  - statusna oznaka iz prototipa, obrazec ali znesek v evrih (razen na straneh EU projektov).
+ *  - neveljaven JSON-LD, manjkajoča og:image, hreflang brez povratne povezave,
+ *  - manjkajoči sitemap.xml, robots.txt, llms.txt, llms-full.txt ali napačen vnos v sitemapu.
  * Opozorila: predolg title (> 60) ali opis (> 155), pomišljaj v besedilu.
  */
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
@@ -168,6 +170,31 @@ for (const file of htmlFiles) {
   const dash = text.match(/.{0,30}\s[—–]\s.{0,30}/);
   if (dash) warn(`pomišljaj v besedilu: »${dash[0].trim()}«`);
 
+  // SEO: JSON-LD, slika za deljenje, hreflang
+  const ldBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  if (!ldBlocks.length) err('manjka JSON-LD');
+  for (const b of ldBlocks) {
+    try {
+      const ld = JSON.parse(b[1]);
+      const nodes = ld['@graph'] ?? [ld];
+      if (!nodes.some((n) => n['@type'] === 'Organization')) err('JSON-LD nima Organization');
+      for (const n of nodes) if (!n['@type']) err('JSON-LD vozlišče brez @type');
+    } catch (e) {
+      err(`neveljaven JSON-LD: ${e.message}`);
+    }
+  }
+  const og = html.match(/<meta property="og:image" content="https:\/\/kalmia\.si([^"]+)"/);
+  if (!og) err('manjka og:image');
+  else if (!existsSync(join(DIST, og[1]))) err(`og:image ne obstaja: ${og[1]}`);
+  const hreflangs = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="https:\/\/kalmia\.si([^"]*)"/g)];
+  for (const [, lang, href] of hreflangs) {
+    if (!routeExists(href || '/')) err(`hreflang ${lang} kaže na neobstoječo stran: ${href}`);
+    else if (lang !== 'x-default') {
+      const target = readFileSync(join(DIST, (href === '' || href === '/' ? '/index' : href) + '.html'), 'utf8');
+      if (!target.includes(`href="https://kalmia.si${url === '/' ? '/' : url}"`)) err(`hreflang ${lang}: ciljna stran ne kaže nazaj na ${url}`);
+    }
+  }
+
   if (problems.length || notes.length) {
     console.log(`\n${url}`);
     for (const p of problems) console.log(`  ✗ ${p}`);
@@ -175,6 +202,27 @@ for (const file of htmlFiles) {
   }
   errors += problems.length;
   warnings += notes.length;
+}
+
+// Datoteke za iskalnike in AI modele
+const sitewide = [];
+for (const f of ['sitemap.xml', 'robots.txt', 'llms.txt', 'llms-full.txt']) if (!existsSync(join(DIST, f))) sitewide.push(`manjka /${f}`);
+if (existsSync(join(DIST, 'sitemap.xml'))) {
+  const sm = readFileSync(join(DIST, 'sitemap.xml'), 'utf8');
+  for (const [, loc] of sm.matchAll(/<loc>https:\/\/kalmia\.si([^<]*)<\/loc>/g)) {
+    if (!routeExists(loc || '/')) sitewide.push(`sitemap: stran ne obstaja: ${loc}`);
+    else {
+      const h = readFileSync(join(DIST, (loc === '' || loc === '/' ? '/index' : loc) + '.html'), 'utf8');
+      if (/<meta name="robots" content="noindex"/.test(h)) sitewide.push(`sitemap: stran z noindex: ${loc}`);
+    }
+  }
+}
+if (existsSync(join(DIST, 'robots.txt')) && !/Sitemap: https:\/\/kalmia\.si\/sitemap\.xml/.test(readFileSync(join(DIST, 'robots.txt'), 'utf8')))
+  sitewide.push('robots.txt ne kaže na sitemap');
+if (sitewide.length) {
+  console.log('\nCelotna stran');
+  for (const p of sitewide) console.log(`  ✗ ${p}`);
+  errors += sitewide.length;
 }
 
 console.log(`\nPreverjenih strani: ${htmlFiles.length}. Napake: ${errors}. Opozorila: ${warnings}.`);

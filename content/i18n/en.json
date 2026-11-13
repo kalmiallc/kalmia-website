@@ -6,7 +6,8 @@
     "breadcrumbsLabel": "Breadcrumbs",
     "cta": "Talk about your processes",
     "ctaShort": "Let's talk",
-    "indexButton": "Index"
+    "indexButton": "Index",
+    "home": "Home"
   },
   "index": {
     "heading": "Index",
@@ -51,5 +52,9 @@
   },
   "projects": {
     "listLabel": "List of EU projects"
+  },
+  "language": {
+    "switchTo": "Slovenščina",
+    "code": "SL"
   }
 }

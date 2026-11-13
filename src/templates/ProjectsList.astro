@@ -24,7 +24,7 @@ const rows = projects.map((p) => ({
 }));
 ---
 
-<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]} translationKey={`page:${d.translationKey}`}>
   <div class="container hero">
     {d.hero.eyebrow && <div class="eyebrow">{d.hero.eyebrow}</div>}
     <h1 class="hero-h1">{d.hero.h1}</h1>

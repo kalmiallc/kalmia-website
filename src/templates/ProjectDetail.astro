@@ -29,6 +29,7 @@ const html = enhanceHtml(entry.rendered?.html ?? '', `content/projects/${entry.i
   title={`${p.breadcrumb}: ${listLabel} | Kalmia`}
   description={p.description}
   breadcrumbs={[{ label: listLabel, href: listHref }, { label: p.breadcrumb }]}
+  translationKey={`project:${p.translationKey}`}
 >
   <div class="container hero">
     {p.eyebrow && <div class="eyebrow">{p.eyebrow}</div>}

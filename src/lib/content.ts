@@ -5,7 +5,7 @@
  */
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { existsSync } from 'node:fs';
-import { LOCALES, homePath, normalizePath, type Locale } from './i18n';
+import { DEFAULT_LOCALE, LOCALES, homePath, normalizePath, type Locale } from './i18n';
 import navigation from '../../content/navigation.json';
 import sl from '../../content/i18n/sl.json';
 import en from '../../content/i18n/en.json';
@@ -29,6 +29,15 @@ export async function getPage(locale: Locale, key: string): Promise<PageEntry> {
   const page = (await getPages(locale)).find((e) => e.data.translationKey === key);
   if (!page) throw new Error(`Manjka stran "${key}" v content/pages/${locale}/.`);
   return page;
+}
+
+/**
+ * Domača stran jezika. Če v jeziku še ne obstaja (npr. EN pred objavo), vodi na
+ * domačo stran privzetega jezika, da ni povezav na neobstoječe strani.
+ */
+export async function localeHome(locale: Locale): Promise<string> {
+  const pages = await getPages(locale);
+  return pages.some((p) => p.data.template === 'home' && !p.data.draft) ? homePath(locale) : homePath(DEFAULT_LOCALE);
 }
 
 /** Pot strani za jezik: "/" + slug, za EN z predpono "/en". */
@@ -96,11 +105,27 @@ export async function getPublishedCases(locale: Locale): Promise<CaseEntry[]> {
 
 /* ---------- FAQ in viri ---------- */
 
+/**
+ * Pogosta vprašanja za stran. Za privzeti jezik (sl) morajo obstajati; za druge jezike
+ * so neobvezna: če jih ni, se razdelek izpusti (opozorilo ob buildu).
+ */
 export async function getFaq(locale: Locale, key: string) {
   const all = await getCollection('faq');
   const entry = all.find((e) => e.id === `${key}.${locale}`);
-  if (!entry) throw new Error(`Manjka content/faq/${key}.${locale}.json.`);
+  if (!entry) {
+    if (locale === DEFAULT_LOCALE) throw new Error(`Manjka content/faq/${key}.${locale}.json.`);
+    warnOnce(`[vsebina] Ni content/faq/${key}.${locale}.json, razdelek Pogosta vprašanja je izpuščen.`);
+    return null;
+  }
   return entry.data;
+}
+
+const warned = new Set<string>();
+function warnOnce(msg: string) {
+  if (!warned.has(msg)) {
+    warned.add(msg);
+    console.warn(`\n${msg}`);
+  }
 }
 
 export async function getSources(locale: Locale, key: string) {
@@ -173,7 +198,7 @@ export function validateContent(): Promise<void> {
         for (const ref of referencedPages(d)) {
           if (!keys.has(ref)) errors.push(`${where}: povezava na neobstoječo stran "${ref}".`);
         }
-        if ('faq' in d && !faqIds.has(`${d.faq}.${locale}`)) errors.push(`${where}: manjka content/faq/${d.faq}.${locale}.json.`);
+        if ('faq' in d && locale === DEFAULT_LOCALE && !faqIds.has(`${d.faq}.${locale}`)) errors.push(`${where}: manjka content/faq/${d.faq}.${locale}.json.`);
         if (d.template === 'vodnik' && !sourceIds.has(d.sources.key)) errors.push(`${where}: manjka content/sources/${d.sources.key}.json.`);
         if (d.template === 'storitve') for (const g of d.groups) if (!groups.has(g.group)) errors.push(`${where}: ni ploščic skupine "${g.group}".`);
         if (d.template === 'ekipe' && !groups.has(d.forms.group)) errors.push(`${where}: ni ploščic skupine "${d.forms.group}".`);

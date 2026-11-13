@@ -10,7 +10,8 @@
  */
 import BookingLink from './BookingLink.astro';
 import IndexRows from './IndexRows.astro';
-import { homePath, ui, type Locale } from '@lib/i18n';
+import { ui, type Locale } from '@lib/i18n';
+import { localeHome } from '@lib/content';
 import { site } from '@lib/site';
 
 export interface Crumb {
@@ -19,16 +20,27 @@ export interface Crumb {
   href?: string;
 }
 
+export interface LanguageLink {
+  href: string;
+  /** Polno ime jezika, npr. »English«. */
+  label: string;
+  /** Kratka oznaka, npr. »EN«. */
+  code: string;
+  lang: string;
+}
+
 interface Props {
   locale: Locale;
   variant: 'home' | 'sub';
   breadcrumbs?: Crumb[];
   currentPath?: string;
+  /** Povezava na drugo jezikovno različico; prikaže se le, če ta obstaja. */
+  languageLink?: LanguageLink;
 }
 
-const { locale, variant, breadcrumbs = [], currentPath } = Astro.props;
+const { locale, variant, breadcrumbs = [], currentPath, languageLink } = Astro.props;
 const t = ui(locale);
-const home = homePath(locale);
+const home = await localeHome(locale);
 ---
 
 {
@@ -38,7 +50,14 @@ const home = homePath(locale);
         <a href={home} aria-label={t.header.homeLabel} class="hdr-logo">
           <img src={site.logo} alt="Kalmia" width="141" height="16" />
         </a>
-        <BookingLink locale={locale} size="header" label={t.header.cta} shortLabel={t.header.ctaShort} />
+        <div class="hdr-right">
+          {languageLink && (
+            <a href={languageLink.href} hreflang={languageLink.lang} lang={languageLink.lang} aria-label={languageLink.label} class="lang">
+              {languageLink.code}
+            </a>
+          )}
+          <BookingLink locale={locale} size="header" label={t.header.cta} shortLabel={t.header.ctaShort} />
+        </div>
       </div>
     </header>
   ) : (
@@ -70,6 +89,11 @@ const home = homePath(locale);
           )}
         </div>
         <div class="hdr-right">
+          {languageLink && (
+            <a href={languageLink.href} hreflang={languageLink.lang} lang={languageLink.lang} aria-label={languageLink.label} class="lang">
+              {languageLink.code}
+            </a>
+          )}
           <a href={`${home}#kazalo`} class="kz-trigger" aria-controls="kz-panel" data-kz-trigger>
             {t.header.indexButton} <span class="kz-caret" aria-hidden="true" data-kz-caret>▾</span>
           </a>
@@ -211,6 +235,19 @@ const home = homePath(locale);
     flex-wrap: wrap;
     align-items: center;
     gap: 8px 20px;
+  }
+  .lang {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    padding: 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    color: var(--support);
+  }
+  .lang:hover {
+    color: var(--ink);
   }
   .kz-trigger {
     position: relative;

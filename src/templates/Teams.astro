@@ -13,6 +13,7 @@ import Faq from '@components/Faq.astro';
 import CtaSection from '@components/CtaSection.astro';
 import { getFaq, getTiles, pagePath, type PageEntry } from '@lib/content';
 import type { Locale } from '@lib/i18n';
+import { absoluteUrl, faqLd, serviceLd } from '@lib/seo';
 
 interface Props {
   locale: Locale;
@@ -25,9 +26,14 @@ if (d.template !== 'ekipe') throw new Error('Napačna predloga.');
 const tiles = await getTiles(locale, d.translationKey, d.forms.group);
 const afterLink = await pagePath(locale, d.afterPilot.link.page, d.afterPilot.link.anchor);
 const faq = await getFaq(locale, d.faq);
+const pageUrl = absoluteUrl(Astro.url.pathname);
+const jsonLd = [
+  ...tiles.map((tile) => serviceLd({ name: `${d.breadcrumb ?? d.hero.h1}: ${tile.title}`, description: tile.description, url: pageUrl, category: d.forms.title })),
+  ...(faq ? [faqLd(faq.items)] : []),
+];
 ---
 
-<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]} translationKey={`page:${d.translationKey}`} jsonLd={jsonLd}>
   <div class="container hero">
     <div class="hero-copy">
       {d.hero.eyebrow && <div class="eyebrow">{d.hero.eyebrow}</div>}
@@ -86,7 +92,7 @@ const faq = await getFaq(locale, d.faq);
     </div>
   </Section>
 
-  <Faq locale={locale} title={faq.title} items={faq.items} borderTop />
+  {faq && <Faq locale={locale} title={faq.title} items={faq.items} borderTop />}
 
   <CtaSection locale={locale} title={d.cta.title} text={d.cta.text} eyebrow={d.cta.eyebrow} buttonLabel={d.cta.button} layout={d.cta.layout} />
 </BaseLayout>

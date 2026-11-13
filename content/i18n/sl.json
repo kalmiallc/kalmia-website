@@ -6,7 +6,8 @@
     "breadcrumbsLabel": "Drobtinice",
     "cta": "Pogovor o vaših procesih",
     "ctaShort": "Pogovorimo se",
-    "indexButton": "Kazalo"
+    "indexButton": "Kazalo",
+    "home": "Domov"
   },
   "index": {
     "heading": "Kazalo",
@@ -51,5 +52,9 @@
   },
   "projects": {
     "listLabel": "Seznam EU projektov"
+  },
+  "language": {
+    "switchTo": "English",
+    "code": "EN"
   }
 }
