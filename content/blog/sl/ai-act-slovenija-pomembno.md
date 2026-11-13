@@ -1,7 +1,9 @@
 ---
 title: "Kaj prinaša AI Act in kaj je pomembno?"
 description: "Slovenija je pred kratkim sprejela nacionalni predlog zakona za izvajanje Evropskega AI Acta, prve celovite zakonodaje, ki ureja uporabo umetne…"
-date: "TODO"
+date: 2025-08-29
+cover: "/images/blog/ai-act-slovenija-pomembno/naslovna.webp"
+coverAlt: "Kaj prinaša AI Act in kaj je pomembno?"
 author: "Kalmia"
 tags: []
 translationKey: "blog-ai-act-slovenija-pomembno"
@@ -82,6 +84,6 @@ Borut Terpinc
 
 Preberite tudi:
 
-• Kako ISO 42001 pomaga podjetjem urediti AI in zmanjšati tveganja
+• [Kako ISO 42001 pomaga podjetjem urediti AI in zmanjšati tveganja](/blog/ai-varnost-manj-tveganja-iso42001)
 
-• Kaj prinese dobro AI svetovanje - in kako prepreči drage napake
+• [Kaj prinese dobro AI svetovanje - in kako prepreči drage napake](/blog/ai-svetovanje-5-kljucnih-nasvetov)

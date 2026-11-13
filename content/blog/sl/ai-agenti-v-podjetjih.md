@@ -1,7 +1,11 @@
 ---
 title: "Kako AI agenti že danes spreminjajo poslovanje: od prodaje do financ"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Kako AI agenti že danes spreminjajo poslovanje"
 description: "Pregled praktične uporabe AI agentov v podjetjih: od prodaje, podpore strankam in financ do HR in dobavne verige."
-date: "TODO"
+date: 2026-05-20
+cover: "/images/blog/ai-agenti-v-podjetjih/naslovna.webp"
+coverAlt: "Kako AI agenti že danes spreminjajo poslovanje: od prodaje do financ"
 author: "Kalmia"
 tags: ["digitalna preobrazba", "avtomatizacija", "digitalizacija", "AI agenti", "prodaja", "finance", "logistika", "HR", "optimizacija poslovanja"]
 translationKey: "blog-ai-agenti-v-podjetjih"
@@ -22,7 +26,7 @@ Poglejmo si praktične primere, kje vam ti digitalni pomočniki že danes lahko 
 - Rešitev: AI agent namesto vas "prečeše" splet, izloči tisto, kar vas ne zanima, in vam na mizo dostavi le najboljše priložnosti.
 - Rezultat: Hitrejša odzivnost in več dobljenih poslov.
 
-Več: AI agent za analizo javnih razpisov
+Več: [AI agent za analizo javnih razpisov](/blog/ai-agent-za-javne-razpise)
 
 2. Podpora strankam (Customer Support)
 
@@ -30,7 +34,7 @@ Več: AI agent za analizo javnih razpisov
 - Rešitev: AI agent se poveže z vašim skladiščem in stranki v sekundi odgovori s točno informacijo.
 - Rezultat: Zadovoljne stranke in razbremenjena ekipa.
 
-Več: AI agent za preverjanje zamude pošiljk
+Več: [AI agent za preverjanje zamude pošiljk](/blog/ai-agent-za-preverjanje-posiljk)
 
 ### 3. Pisarna in administracija
 
@@ -38,7 +42,7 @@ Več: AI agent za preverjanje zamude pošiljk
 - Rešitev: Agentu samo poveste ključne podatke, on pa sam izpolni in pripravi vso potrebno dokumentacijo.
 - Rezultat: Manj papirja, več časa za resno delo.
 
-Več: AI agent za potne naloge
+Več: [AI agent za potne naloge](/blog/ai-agent-potni-nalogi)
 
 ### 4. Prodaja
 
@@ -64,7 +68,7 @@ Več: AI agent za potne naloge
 - Rešitev: AI agent bdi nad vsemi pošiljkami in vas takoj opozori, če gre kaj narobe.
 - Rezultat: Manj zastojev in bolj predvidljivo poslovanje.
 
-Več: Logistika na avtopilotu
+Več: [Logistika na avtopilotu](/blog/ai-agent-optimizacija-logistike)
 
 ## Kakšen je finančni učinek?
 
@@ -95,5 +99,5 @@ V Kalmii podjetjem pomagamo pri celotnem ciklu vpeljave - od pregleda procesov d
 
 Preberite tudi:
 
-- Chatbot, asistent ali agent: Katera stopnja umetne inteligence je tista, ki bo zares transformirala vaše poslovanje?
-- OpenClaw, nov tip AI Agenta - ali gre za vročo inovacijo ali varnostno tveganje?
+- [Chatbot, asistent ali agent: Katera stopnja umetne inteligence je tista, ki bo zares transformirala vaše poslovanje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)
+- [OpenClaw, nov tip AI Agenta - ali gre za vročo inovacijo ali varnostno tveganje?](/blog/openclaw-ai-agent-varnost)

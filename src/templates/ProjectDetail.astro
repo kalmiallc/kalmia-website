@@ -6,7 +6,7 @@ import NextRow from '@components/NextRow.astro';
 import { pathForSlug, type PageEntry } from '@lib/content';
 import type { ProjectEntry } from '@lib/routes';
 import { ui, type Locale } from '@lib/i18n';
-import { render } from 'astro:content';
+import { enhanceHtml } from '@lib/html';
 
 interface Props {
   locale: Locale;
@@ -21,7 +21,7 @@ if (list.template !== 'projekti') throw new Error('Napačna predloga.');
 const t = ui(locale);
 const listHref = pathForSlug(locale, list.slug);
 const listLabel = list.breadcrumb ?? list.hero.h1;
-const { Content } = await render(entry);
+const html = enhanceHtml(entry.rendered?.html ?? '', `content/projects/${entry.id}.md`);
 ---
 
 <BaseLayout
@@ -41,7 +41,7 @@ const { Content } = await render(entry);
   </div>
 
   <Section borderTop>
-    <Prose><Content /></Prose>
+    <Prose><Fragment set:html={html} /></Prose>
   </Section>
 
   <NextRow label={t.back} title={listLabel} href={listHref} />

@@ -1,7 +1,11 @@
 ---
 title: "Spoznajte Murai - pametni chatbot, ki ga nastavite v nekaj minutah"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Murai: pametni chatbot, ki ga nastavite v nekaj minutah"
 description: "Kadar spletni klepetalnik deluje kot zastarelo pogovorno okno, je razočaranje osebe na drugi strani pogosto še večje, kot če klepetalnika sploh ne bi…"
-date: "TODO"
+date: 2025-10-21
+cover: "/images/blog/spoznajte-murai-pametni-chatbot/naslovna.webp"
+coverAlt: "Predstavitev Murai AI pomočnika - primer klepeta in slogan \"Izboljšajte svoje poslovanje z umetno inteligenco\""
 author: "Kalmia"
 tags: []
 translationKey: "blog-spoznajte-murai-pametni-chatbot"
@@ -12,13 +16,15 @@ Kadar spletni klepetalnik deluje kot zastarelo pogovorno okno, je razočaranje o
 
 Od umetne inteligence smo začeli pričakovati več kot le avtomatski odziv: pričakujemo pogovor.
 
-Murai je chatbot po meri, ki v podjetje prinese pravo pogovorno inteligenco - na osnovi podatkov, ki jih že imate. Namesto da bi iskali po menujih, uporabniki lahko vprašajo - in dobijo zanesljiv odgovor.
+[Murai](https://murai.ai/sl) je chatbot po meri, ki v podjetje prinese pravo pogovorno inteligenco - na osnovi podatkov, ki jih že imate. Namesto da bi iskali po menujih, uporabniki lahko vprašajo - in dobijo zanesljiv odgovor.
 
 ## 1. Kaj je Murai in zakaj je več kot le chatbot?
 
 Platforma Murai vam omogoča, da ustvarite svojega klepetalnega pomočnika, ki se uči iz vsebine, ki mu jo namenite - to so lahko razni dokumenti z informacijami, FAQ (pogosto zastavljena vprašanja) ali vaša spletna stran.
 
 Prebere, razume in odgovarja na podlagi preverjenih informacij iz vaših (javno dostopnih) virov. In kar je najboljše - nastavitev traja le nekaj minut, brez programiranja ali tehničnega znanja.
+
+![Primer uporabe Murai chatbota za avtomobilski katalog – AI odgovarja na vprašanja o vozilih California 6.1.](/images/blog/spoznajte-murai-pametni-chatbot/slika-1.webp)
 
 Primer klepetalnika na spletni strani.
 
@@ -50,6 +56,8 @@ Rezultat? Povsem drugačna, bolj človeška uporabniška izkušnja - z jasnimi k
 
 Gostje so dobili jasne informacije o cenah (brez ugibanja na lastno pest), podjetje pa vpogled v analitiko pogovorov in vedenjske vzorce gostov, kar pomaga izboljšati njihovo ponudbo in odzivnost.
 
+![Murai chatbot analitika – prikaz števila sporočil, pogovorov in aktivnosti uporabnikov po dnevih.](/images/blog/spoznajte-murai-pametni-chatbot/slika-2.webp)
+
 Nadzorna plošča vašega chatbota.
 
 ## 4. Kako deluje Murai?
@@ -62,6 +70,8 @@ Za nastavitev vašega Murai chatbota ne potrebujete posebnih znanj - ko naložit
 
 Svoj klepetalni bot lahko popolnoma prilagodite vaši znamki: spreminjate ime, dodate logotip in barve vašega podjetja, prilagodite ton govora in še več.
 
+![Murai chatbot nadzorna plošča - pregled nastavitev, treninga in integracij za izboljšanje delovanja klepetalnika.](/images/blog/spoznajte-murai-pametni-chatbot/slika-3.webp)
+
 Možnosti za prilagoditve profila klepetalnika.
 
 Vaš klepetalnik boste lahko preizkusili v vašem testnem okolju, se prepričali, da je popolnoma prilagojen vašim obiskovalcem, nato pa ga preko povezave, ki vas čaka v nadzorni plošči, vključite na spletno stran ali drugo izbrano okolje (npr. Slack).
@@ -70,7 +80,7 @@ Znotraj platforme lahko ustvarite več različnih klepetalnih pomočnikov, prila
 
 V hotelu so vse to uredili v manj kot nekaj urah, in tako je Murai že prvi dan prevzel več kot 65% vprašanj gostov. Zabeležili so tudi +15-30% več rezervacij kar preko klepetalnika.
 
-Preberite več o vzpostavitvi “digitalne recepcije” in prihranku časa, ki ga je hotelskemu osebju doprinesel Murai.
+[Preberite več o vzpostavitvi “digitalne recepcije” in prihranku časa, ki ga je hotelskemu osebju doprinesel Murai.](/blog/pamenti-bot-hoteli)
 
 ## 5. Kje Murai pomaga?
 
@@ -109,14 +119,16 @@ Bolj kot so vsebine strukturirane in jezik dosleden, večjo konkurenčno prednos
 
 Vas zanima, kaj bi na podlagi vaših podatkov strankam povedal Murai?
 
-Za hitro postavitev chatbota si pomagajte z nazornimi navodili, ki vas vodijo po korakih.
+Za hitro postavitev chatbota si pomagajte z [nazornimi navodili, ki vas vodijo po korakih.](https://docs.murai.ai/rest/getting-started/quick-start.html)
+
+![Murai chatbot – celovita AI podpora podjetjem, koraki za ustvarjanje in upravljanje klepetalnega pomočnika.](/images/blog/spoznajte-murai-pametni-chatbot/slika-4.webp)
 
 4 koraki do preproste vzpostavitve vašega chatbota
 
 Murai ni končni cilj, je začetek poti. In dokaz, da pogovor z AI pomočnikom postaja sedanjost poslovanja.Ko podjetje uvede pogovorno avtomatizacijo, se hitro pokažejo nove priložnosti:
 
 - povezava z internimi orodji,
-- nadgradnja v AI asistenta ali agenta,
+- nadgradnja v [AI asistenta](/lokalna-ai-infrastruktura) ali agenta,
 - uporaba analitike za izboljšavo izkušenj.
 
 Kalmia pri tem ne ponuja zgolj orodja, temveč predvsem partnerstvo: od načrtovanja do nadgradnje in vzdrževanja.
@@ -125,6 +137,6 @@ Brezplačno svetovanje je namenjeno vsem, ki si želijo raziskati polja umetne i
 
 Preberite tudi:
 
-• Kako je podjetje ETI z Murai chatbotom prihranil čas, razbremenil ekipo?
+• [Kako je podjetje ETI z Murai chatbotom prihranil čas, razbremenil ekipo?](/reference/eti)
 
 • Kaj morate pripraviti, da bo vaš chatbot strankam zares pomagal?

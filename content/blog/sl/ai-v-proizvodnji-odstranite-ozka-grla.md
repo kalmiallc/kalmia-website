@@ -1,7 +1,11 @@
 ---
 title: "Umetna inteligenca v proizvodnji: 3 načini za največji prihranek časa"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "AI v proizvodnji: 3 načini za največji prihranek časa"
 description: "V sodobni industriji in proizvodnih obratih šteje vsaka minuta, uvedba AI pa lahko pomeni veliko razliko med odzivnostjo in zamudo, med improvizacijo…"
-date: "TODO"
+date: 2025-10-28
+cover: "/images/blog/ai-v-proizvodnji-odstranite-ozka-grla/naslovna.webp"
+coverAlt: "Umetna inteligenca v proizvodnji: 3 načini za največji prihranek časa"
 author: "Kalmia"
 tags: ["AI"]
 translationKey: "blog-ai-v-proizvodnji-odstranite-ozka-grla"
@@ -46,7 +50,7 @@ V avtomobilski, kovinski ali proizvodni industriji se zaposleni vsakodnevno sre�
 
 Asistent deluje kot digitalni tehnični priročnik - nanj lahko preprosto naslovijo vprašanje, kot na primer: “Kakšen je postopek za obdelavo aluminija serije X pri 150 °C?”
 
-Interni AI asistent razišče interne dokumente, tehnične liste in navodila ter poda preverjen odgovor v nekaj sekundah.
+[Interni AI asistent](/lokalna-ai-infrastruktura) razišče interne dokumente, tehnične liste in navodila ter poda preverjen odgovor v nekaj sekundah.
 
 Zaposleni hitreje razumejo izjeme v procesih in se pri posebnih primerih zanašajo na preverjene podatke, ne na spomin ali ugibanje glede na pretekle izkušnje.
 
@@ -78,4 +82,4 @@ Kalmia pomaga podjetjem prepoznati, kje nastajajo izgube časa, in iz teh točk 
 
 Na voljo vam je strokovno AI svetovanje z našimi izkušenimi strokovnjaki, ki bodo poskrbeli, da bo vaš slovenski chatbot ali asistent deloval brezhibno.
 
-Preberite tudi:• Kako smo v ORO digitalizirali proizvodnjo in pohitrili procese z AI• Zakaj vaše podjetje potrebuje AI asistenta?
+Preberite tudi:• [Kako smo v ORO digitalizirali proizvodnjo in pohitrili procese z AI](/reference/oro-orodjarna)• [Zakaj vaše podjetje potrebuje AI asistenta?](/blog/ai-asistent-vec-kot-ms-copilot)

@@ -1,0 +1,153 @@
+---
+/** Kartica zapisa na seznamu bloga: naslovnica, datum, naslov, opis. Vodi na zapis. */
+import { formatDate, isoDay } from '@lib/format';
+import { publicImageSize } from '../plugins/image-size.mjs';
+import type { Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  href: string;
+  title: string;
+  description: string;
+  date: Date;
+  cover?: string;
+  coverAlt?: string;
+  eager?: boolean;
+}
+
+const { locale, href, title, description, date, cover, coverAlt, eager = false } = Astro.props;
+const size = cover ? publicImageSize(cover) : null;
+---
+
+<article class="post">
+  {
+    cover && size && (
+      <img
+        src={cover}
+        alt={coverAlt ?? ''}
+        width={size.width}
+        height={size.height}
+        loading={eager ? 'eager' : 'lazy'}
+        decoding="async"
+        class="post-cover"
+      />
+    )
+  }
+  <div class="post-body">
+    <span class="post-top">
+      <time datetime={isoDay(date)} class="post-date">{formatDate(date, locale)}</time>
+      <span class="post-go" aria-hidden="true">→</span>
+    </span>
+    <h2 class="post-title"><a href={href} class="post-link">{title}</a></h2>
+    <p class="post-desc">{description}</p>
+  </div>
+</article>
+
+<style>
+  .post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  .post::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: var(--lime);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  .post:hover,
+  .post:focus-within {
+    border-color: var(--ink);
+    transform: translateY(-2px);
+  }
+  .post:hover::after,
+  .post:focus-within::after {
+    transform: scaleX(1);
+  }
+  .post-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--surface);
+  }
+  .post-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 18px 22px;
+  }
+  .post-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .post-date {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--support);
+  }
+  .post-go {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    color: var(--royal);
+    font-size: 14px;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+  .post:hover .post-go,
+  .post:focus-within .post-go {
+    background: var(--royal);
+    border-color: var(--royal);
+    color: var(--paper);
+  }
+  .post-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+  .post-link {
+    color: var(--ink);
+  }
+  .post-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .post-link:focus-visible {
+    outline: none;
+  }
+  .post:focus-within {
+    outline: 2px solid var(--royal);
+    outline-offset: 2px;
+  }
+  .post-desc {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--support);
+  }
+</style>

@@ -1,7 +1,11 @@
 ---
 title: "AI agent za analizo javnih razpisov: koliko poslov si še lahko privoščite spregledati?"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "AI agent za analizo javnih razpisov"
 description: "AI agent samodejno spremlja eNaročanje, filtrira razpise po vašem profilu in pripravi strukturiran povzetek pogojev."
-date: "TODO"
+date: 2026-03-10
+cover: "/images/blog/ai-agent-za-javne-razpise/naslovna.webp"
+coverAlt: "AI agent za analizo javnih razpisov: koliko poslov si še lahko privoščite spregledati?"
 author: "Kalmia"
 tags: ["AI agent", "umetna inteligenca", "javni razpisi", "analiza", "avtomatizacija", "spremljanje razpisov", "AI za podjetja", "digitalizacija", "javna naročila", "razpisne priložnosti", "poslovna rast", "optimizacija poslovnih procesov"]
 translationKey: "blog-ai-agent-za-javne-razpise"
@@ -36,7 +40,7 @@ Težava je, da jih je preveč, proces pa ročen in zato dolgotrajen.
 
 ## Kako AI agent pregleda razpise namesto vas
 
-Tu ne govorimo o AI asistentu, ki vam povzame dokument, ko ga že odprete. Tu v igro vstopi AI agent, ki proces spremljanja in filtriranja prevzame sistematično in proaktivno.
+Tu ne govorimo o [AI asistentu](/lokalna-ai-infrastruktura), ki vam povzame dokument, ko ga že odprete. Tu v igro vstopi AI agent, ki proces spremljanja in filtriranja prevzame sistematično in proaktivno.
 
 - Korak 1: Spremljanje portala
 
@@ -132,7 +136,7 @@ Varno delovanje pomeni:
 
 Več kot agent analizira, bolj pomemben je arhitektura, na kateri takšen agent temelji. V Kalmii se uvedbe AI agentov lotimo najprej procesno, šele nato tehnično. Analiziramo potek dela, določimo meje sistema in šele nato zgradimo arhitekturo, ki je varna in nadzorovana.
 
-Več o tem, kako se na Kalmii zavzamemo za temeljit pristop k varnosti in nadzoru, preberite tukaj.
+Več o tem, kako se na Kalmii zavzamemo za temeljit pristop k varnosti in nadzoru, preberite [tukaj](/blog/openclaw-ai-agent-varnost).
 
 ## Koliko poslov si še lahko privoščite spregledati?
 
@@ -146,5 +150,5 @@ To ni zgolj optimizacija, je zmanjševanje poslovnega tveganja.
 
 Preberite tudi:
 
-- Kako prepoznati delovne zastoje in jih pretvoriti v konkretne, varne AI procese
-- OpenClaw, nov tip AI Agenta - ali je lahko varen?
+- [Kako prepoznati delovne zastoje in jih pretvoriti v konkretne, varne AI procese](/blog/erp-ozka-grla-in-ai-resitve)
+- [OpenClaw, nov tip AI Agenta - ali je lahko varen?](/blog/openclaw-ai-agent-varnost)

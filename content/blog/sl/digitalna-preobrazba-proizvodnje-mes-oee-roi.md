@@ -1,7 +1,11 @@
 ---
 title: "Digitalna preobrazba proizvodnje: Kako s Kalmia MES do višjega OEE in ROI, ki ga boste opazili takoj"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Digitalna preobrazba proizvodnje s Kalmia MES: OEE in ROI"
 description: "Digitalna preobrazba proizvodnje s Kalmia MES: izboljšajte OEE, zmanjšajte stroške in dosezite hiter ROI z realnočasovnimi podatki in AI optimizacijo."
-date: "TODO"
+date: 2026-05-06
+cover: "/images/blog/digitalna-preobrazba-proizvodnje-mes-oee-roi/naslovna.webp"
+coverAlt: "Digitalna preobrazba proizvodnje: Kako s Kalmia MES do višjega OEE in ROI, ki ga boste opazili takoj"
 author: "Kalmia"
 tags: ["digitalna preobrazba", "proizvodnja", "MES sistem", "Kalmia MES", "OEE", "ROI", "optimizacija proizvodnje"]
 translationKey: "blog-digitalna-preobrazba-proizvodnje-mes-oee-roi"
@@ -12,13 +16,13 @@ V svetu sodobne proizvodnje pogosto slišimo, da so podatki ključni digitalni t
 
 Številni direktorji proizvodnje se še vedno soočajo z istim izzivom: kako vedeti, kje točno izgubljamo denar? Je to zaradi nenačrtovanih zastojev, prepočasnih strojev ali morda zaradi prevelikega izmeta? Odgovor se skriva v metriki OEE (Overall Equipment Effectiveness), ključ do njenega izboljšanja pa je sodoben MES sistem.
 
-V Kalmii smo razvili Kalmia MES, ki ne le spremlja proizvodnjo, temveč jo aktivno optimizira s pomočjo umetne inteligence.
+V Kalmii smo razvili [Kalmia MES](/proizvodnja), ki ne le spremlja proizvodnjo, temveč jo aktivno optimizira s pomočjo umetne inteligence.
 
 ## Zakaj je OEE vaš najpomembnejši kazalnik uspeha?
 
 OEE ni le suhoparna statistika; je neposredno ogledalo vaše dobičkonosnosti. Sestoji iz treh ključnih komponent: razpoložljivosti, zmogljivosti in kakovosti.
 
-Ko vpeljete Kalmia MES, se ti parametri začnejo spreminjati:
+Ko vpeljete [Kalmia MES](/proizvodnja), se ti parametri začnejo spreminjati:
 
 - Razpoložljivost: Namesto da operaterji ročno beležijo zastoje (kar pogosto počnejo z zamikom in neustrezno natančnostjo), sistem avtomatsko zazna vsako sekundo nedelovanja. Rezultat? Hitrejša reakcija in manj praznega teka.
 - Zmogljivost: Ali vaši stroji delujejo s polno hitrostjo? MES takoj pokaže odstopanja med teoretično in dejansko hitrostjo cikla, kar omogoča takojšnje korektivne ukrepe.
@@ -44,7 +48,7 @@ Začnete lahko z eno linijo ali enim modulom in sistem širite skladno z rastjo 
 
 ## Od papirja do digitalne odličnosti: Primer podjetja GO-ST
 
-Teorija je eno, praksa pa drugo. Podjetje GO-ST je stopilo na pot digitalne transformacije s jasnim ciljem: odpraviti papirno poslovanje in povečati preglednost.
+Teorija je eno, praksa pa drugo. Podjetje GO-ST je stopilo na [pot digitalne transformacije](/reference/go-st) s jasnim ciljem: odpraviti papirno poslovanje in povečati preglednost.
 
 Pred sodelovanjem s Kalmio so njihovi procesi vključevali ročno razporejanje nalogov, skice na papirju in ročno beleženje porabe materiala v Excel. Takšen način dela je neizogibno vodil do informacijskih šumov in nepotrebnega podvajanja dela.
 
@@ -68,13 +72,13 @@ Zakaj bi čakali, da se stroj pokvari? Naš sistem spremlja vibracije, temperatu
 
 ## Zaključek: Digitalna transformacija, ki opolnomoči ljudi
 
-Digitalizacija s Kalmia MES sistemom ni namenjena zamenjavi ljudi, temveč njihovemu opolnomočenju. Ko operaterjem in vodjem odstranite administrativno breme in jim podate jasne podatke, lahko svoj čas posvetijo tistemu, kar zares šteje – inovacijam in kakovosti.
+Digitalizacija s [Kalmia MES](/proizvodnja) sistemom ni namenjena zamenjavi ljudi, temveč njihovemu opolnomočenju. Ko operaterjem in vodjem odstranite administrativno breme in jim podate jasne podatke, lahko svoj čas posvetijo tistemu, kar zares šteje – inovacijam in kakovosti.
 
 Če želite povečati svojo učinkovitost, znižati stroške in stopiti ob bok najbolj naprednim podjetjem, je čas za prvi korak.
 
-Vas zanima, kakšen ROI bi Kalmia MES prinesel vašemu podjetju? Kontaktirajte našo ekipo strokovnjakov za brezplačno svetovanje in demonstracijo sistema. Skupaj bomo vašo proizvodnjo spremenili v digitalno zgodbo o uspehu.
+Vas zanima, kakšen ROI bi Kalmia MES prinesel vašemu podjetju? [Kontaktirajte našo ekipo strokovnjakov](https://calendar.app.google/1gRbpXL6jMbbH7NN7) za brezplačno svetovanje in demonstracijo sistema. Skupaj bomo vašo proizvodnjo spremenili v digitalno zgodbo o uspehu.
 
 Preberite tudi:
 
-- Kako prepoznati delovne zastoje in jih pretvoriti v konkretne, varne AI procese
-- OpenClaw, nov tip AI Agenta - ali je lahko varen?
+- [Kako prepoznati delovne zastoje in jih pretvoriti v konkretne, varne AI procese](/blog/erp-ozka-grla-in-ai-resitve)
+- [OpenClaw,](/blog/openclaw-ai-agent-varnost) [nov tip AI Agenta - ali je lahko varen?](/blog/openclaw-ai-agent-varnost)

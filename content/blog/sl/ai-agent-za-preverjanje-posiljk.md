@@ -1,7 +1,11 @@
 ---
 title: "AI agent za preverjanje zamude pošiljk: hitrejši odgovori in manj negotovosti za kupce"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "AI agent za preverjanje zamude pošiljk"
 description: "Avtomatizirajte preverjanje zamud pošiljk z AI agentom in sprostite kapaciteto ekipe za zahtevnejše primere."
-date: "TODO"
+date: 2026-03-17
+cover: "/images/blog/ai-agent-za-preverjanje-posiljk/naslovna.webp"
+coverAlt: "AI agent za preverjanje zamude pošiljk: hitrejši odgovori in manj negotovosti za kupce"
 author: "Kalmia"
 tags: ["AI", "AI agenti", "avtomatizacija", "podpora strankam", "logistika", "dostava", "pošiljke", "zamude pošiljk", "sledenje pošiljk", "customer support", "optimizacija procesov", "uporabniška izkušnja", "operativna učinkovitost", "digitalizacija"]
 translationKey: "blog-ai-agent-za-preverjanje-posiljk"
@@ -62,7 +66,7 @@ Zaposleni, odgovoren za ta delovni proces, pa predlog potrdi ali ga dopolni in n
 
 ## Zakaj tega ne zmore chatbot ali AI asistent?
 
-Chatbot odgovori na vprašanje. AI asistent pomaga najti informacijo znotraj internih baz.
+[Chatbot](https://murai.ai/) odgovori na vprašanje. [AI asistent](/lokalna-ai-infrastruktura) pomaga najti informacijo znotraj internih baz.
 
 Oba reagirata.
 
@@ -124,5 +128,5 @@ Ne gre za tehnološki eksperiment, temveč racionalno optimizacijo procesa, ki s
 
 Preberite tudi:
 
-- Kako prepoznati operativne zastoje in jih pretvoriti v konkretne, varne AI procese
-- Razlika med iskanjem po internih bazah in avtomatizacijo celotnega procesa
+- [Kako prepoznati operativne zastoje in jih pretvoriti v konkretne, varne AI procese](/blog/ai-v-proizvodnji-del-2)
+- [Razlika med iskanjem po internih bazah in avtomatizacijo celotnega procesa](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)

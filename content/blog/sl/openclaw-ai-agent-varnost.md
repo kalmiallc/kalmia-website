@@ -1,7 +1,9 @@
 ---
 title: "OpenClaw, nov tip AI Agenta - ali je lahko varen?"
 description: "OpenClaw je postal ena najbolj omenjanih tem, ko govorimo o AI agentih."
-date: "TODO"
+date: 2026-03-03
+cover: "/images/blog/openclaw-ai-agent-varnost/naslovna.webp"
+coverAlt: "OpenClaw, nov tip AI Agenta - ali je lahko varen?"
 author: "Kalmia"
 tags: ["AI agent", "AI asistent", "OpenClaw", "umetna inteligenca", "avtomatizacija procesov", "poslovna učinkovitost", "varnost podatkov", "ERP", "digitalna transformacija"]
 translationKey: "blog-openclaw-ai-agent-varnost"
@@ -15,6 +17,8 @@ Umetna inteligenca namreč prvič ne ostane več samo v klepetalnem oknu, temve�
 To lahko pomeni večjo učinkovitost, hkrati pa odpira ključno vprašanje varnosti.
 
 OpenClaw lahko deluje z zelo širokimi privilegiji, zato sam po sebi ni najbolj idealna poslovna rešitev. Je močno orodje, ki brez jasnih omejitev in nadzora lahko predstavlja veliko varnostno tveganje. Primeri, kot je spodnji, potrjujejo, kako hitro lahko eksperiment postane velika nevšečnost.
+
+[![Objava Summer Yue na omrežju X: agent OpenClaw je kljub navodilu »potrdi pred dejanjem« začel brisati njen e-poštni predal.](/images/blog/openclaw-ai-agent-varnost/slika-1.webp)](https://x.com/summeryue0/status/2025774069124399363)
 
 V poslovnem okolju se zato kot stabilnejši pristop izkažejo varno zasnovani AI agenti, kjer so dostopi, odgovornosti in meje delovanja jasno določeni že v sami zasnovi sistema.
 
@@ -38,7 +42,7 @@ To je AI agent.
 
 ## AI asistent pomaga razumeti. AI agent začne izvajati.
 
-Večina podjetij danes že uporablja AI asistenta - klepetalni vmesnik, ki zna poiskati interne dokumente, povzeti pravilnike ali najti podatke v sistemu.
+Večina podjetij danes že uporablja [AI asistenta](/lokalna-ai-infrastruktura) - klepetalni vmesnik, ki zna poiskati interne dokumente, povzeti pravilnike ali najti podatke v sistemu.
 
 Če bi isti vodja nabave uporabljal AI asistenta, bi ga ob 9:05 sam vprašal:
 
@@ -55,7 +59,7 @@ Predstavljajte si vrhunskega športnika, ki ima asistenta in agenta:
 
 Podobno je v podjetju.
 
-AI asistent reagira šele, ko ga vprašamo.
+[AI asistent](/lokalna-ai-infrastruktura) reagira šele, ko ga vprašamo.
 
 AI agent je s procesi tesno povezan in ob odstopanju sam sproži analizo ter pripravi naslednji korak.
 
@@ -111,5 +115,5 @@ S Kalmio agente vzpostavimo tako, da razbremenijo ključne ljudi in optimizirajo
 
 Preberite tudi:
 
-- Kako se prepričati, katera AI pomoč v podjetju bi vam prišla najbolj prav?
-- Kako v delovne procese uvesti AI, da bo prinesla merljive rezultate?
+- [Kako se prepričati, katera AI pomoč v podjetju bi vam prišla najbolj prav?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)
+- [Kako v delovne procese uvesti AI, da bo prinesla merljive rezultate?](/blog/lokalni-vs-generativni-ai-poslovni-ucinek)

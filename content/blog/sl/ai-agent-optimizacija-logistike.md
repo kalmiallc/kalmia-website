@@ -1,7 +1,11 @@
 ---
 title: "Logistika na avtopilotu: Kako AI agent rešuje kaos v skladiščih"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Logistika na avtopilotu: AI agent v skladiščih"
 description: "Pozabite na prazne police. Spoznajte, kako AI agenti s predvidevanjem trendov avtomatsko razporejajo zaloge in zmanjšujejo stroške logistike!"
-date: "TODO"
+date: 2026-04-13
+cover: "/images/blog/ai-agent-optimizacija-logistike/naslovna.webp"
+coverAlt: "Logistika na avtopilotu: Kako AI agent rešuje kaos v skladiščih"
 author: "Kalmia"
 tags: ["AI agenti", "logistika", "digitalna transformacija", "upravljanje zalog", "maloprodaja", "Kalmia", "avtomatizacija skladišč", "predvidevanje trendov"]
 translationKey: "blog-ai-agent-optimizacija-logistike"
@@ -35,14 +39,14 @@ Ko govorimo o AI agentih v logistiki, ne govorimo le o tehnologiji, temveč o po
 
 ## Bi pomagal AI asistent?
 
-Logistični AI-agent tako omogoča avtomatizacijo, kjer se akcije izvajajo samostojno, vse, kar je kdaj potrebno, pa sta človekova potrditev in preveritev podatkov. AI asistent pa je lahko del celote, kjer predstavlja pogovorno okno za poizvedbe in vprašanja po vaši želji. S pomočjo pogovornega okna vam lahko pripravi:
+Logistični AI-agent tako omogoča avtomatizacijo, kjer se akcije izvajajo samostojno, vse, kar je kdaj potrebno, pa sta človekova potrditev in preveritev podatkov. [AI asistent](/lokalna-ai-infrastruktura) pa je lahko del celote, kjer predstavlja pogovorno okno za poizvedbe in vprašanja po vaši želji. S pomočjo pogovornega okna vam lahko pripravi:
 
 - poročilo o dnevnih poteh,
 - analize najbolj prodajanih artiklov,
 - poročilo o težavah,
 - poročilo o stroških transporta.
 
-Dodatek AI-asistenta s pomočjo AI-agenta tako v sistemu predstavlja še večjo dodano vrednost.
+Dodatek [AI-asistenta](/lokalna-ai-infrastruktura) s pomočjo AI-agenta tako v sistemu predstavlja še večjo dodano vrednost.
 
 ## Prihodnost ni v "več dela", ampak v "pametnejšem delu"
 
@@ -52,5 +56,5 @@ V Kalmii ne gradimo le programske opreme; gradimo digitalne kolege, ki vaše pos
 
 Preberite tudi:
 
-- Koliko poslov si še lahko privoščite spregledati: AI agent za analizo javnih razpisov
-- Hitrejši odgovori in manj negotovosti za kupce: AI agent za preverjanje pošiljk
+- [Koliko poslov si še lahko privoščite spregledati: AI agent za analizo javnih razpisov](/blog/ai-agent-za-javne-razpise)
+- [Hitrejši odgovori in manj negotovosti za kupce: AI agent za preverjanje pošiljk](/blog/ai-agent-za-preverjanje-posiljk)

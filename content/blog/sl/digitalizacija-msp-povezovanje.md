@@ -1,7 +1,11 @@
 ---
 title: "Digitalizacija MSP: Zakaj povezovanje aplikacij prinaša največjo vrednost"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Digitalizacija MSP in povezovanje aplikacij"
 description: "Digitalizacija malih in srednjih podjetij predstavlja enega večjih izzivov slovenskega gospodarstva."
-date: "TODO"
+date: 2025-07-31
+cover: "/images/blog/digitalizacija-msp-povezovanje/naslovna.webp"
+coverAlt: "Digitalizacija MSP: Zakaj povezovanje aplikacij prinaša največjo vrednost"
 author: "Kalmia"
 tags: []
 translationKey: "blog-digitalizacija-msp-povezovanje"
@@ -26,7 +30,7 @@ Stranke želijo rešitve, ki niso zgolj začasne, ampak omogočajo nadaljnjo ras
 
 ## Preudarno z vpeljavo umetne inteligence
 
-Umetna inteligenca ni le trend, ampak orodje, ki lahko v veliki meri olajša poslovanje. Ker je Kalmia specializirana na področju uporabe UI, strankam lahko nudimo različno paleto rešitev od uporabe klepetalnih botov in agentov do orodij za predikcije in pametne analize. Tudi v tem primeru proces vedno začnemo z delavnico, kjer poiščemo t. i. “hitre zmage” – rešitve, kjer lahko umetna inteligenca najhitreje prinese rezultate.Znani rek pri uvedbi umetne inteligence “Garbage in, Garbage out” ponazarja, da umetna inteligenca ne more dobro delovati brez ustreznih in pravilno pripravljenih podatkov. Ključno vlogo pri tem ima centralno digitalno stičišče podjetja, kjer umetna inteligenca pridobi kakovostne in dosledne podatke. Prav ta del veliko podjetij pogosto zanemari. V Kalmii ga obravnavamo kot osnovni element uspešne vpeljave, zato mu posvetimo posebno pozornost že od začetka projekta.
+Umetna inteligenca ni le trend, ampak orodje, ki lahko v veliki meri olajša poslovanje. Ker je Kalmia specializirana na področju uporabe UI, strankam lahko nudimo različno paleto rešitev od uporabe klepetalnih botov in agentov do orodij za predikcije in pametne analize. Tudi v tem primeru proces vedno [začnemo z delavnico](/claude-chatgpt-za-ekipe), kjer poiščemo t. i. “hitre zmage” – rešitve, kjer lahko umetna inteligenca najhitreje prinese rezultate.Znani rek pri uvedbi umetne inteligence “Garbage in, Garbage out” ponazarja, da umetna inteligenca ne more dobro delovati brez ustreznih in pravilno pripravljenih podatkov. Ključno vlogo pri tem ima centralno digitalno stičišče podjetja, kjer umetna inteligenca pridobi kakovostne in dosledne podatke. Prav ta del veliko podjetij pogosto zanemari. V Kalmii ga obravnavamo kot osnovni element uspešne vpeljave, zato mu posvetimo posebno pozornost že od začetka projekta.
 
 ## Majhni koraki za velike rezultate
 
@@ -36,6 +40,6 @@ Veliko MSP se zaveda izziva pomanjkljive digitalizacije poslovnih procesov in si
 
 Preberite tudi:
 
-• Kako je ORO s povezavo sistemov in AI povečal učinkovitost proizvodnje
+• [Kako je ORO s povezavo sistemov in AI povečal učinkovitost proizvodnje](/blog/lokalni-vs-generativni-ai-poslovni-ucinek)
 
-• Generativni ali lokalni AI - kateri pristop MSP-jem prinese večje rezultate
+• [Generativni ali lokalni AI - kateri pristop MSP-jem prinese večje rezultate](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)

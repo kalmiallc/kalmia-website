@@ -1,7 +1,9 @@
 ---
 title: "AI in ERP: 3 ozka grla, ki jih lahko rešimo z AI asistentom"
 description: "ERP sistemi v podjetjih že dolgo niso več vprašanja izbire."
-date: "TODO"
+date: 2026-02-17
+cover: "/images/blog/erp-ozka-grla-in-ai-resitve/naslovna.webp"
+coverAlt: "AI in ERP: 3 ozka grla, ki jih lahko rešimo z AI asistentom"
 author: "Kalmia"
 tags: ["AI", "ERP", "AI asistent", "digitalizacija", "avtomatizacija procesov", "poslovni sistemi"]
 translationKey: "blog-erp-ozka-grla-in-ai-resitve"
@@ -22,9 +24,9 @@ Tu se v praksi pogosto srečamo z dvema scenarijema.
 
 - Če večino poslovanja vodite v Excelovih preglednicah in to v podjetju dobro deluje, je to znak, da ERP za vaše potrebe še ni nujen.
 
-V tem primeru se je smiselno vprašati, kako urediti, da bo Excel delal za vas - in ne, kako ga zamenjati. O tem pišemo tukaj: Kako preoblikovati Excel tabele v zmogljivo aplikacijo?
+V tem primeru se je smiselno vprašati, kako urediti, da bo Excel delal za vas - in ne, kako ga zamenjati. O tem pišemo tukaj: [Kako preoblikovati Excel tabele v zmogljivo aplikacijo?](/blog/excel-v-aplikacijo-brez-visokih-stroskov)
 
-- Če ERP v podjetju že uporabljate, pa se kljub temu srečujete z obhodi, vprašanji in ročnimi razlagami, poglejmo tri zelo pogoste primere iz prakse, kjer lahko interni AI asistent pomaga s prihrankom časa.
+- Če ERP v podjetju že uporabljate, pa se kljub temu srečujete z obhodi, vprašanji in ročnimi razlagami, poglejmo tri zelo pogoste primere iz prakse, kjer lahko interni [AI asistent](/lokalna-ai-infrastruktura) pomaga s prihrankom časa.
 
 Ne glede na to, ali uporabljate uveljavljene ERP rešitve, kot so SAOP, GoSoft, Panteon ali Vasco, se podjetja pri vsakdanjem delu pogosto srečujejo s podobnimi izzivi.
 
@@ -133,5 +135,5 @@ Skupaj s Kalmio lahko poskrbite, da obstoječa tehnologija in sistemi začnejo d
 
 Preberite tudi:
 
-- AI v proizvodnji: 3 praktični primeri, kako prihranite čas in živce, 2. del
-- Chatbot, AI asistent ali AI agent - znate izbrati pravo pomoč za vaše podjetje?
+- [AI v proizvodnji: 3 praktični primeri, kako prihranite čas in živce, 2. del](/blog/ai-v-proizvodnji-del-2)
+- [Chatbot, AI asistent ali AI agent - znate izbrati pravo pomoč za vaše podjetje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)

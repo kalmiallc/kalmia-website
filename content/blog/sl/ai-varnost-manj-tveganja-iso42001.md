@@ -1,7 +1,9 @@
 ---
 title: "AI v podjetjih: večja varnost in manj tveganja z ISO 42001"
 description: "AI v podjetjih izboljšuje odzivnost, pospešuje procese in znižuje stroške."
-date: "TODO"
+date: 2025-09-16
+cover: "/images/blog/ai-varnost-manj-tveganja-iso42001/naslovna.webp"
+coverAlt: "AI v podjetjih: večja varnost in manj tveganja z ISO 42001"
 author: "Kalmia"
 tags: []
 translationKey: "blog-ai-varnost-manj-tveganja-iso42001"
@@ -27,7 +29,7 @@ Med drugim odpira vprašanja, kot so:
 
 Standard je zasnovan za podjetja, ki želijo jasno vedeti, kaj so uvedli, zakaj in kako s tem upravljajo. Tudi če certifikat (še) ni obvezen, so načela ISO 42001 temelj dobre prakse pri uporabi umetne inteligence.
 
-Zelo dobro se dopolnjuje z obstoječimi standardi, kot npr. ISO 27001 (informacijska varnost), ISO 9001 (vodenje kakovosti) ter z zakonodajo, kot je GDPR (zlasti kadar AI obdeluje osebne podatke), in AI Act (akt o umetni inteligenci, o katerem lahko več preberete tukaj).
+Zelo dobro se dopolnjuje z obstoječimi standardi, kot npr. ISO 27001 (informacijska varnost), ISO 9001 (vodenje kakovosti) ter z zakonodajo, kot je GDPR (zlasti kadar AI obdeluje osebne podatke), in AI Act (akt o umetni inteligenci, o katerem lahko več preberete [tukaj](/blog/ai-act-slovenija-pomembno)).
 
 Skupaj tvorijo celovit sistem, ki podjetjem pomaga graditi zaupanje, preglednost in odpornost, tudi v dobi hitrega tehnološkega razvoja.
 
@@ -67,10 +69,10 @@ Pomagamo vam postaviti zdrave temelje in se osredotočiti na:
 
 Skupaj lahko preverimo, kje vam AI lahko še dodatno koristi, tako da ostanemo znotraj meja skladnosti z zakonskimi predlogi, ki trenutno urejajo polje umetne inteligence.
 
-Prijavite se na brezplačni posvet ali se nam oglasite na info@kalmia.si.
+Prijavite se na brezplačni posvet ali se nam oglasite na [info@kalmia.si](mailto:info@kalmia.si).
 
 Preberite tudi:
 
-• Kaj AI Act dejansko pomeni za podjetja v praksi?
+• [Kaj AI Act dejansko pomeni za podjetja v praksi?](/blog/ai-act-slovenija-pomembno)
 
-• Ne zaupajte AI svetovalcem, ki vam ne znajo odgovoriti na teh 5 vprašanj
+• [Ne zaupajte AI svetovalcem, ki vam ne znajo odgovoriti na teh 5 vprašanj](/blog/ai-svetovanje-5-kljucnih-nasvetov)

@@ -1,7 +1,11 @@
 ---
 title: "95% podjetij, ki uvaja umetno inteligenco, ne zazna večjih izboljšav. Kako postanete del 5%?"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "95 % podjetij z AI ne zazna večjih izboljšav"
 description: "Ob omembi umetne inteligence večina ljudi najprej pomisli na ChatGPT ali Microsoft Copilot."
-date: "TODO"
+date: 2025-11-20
+cover: "/images/blog/lokalni-vs-generativni-ai-poslovni-ucinek/naslovna.webp"
+coverAlt: "95% podjetij, ki uvaja umetno inteligenco, ne zazna večjih izboljšav. Kako postanete del 5%?"
 author: "Kalmia"
 tags: ["AI", "AI assistant"]
 translationKey: "blog-lokalni-vs-generativni-ai-poslovni-ucinek"
@@ -27,9 +31,9 @@ Namesto generičnih odgovorov pomaga reševati konkretne naloge:
 - pomaga pri uvajanjem novih kadrov,
 - združuje podatke iz različnih baz itd.
 
-Za podjetja v reguliranih panogah (finančne storitve, zdravstvo, javni sektor), je to pogosto edina skladna in varna pot uporabe umetne inteligence. Skladnost z regulativami postaja namreč pomemben aspekt celotnega poslovanja z AI.
+Za podjetja v reguliranih panogah (finančne storitve, zdravstvo, javni sektor), je to pogosto edina skladna in varna pot uporabe umetne inteligence. [Skladnost z regulativami](/blog/ai-v-proizvodnji-odstranite-ozka-grla) postaja namreč pomemben aspekt celotnega poslovanja z AI.
 
-Kalmiin AI asistent je primer lokalne AI rešitve, ki deluje znotraj okolja podjetja. Z njim so proizvodna podjetja odpravila 3 najbolj pogosta ozka grla - in tako dosegla občuten prihranek časa ter povečala potencial svojih ekip.
+Kalmiin AI asistent je primer lokalne AI rešitve, ki deluje znotraj okolja podjetja. Z njim so proizvodna podjetja odpravila [3 najbolj pogosta ozka grla](/blog/ai-v-proizvodnji-odstranite-ozka-grla) - in tako dosegla občuten prihranek časa ter povečala potencial svojih ekip.
 
 Če poenostavimo:
 
@@ -43,7 +47,7 @@ Lokalni AI pomaga spremeniti način, da podjetje naloge izvaja pametneje, hitrej
 
 Le peščica podjetij (okoli 5%) je uspela umetno inteligenco integrirati tako, da je prinesla dejanske rezultate.
 
-»Več kot 80 % organizacij je že preizkusilo orodja kot so ChatGPT ali Copilot - ta orodja povečujejo predvsem produktivnost posameznikov, ne pa tudi dejanskega poslovnega učinka.« (MIT, State of AI in Business, 2025)
+»Več kot 80 % organizacij je že preizkusilo orodja kot so ChatGPT ali Copilot - ta orodja povečujejo predvsem produktivnost posameznikov, ne pa tudi dejanskega poslovnega učinka.« (MIT, [State of AI in Business, 2025](https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf))
 
 Generativna orodja so torej dobra za posameznike, ki iščejo bližnjice.
 
@@ -55,11 +59,11 @@ Torej, če AI ne spremeni načina dela, ne bo spremenil rezultatov.
 
 Glede na omenjeno raziskavo večina AI projektov odpove, še preden pride do prave uvedbe v okolje podjetja.
 
-»Najpogostejši razlogi za neuspeh so toga delovna okolja in slaba integracija v vsakodnevne procese.« (MIT, State of AI in Business 2025)
+»Najpogostejši razlogi za neuspeh so toga delovna okolja in slaba integracija v vsakodnevne procese.« (MIT, [State of AI in Business 2025](https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf))
 
 AI, ki ne dostopa do vaših internih sistemov in podatkov, se ne more učiti iz realnih primerov in ne razume konteksta - tako bo vedno ostal le na ravni digitalnega ‘wow momenta’.
 
-Interni AI sistemi, kot je AI asistent, pa povezujejo podatke, pospešujejo odzivni čas in pomagajo ekipam sprejemati boljše odločitve.
+Interni AI sistemi, kot je [AI asistent,](/lokalna-ai-infrastruktura) pa povezujejo podatke, pospešujejo odzivni čas in pomagajo ekipam sprejemati boljše odločitve.
 
 ## Pravi učinek se skriva v ozadju
 
@@ -77,9 +81,9 @@ Takrat AI ne nadomešča zaposlenih, temveč jim pomaga delati pametneje.
 
 Podjetja najbolje poznajo svoje procese in način dela - a to še ne pomeni, da znajo sama implementirati učinkovite AI rešitve.
 
-»Strateška partnerstva z zunanjimi strokovnjaki dosežejo dvakrat večjo verjetnost, da se projekt uspešno uvede kot če bi za to skrbela ekipa notranjih sodelavcev brez potrebne ekspertize.« (MIT, State of AI in Business, 2025)
+»Strateška partnerstva z zunanjimi strokovnjaki dosežejo dvakrat večjo verjetnost, da se projekt uspešno uvede kot če bi za to skrbela ekipa notranjih sodelavcev brez potrebne ekspertize.« (MIT, [State of AI in Business, 2025](https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf))
 
-Na Kalmii smo priča zgodbam, kako prav AI asistent, razvit in povezan z obstoječimi sistemi, spremeni pot do uspeha - hitro, merljivo in skladno z zahtevami panoge.
+Na Kalmii smo priča zgodbam, kako prav [AI asistent](/lokalna-ai-infrastruktura), razvit in povezan z obstoječimi sistemi, spremeni pot do uspeha - hitro, merljivo in skladno z zahtevami panoge.
 
 ## Izkoristite brezplačno AI svetovanje
 
@@ -87,6 +91,6 @@ Prava vrednost umetne inteligence se ustvari, ko postane del sistema: ko razume 
 
 AI asistent je najboljši dokaz: deluje znotraj vašega okolja in vsak dan prispeva k boljšim rezultatom.
 
-Če razmišljate, kako umetno inteligenco prevesti iz orodja v dejanski poslovni učinek, se pogovorimo na brezplačnem AI svetovanju.
+Če razmišljate, kako umetno inteligenco prevesti iz orodja v dejanski poslovni učinek, se pogovorimo na [brezplačnem AI svetovanju](/storitve).
 
 Pomagamo vam načrtovati in uvesti AI rešitve, ki ne delajo samo vtisa - ampak razliko.

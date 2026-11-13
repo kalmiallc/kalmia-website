@@ -1,7 +1,11 @@
 ---
 title: "Naj gostje klepetajo, ne klikajo — Murai Chat: AI asistent za hotele in kampe"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Murai Chat: AI asistent za hotele in kampe"
 description: "Iskanje prave sobe na hotelski spletni strani je lahko podobno izpolnjevanju davčnega obrazca: izberi datume, število oseb, preveri cene, možnosti za…"
-date: "TODO"
+date: 2025-07-21
+cover: "/images/blog/pamenti-bot-hoteli/naslovna.webp"
+coverAlt: "Naj gostje klepetajo, ne klikajo — Murai Chat: AI asistent za hotele in kampe"
 author: "Kalmia"
 tags: []
 translationKey: "blog-pamenti-bot-hoteli"
@@ -77,6 +81,6 @@ Podjetja, ki sledijo tem trendom, si bodo pridobila ključno konkurenčno predno
 
 Preberite tudi:
 
-• Spoznajte Murai - pametni chatbot, ki zna več kot le odgovarjati
+• [Spoznajte Murai - pametni chatbot, ki zna več kot le odgovarjati](/blog/spoznajte-murai-pametni-chatbot)
 
 • Zakaj večina chatbotov izgubi uporabnika po treh odgovorih - in kako to popraviti

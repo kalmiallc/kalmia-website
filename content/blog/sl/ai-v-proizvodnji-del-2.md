@@ -1,7 +1,11 @@
 ---
 title: "AI v proizvodnji: 3 praktični primeri, kako prihranite čas in živce, 2. del"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "AI v proizvodnji: 3 praktični primeri, 2. del"
 description: "Industrija se danes ne vrti le okoli strojev, temveč okoli informacij."
-date: "TODO"
+date: 2025-12-10
+cover: "/images/blog/ai-v-proizvodnji-del-2/naslovna.webp"
+coverAlt: "AI v proizvodnji: 3 praktični primeri, kako prihranite čas in živce, 2. del"
 author: "Kalmia"
 tags: ["AI", "AI assistant"]
 translationKey: "blog-ai-v-proizvodnji-del-2"
@@ -86,7 +90,7 @@ Manj administrativnega dela, manj napak in več časa za izboljšave.
 
 Vodje preko poročil pridobijo aktualne podatke, zaposleni pa jasen občutek napredka.
 
-Poglejte še tri praktične primere, kjer podjetja prihranijo več časa, kot bi pričakovali.
+[Poglejte še tri praktične primere, kjer podjetja prihranijo več časa, kot bi pričakovali.](/blog/ai-v-proizvodnji-odstranite-ozka-grla)
 
 ## Ko znanje v podjetju spet zaživi
 
@@ -98,9 +102,9 @@ AI asistent deluje znotraj vašega okolja - varno in na podatkih, ki jih vaše p
 
 Ne potrebuje sprememb sistemov, le prostor, kjer lahko dela to, kar zna najbolje: odgovarjati, razlagati, povezovati informacije v smiselne odgovore in vzorce.
 
-Če želite izvedeti, kje bi AI asistent prihranil največ časa v vašem podjetju, rezervirajte brezplačen AI posvet in skupaj bomo naredili pregled vaših procesov, kjer bi lahko prepoznali “hitre zmage”.
+Če želite izvedeti, kje bi AI asistent prihranil največ časa v vašem podjetju, [rezervirajte brezplačen AI posvet](/storitve) in skupaj bomo naredili pregled vaših procesov, kjer bi lahko prepoznali “hitre zmage”.
 
 Preberite tudi:
 
-- Zakaj chatGPT ne izboljša učinkovitosti v podjetjih - in katero AI orodje to dejansko naredi?
-- 5 vprašanj, s katerimi takoj ugotovite, ali imate pravega svetovalca za AI ali ne?
+- [Zakaj chatGPT ne izboljša učinkovitosti v podjetjih - in katero AI orodje to dejansko naredi?](/blog/lokalni-vs-generativni-ai-poslovni-ucinek)
+- [5 vprašanj, s katerimi takoj ugotovite, ali imate pravega svetovalca za AI ali ne?](/blog/ai-svetovanje-5-kljucnih-nasvetov)

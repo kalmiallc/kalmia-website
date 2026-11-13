@@ -1,7 +1,11 @@
 ---
 title: "AI agent za potne naloge: konec ročnega pisanja in pozabljenih kilometrin"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "AI agent za potne naloge: konec ročnega pisanja"
 description: "Avtomatizirajte pripravo potnih nalogov: naj AI agent računa kilometrino, medtem ko se vaša ekipa pripravlja na naslednji velik sestanek."
-date: "TODO"
+date: 2026-04-01
+cover: "/images/blog/ai-agent-potni-nalogi/naslovna.webp"
+coverAlt: "AI agent za potne naloge: konec ročnega pisanja in pozabljenih kilometrin"
 author: "Kalmia"
 tags: ["AI", "AI agenti", "avtomatizacija", "potni nalogi", "administracija", "optimizacija procesov", "digitalizacija"]
 translationKey: "blog-ai-agent-potni-nalogi"
@@ -56,7 +60,7 @@ Namesto zamudnega pisanja uporabnik odpre seznam pripravljenih potnih nalogov, j
 
 ## Zakaj tega ne zmore običajen AI asistent?
 
-AI asistent čaka na vaš ukaz, nato vam pomaga izpolniti potni nalog. AI agent pa se dokumentacije loti še preden sami pomislite nanjo, saj:
+[AI asistent](/lokalna-ai-infrastruktura) čaka na vaš ukaz, nato vam pomaga izpolniti potni nalog. AI agent pa se dokumentacije loti še preden sami pomislite nanjo, saj:
 
 - spremlja koledar,
 - zazna službeno pot,
@@ -117,5 +121,5 @@ Prvi korak ni implementacija, ampak analiza. Na brezplačnem posvetu lahko skupa
 
 Preberite tudi:
 
-- Koliko poslov si še lahko privoščite spregledati: AI agent za analizo javnih razpisov
-- Hitrejši odgovori in manj negotovosti za kupce: AI agent za preverjanje pošiljk
+- [Koliko poslov si še lahko privoščite spregledati: AI agent za analizo javnih razpisov](/blog/ai-agent-za-javne-razpise)
+- [Hitrejši odgovori in manj negotovosti za kupce: AI agent za preverjanje pošiljk](/blog/ai-agent-za-preverjanje-posiljk)

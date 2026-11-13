@@ -1,7 +1,11 @@
 ---
 title: "Iz Excel tabel do zmogljive aplikacije: Digitalizacija brez bolečin in visokih stroškov"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Iz Excel tabel do zmogljive aplikacije"
 description: "Večina podjetij svojo digitalno pot začne z orodjem, ki ga vsi poznamo in obvladamo: Excelom."
-date: "TODO"
+date: 2026-01-18
+cover: "/images/blog/excel-v-aplikacijo-brez-visokih-stroskov/naslovna.webp"
+coverAlt: "Iz Excel tabel do zmogljive aplikacije: Digitalizacija brez bolečin in visokih stroškov"
 author: "Kalmia"
 tags: ["digitalizacija", "Excel", "mini ERP", "MES", "optimizacija dela"]
 translationKey: "blog-excel-v-aplikacijo-brez-visokih-stroskov"
@@ -14,7 +18,7 @@ Ste se že zalotili pri čakanju, da se kompleksna tabela sploh odpre? Se sooča
 
 V takšnih trenutkih se podjetniki pogosto ustrašijo: »Ali moram zdaj investirati deset tisoče evrov v okoren ERP sistem?«Odgovor je: Ne. Obstaja pot, ki digitalizira vaše poslovanje brez bolečin in omogoči znaten prihranek časa.
 
-Vas zanima odpravljanje ozkih grl s pomočjo umetne inteligence - preberite Umetna inteligenca v proizvodnji: 3 načini za največji prihranek časa
+Vas zanima odpravljanje ozkih grl s pomočjo umetne inteligence - preberite [Umetna inteligenca v proizvodnji: 3 načini za največji prihranek časa](/blog/ai-v-proizvodnji-odstranite-ozka-grla)
 
 ## Kaj je rešitev Sheets2App?
 
@@ -58,11 +62,11 @@ Digitalna preobrazba ne pomeni vedno revolucije in ogromnih investicij. Pomeni l
 
 Ste pripravljeni svoje Excel tabele spremeniti v motor vašega podjetja?
 
-Ne dovolite, da vas zastarela orodja držijo nazaj. Obiščite spletno stran Kalmia Sheets2App in se prijavite na brezplačen posvet. Pregledali bomo vaše trenutne tabele in vam pokazali, kako jih lahko v nekaj tednih spremenimo v vašo najljubšo poslovno aplikacijo.
+Ne dovolite, da vas zastarela orodja držijo nazaj. Obiščite spletno stran [Kalmia Sheets2App](/storitve) in se prijavite na brezplačen posvet. Pregledali bomo vaše trenutne tabele in vam pokazali, kako jih lahko v nekaj tednih spremenimo v vašo najljubšo poslovno aplikacijo.
 
 Naj vaša tehnologija končno dohiteva vašo vizijo.
 
 Preberite tudi:
 
-- 95% podjetij, ki uvaja umetno inteligenco, ne zazna večjih izboljšav. Kako postane del 5%?
-- Chatbot, AI asistent ali AI agnet - znate izbrati pravo pomoč za vaše podjetje?
+- [95% podjetij, ki uvaja umetno inteligenco, ne zazna večjih izboljšav. Kako postane del 5%?](/blog/lokalni-vs-generativni-ai-poslovni-ucinek)
+- [Chatbot, AI asistent ali AI agnet - znate izbrati pravo pomoč za vaše podjetje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)

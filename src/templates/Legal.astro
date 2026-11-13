@@ -4,7 +4,7 @@ import Section from '@components/Section.astro';
 import Prose from '@components/Prose.astro';
 import type { LegalEntry } from '@lib/routes';
 import type { Locale } from '@lib/i18n';
-import { render } from 'astro:content';
+import { enhanceHtml } from '@lib/html';
 
 interface Props {
   locale: Locale;
@@ -13,7 +13,7 @@ interface Props {
 
 const { locale, entry } = Astro.props;
 const d = entry.data;
-const { Content } = await render(entry);
+const html = enhanceHtml(entry.rendered?.html ?? '', `content/legal/${entry.id}.md`);
 ---
 
 <BaseLayout locale={locale} title={`${d.title} | Kalmia`} description={d.description} breadcrumbs={[{ label: d.h1 }]}>
@@ -21,7 +21,7 @@ const { Content } = await render(entry);
     <h1 class="hero-h1">{d.h1}</h1>
   </div>
   <Section borderTop>
-    <Prose lang={d.lang && d.lang !== locale ? d.lang : undefined}><Content /></Prose>
+    <Prose lang={d.lang && d.lang !== locale ? d.lang : undefined}><Fragment set:html={html} /></Prose>
   </Section>
 </BaseLayout>
 

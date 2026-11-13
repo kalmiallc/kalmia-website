@@ -1,7 +1,11 @@
 ---
 title: "Pol leta brezplačne uporabe AI modelov? Najcenejši način, da preverite, ali vam AI res prinaša koristi."
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Pol leta brezplačne uporabe AI modelov"
 description: "Kalmiina aktualna ponudba odstrani največje začetno tveganje, ki podjetja običajno ustavi: stroški uporabe AI modelov, ki lahko hitro narastejo tudi na…"
-date: "TODO"
+date: 2025-12-04
+cover: "/images/blog/6-mesecev-brezplacne-uporabe-ai-modelov/naslovna.webp"
+coverAlt: "Pol leta brezplačne uporabe AI modelov? Najcenejši način, da preverite, ali vam AI res prinaša koristi."
 author: "Kalmia"
 tags: ["AI · AI assistant · AI Agent · AI priprava podatkov · AI poročanje"]
 translationKey: "blog-6-mesecev-brezplacne-uporabe-ai-modelov"
@@ -14,7 +18,7 @@ Kalmia je eden izmed vodilnih AI inovatorjev v regiji, kar je prepoznal tudi Goo
 
 Rezultat? Stroške prvih petih ali šestih mesecev uporabe AI modelov pokrijemo mi.
 
-Če si želite učinkovitejšega poslovanja z AI asistentom ali integracijo AI Agentov v vaše podjetje in doseči resničen prihranek časa, je sedaj najboljši čas za začetek.
+Če si želite učinkovitejšega poslovanja z [AI asistentom](/lokalna-ai-infrastruktura) ali integracijo AI Agentov v vaše podjetje in doseči resničen prihranek časa, je sedaj najboljši čas za začetek.
 
 Predvsem pa - najcenejši.
 
@@ -85,6 +89,6 @@ Ponudba bo najbolj koristila podjetjem, ki:
 
 Prijavite se na brezplačno AI svetovanje - skupaj bomo preverili vaš primer in rezervirali vaše mesto v kvoti Google kreditov.
 
-• Katero AI rešitev izbrati za vaše poslovanje?
+• [Katero AI rešitev izbrati za vaše poslovanje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)
 
-• Zakaj vaše podjetje potrebuje AI asistenta?
+• [Zakaj vaše podjetje potrebuje AI asistenta?](/blog/ai-asistent-vec-kot-ms-copilot)

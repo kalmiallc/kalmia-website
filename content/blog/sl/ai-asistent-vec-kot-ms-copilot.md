@@ -1,7 +1,11 @@
 ---
 title: "Zakaj ponuja AI asistent več kot copilot - in prava izbira za podjetja, ki mislijo resno?"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Zakaj AI asistent ponuja več kot Copilot"
 description: "Beseda copilot je v zadnjem času postala sinonim za uporabo AI v podjetjih."
-date: "TODO"
+date: 2025-09-29
+cover: "/images/blog/ai-asistent-vec-kot-ms-copilot/naslovna.webp"
+coverAlt: "Zakaj ponuja AI asistent več kot copilot - in prava izbira za podjetja, ki mislijo resno?"
 author: "Kalmia"
 tags: []
 translationKey: "blog-ai-asistent-vec-kot-ms-copilot"
@@ -50,10 +54,10 @@ Pri uvajanju umetne inteligence v podjetje ne gre le za to, kaj zna AI narediti 
 
 Vas zanima, kako bi interni AI pomočnik deloval na vaših dokumentih? Prijavite se na brezplačen posvet, mi pa vam pokažemo razliko med generičnim copilotom in Kalmiinim AI asistentom, ki dela za vas v vseh fazah in okoljih poslovanja.
 
-Prijavite se na brezplačni posvet ali se nam oglasite na info@kalmia.si.
+Prijavite se na brezplačni posvet ali se nam oglasite na [info@kalmia.si](mailto:info@kalmia.si).
 
 Preberite tudi:
 
-• Chatbot, AI asistent ali AI agent - znate izbrati pravo rešitev za vaše poslovanje?
+• [Chatbot, AI asistent ali AI agent - znate izbrati pravo rešitev za vaše poslovanje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)
 
-• AI v proizvodnji - 3 načini za največji prihranek časa
+• [AI v proizvodnji - 3 načini za največji prihranek časa](/blog/ai-v-proizvodnji-odstranite-ozka-grla)

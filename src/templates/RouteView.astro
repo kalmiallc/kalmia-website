@@ -11,6 +11,8 @@ import ProjectsList from './ProjectsList.astro';
 import CaseDetail from './CaseDetail.astro';
 import ProjectDetail from './ProjectDetail.astro';
 import Legal from './Legal.astro';
+import BlogList from './BlogList.astro';
+import BlogPost from './BlogPost.astro';
 import type { RouteProps } from '@lib/routes';
 
 type Props = RouteProps;
@@ -25,6 +27,7 @@ const PAGE_TEMPLATES = {
   proizvodnja: Manufacturing,
   reference: References,
   projekti: ProjectsList,
+  blog: BlogList,
 } as const;
 
 const Template = route.kind === 'page' ? PAGE_TEMPLATES[route.entry.data.template] : null;
@@ -34,3 +37,4 @@ const Template = route.kind === 'page' ? PAGE_TEMPLATES[route.entry.data.templat
 {route.kind === 'case' && <CaseDetail locale={route.locale} entry={route.entry} listPage={route.listPage} />}
 {route.kind === 'project' && <ProjectDetail locale={route.locale} entry={route.entry} listPage={route.listPage} />}
 {route.kind === 'legal' && <Legal locale={route.locale} entry={route.entry} />}
+{route.kind === 'post' && <BlogPost locale={route.locale} entry={route.entry} listPage={route.listPage} />}

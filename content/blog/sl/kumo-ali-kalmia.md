@@ -1,7 +1,11 @@
 ---
 title: "Zakaj je rešitev Kalmia lahko dolgoročno varnejša in donosnejša od SaaS platform"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Rešitev Kalmia ali SaaS platforma, kot je Kumo.ai"
 description: "Najeti Kumo.ai (Nvidia) ali zgraditi lastno AI rešitev? Spoznajte finančne prednosti, varnost lokalnih podatkov in ROI namenske rešitve Kalmia"
-date: "TODO"
+date: 2026-06-09
+cover: "/images/blog/kumo-ali-kalmia/naslovna.webp"
+coverAlt: "Zakaj je rešitev Kalmia lahko dolgoročno varnejša in donosnejša od SaaS platform"
 author: "Kalmia"
 tags: ["avtomatizacija zalog", "napovedovanje prodaje", "umetna inteligenca v logistiki", "Kalmia", "digitalna transformacija", "B2B AI rešitve", "stroški implementacije AI", "Build vs Buy AI"]
 translationKey: "blog-kumo-ali-kalmia"
@@ -89,5 +93,5 @@ V podjetju Kalmia vam pomagamo krmariti skozi celoten cikel implementacije – o
 
 Preberite tudi:
 
-- Logistika na avtopilotu: Kako AI agent rešuje kaos v skladiščih
-- Kako AI agenti že danes spreminjajo poslovanje: od prodaje do financ
+- [Logistika na avtopilotu: Kako AI agent rešuje kaos v skladiščih](/blog/ai-agent-optimizacija-logistike)
+- [Kako AI agenti že danes spreminjajo poslovanje: od prodaje do financ](/blog/ai-agenti-v-podjetjih)

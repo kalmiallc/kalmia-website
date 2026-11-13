@@ -1,7 +1,11 @@
 ---
 title: "Pomotoma smo razvili MES – le zato, da bi ugotovili, katere podatke potrebujemo."
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Pomotoma smo razvili MES"
 description: "K nam je pristopila stranka s specifičnim ciljem: optimizirati učinkovitost njihovih CNC strojev."
-date: "TODO"
+date: 2025-05-26
+cover: "/images/blog/oro-pomotoma-smo-razvili-mes/naslovna.webp"
+coverAlt: "Pomotoma smo razvili MES – le zato, da bi ugotovili, katere podatke potrebujemo."
 author: "Kalmia"
 tags: ["Proizvodnja · Industrijska oprema"]
 translationKey: "blog-oro-pomotoma-smo-razvili-mes"
@@ -48,6 +52,6 @@ Borut Terpinc
 
 Preberite tudi:
 
-• Kako je ORO s podatki in AI asistentom spremenil proizvodne procese
+• [Kako je ORO s podatki in AI asistentom spremenil proizvodne procese](/reference/oro-orodjarna)
 
-• AI v proizvodnji - 3 načini, kako podjetja dosegajo merljiv prihranek časa
+• [AI v proizvodnji - 3 načini, kako podjetja dosegajo merljiv prihranek časa](/blog/ai-v-proizvodnji-odstranite-ozka-grla)

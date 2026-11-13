@@ -1,7 +1,11 @@
 ---
 title: "Kako prihraniti čas z avtomatizacijo odgovorov na pogosta vprašanja strank?"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Avtomatizacija odgovorov na pogosta vprašanja strank"
 description: "Kako z AI klepetalnim botom samodejno odgovarjati na pogosta vprašanja strank in prodajni ter podporni ekipi prihraniti čas."
-date: "TODO"
+date: 2025-06-26
+cover: "/images/blog/prihranek-casa-murai/naslovna.webp"
+coverAlt: "Kako prihraniti čas z avtomatizacijo odgovorov na pogosta vprašanja strank?"
 author: "Borut Terpinc"
 tags: []
 translationKey: "blog-prihranek-casa-murai"
@@ -56,4 +60,4 @@ Preberite tudi:
 
 • Zakaj večina chatbotov izgubi uporabnika po treh odgovorih in kako to popraviti?
 
-• Murai chatbot: kako do hotelskih rezervacij preko pogovora - in ne obrazca?
+• [Murai chatbot: kako do hotelskih rezervacij preko pogovora - in ne obrazca?](/blog/pamenti-bot-hoteli)

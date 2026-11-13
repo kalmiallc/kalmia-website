@@ -1,5 +1,5 @@
 {
-  "comment": "Preusmeritve s stare strani (SPEC, razdelek 8), preverjene s sitemapom stare strani (kalmia.si/__sitemap__/sl.xml in en.xml). Ob buildu se prenesejo v vercel.json (faza 6). Stare poti blog zapisov se dodajo samodejno iz polja legacyUrl v content/blog. Angleški stari URL-ji vodijo s 302 na slovensko ustreznico, dokler EN strani ne obstajajo. Stari angleški blog zapisi brez slovenske različice vodijo s 302 na /blog (faza 4).",
+  "comment": "Preusmeritve s stare strani (SPEC, razdelek 8), preverjene s sitemapom stare strani (kalmia.si/__sitemap__/sl.xml in en.xml). Ob buildu se prenesejo v vercel.json (faza 6). Stare poti blog zapisov se dodajo samodejno iz polja legacyUrl v content/blog. Angleški stari URL-ji vodijo s 302 na slovensko ustreznico, dokler EN strani ne obstajajo. Stari angleški blog zapisi vodijo s 302 na slovensko različico (povezano po naslovni sliki, datumu in vsebini), trije zapisi brez slovenske različice pa na /blog.",
   "redirects": [
     {
       "from": "/sl",
@@ -185,6 +185,151 @@
       "from": "/terms",
       "to": "/pogoji-uporabe",
       "status": 302
+    },
+    {
+      "from": "/blog/AI-act-slovenija-important",
+      "to": "/blog/ai-act-slovenija-pomembno",
+      "status": 302
+    },
+    {
+      "from": "/blog/AI-in-manufacturing-vol-2",
+      "to": "/blog/ai-v-proizvodnji-del-2",
+      "status": 302
+    },
+    {
+      "from": "/blog/OpenClaw-ai-agent-security",
+      "to": "/blog/openclaw-ai-agent-varnost",
+      "status": 302
+    },
+    {
+      "from": "/blog/ai-agent-shipment-delay-checks",
+      "to": "/blog/ai-agent-za-preverjanje-posiljk",
+      "status": 302
+    },
+    {
+      "from": "/blog/ai-agent-travel-orders",
+      "to": "/blog/ai-agent-potni-nalogi",
+      "status": 302
+    },
+    {
+      "from": "/blog/ai-asistent-more-than-ms-copilot",
+      "to": "/blog/ai-asistent-vec-kot-ms-copilot",
+      "status": 302
+    },
+    {
+      "from": "/blog/ai-consulting-5-key-points",
+      "to": "/blog/ai-svetovanje-5-kljucnih-nasvetov",
+      "status": 302
+    },
+    {
+      "from": "/blog/ai-fast-wins-with-ai-automatization",
+      "to": "/blog/ai-od-hitrih-zmag-do-avtomatizirane-produkcije",
+      "status": 302
+    },
+    {
+      "from": "/blog/ai-in-manufacturing-saves-time",
+      "to": "/blog/ai-v-proizvodnji-odstranite-ozka-grla",
+      "status": 302
+    },
+    {
+      "from": "/blog/ai-logistics-agent-inventory-optimization",
+      "to": "/blog/ai-agent-optimizacija-logistike",
+      "status": 302
+    },
+    {
+      "from": "/blog/ai-security-less-risk-iso42001",
+      "to": "/blog/ai-varnost-manj-tveganja-iso42001",
+      "status": 302
+    },
+    {
+      "from": "/blog/become-part-of-the-5-percent-ai-success",
+      "to": "/blog/lokalni-vs-generativni-ai-poslovni-ucinek",
+      "status": 302
+    },
+    {
+      "from": "/blog/chatbot-vs-ai-assistant-vs-ai-agent-how-to-choose",
+      "to": "/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje",
+      "status": 302
+    },
+    {
+      "from": "/blog/digital-transformation-manufacturing-kalmia-mes-oee-roi",
+      "to": "/blog/digitalna-preobrazba-proizvodnje-mes-oee-roi",
+      "status": 302
+    },
+    {
+      "from": "/blog/digitalization-sme-integrations",
+      "to": "/blog/digitalizacija-msp-povezovanje",
+      "status": 302
+    },
+    {
+      "from": "/blog/erp-bottlenecks-and-ai-solutions",
+      "to": "/blog/erp-ozka-grla-in-ai-resitve",
+      "status": 302
+    },
+    {
+      "from": "/blog/excel-to-app-without-high-costs",
+      "to": "/blog/excel-v-aplikacijo-brez-visokih-stroskov",
+      "status": 302
+    },
+    {
+      "from": "/blog/how-ai-agents-are-transforming-business",
+      "to": "/blog/ai-agenti-v-podjetjih",
+      "status": 302
+    },
+    {
+      "from": "/blog/kumo-or-kalmia",
+      "to": "/blog/kumo-ali-kalmia",
+      "status": 302
+    },
+    {
+      "from": "/blog/meet-murai-smart-chatbot",
+      "to": "/blog/spoznajte-murai-pametni-chatbot",
+      "status": 302
+    },
+    {
+      "from": "/blog/oro-we-built-an-mes-by-mistake",
+      "to": "/blog/oro-pomotoma-smo-razvili-mes",
+      "status": 302
+    },
+    {
+      "from": "/blog/practical-comparison-of-amd-ai-max-and-nvidia-rtx-spark",
+      "to": "/blog",
+      "status": 302
+    },
+    {
+      "from": "/blog/prepare-a-chatbot-that-actually-works",
+      "to": "/blog",
+      "status": 302
+    },
+    {
+      "from": "/blog/running-llms-on-amd-framework-vulkan-rocm",
+      "to": "/blog",
+      "status": 302
+    },
+    {
+      "from": "/blog/save-time-murai",
+      "to": "/blog/prihranek-casa-murai",
+      "status": 302
+    },
+    {
+      "from": "/blog/six-months-free-ai-model-usage-benefit-check",
+      "to": "/blog/6-mesecev-brezplacne-uporabe-ai-modelov",
+      "status": 302
+    },
+    {
+      "from": "/blog/smart-chat-bot-hotels",
+      "to": "/blog/pamenti-bot-hoteli",
+      "status": 302
+    },
+    {
+      "from": "/sl/blog/AI-v-proizvodnji-del-2",
+      "to": "/blog/ai-v-proizvodnji-del-2",
+      "status": 301
+    },
+    {
+      "from": "/sl/blog/AI-act-slovenija-pomembno",
+      "to": "/blog/ai-act-slovenija-pomembno",
+      "status": 301
     }
   ]
 }

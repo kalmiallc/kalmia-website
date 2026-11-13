@@ -1,7 +1,11 @@
 ---
 title: "AI svetovanje za podjetja: 5 ključnih točk, ki jih dober svetovalec ne spregleda"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "AI svetovanje za podjetja: 5 ključnih točk"
 description: "Umetna inteligenca ni več rezervirana za prihodnost in tehnološke velikane, danes jo uvajajo že povsem običajna podjetja iz najrazličnejših panog."
-date: "TODO"
+date: 2025-09-08
+cover: "/images/blog/ai-svetovanje-5-kljucnih-nasvetov/naslovna.webp"
+coverAlt: "AI svetovanje za podjetja: 5 ključnih točk, ki jih dober svetovalec ne spregleda"
 author: "Kalmia"
 tags: []
 translationKey: "blog-ai-svetovanje-5-kljucnih-nasvetov"
@@ -68,10 +72,10 @@ Za nekatera podjetja je uvodni posvet dovolj, da naredijo prvi premik. Druga se 
 
 Vsem pa posvet pomaga ločiti bleščeče obljube od tistih rešitev, ki dejansko prinesejo vrednost.
 
-Prijavite se na brezplačni posvet ali se nam oglasite na info@kalmia.si.
+Prijavite se na brezplačni [posvet](/storitve) ali se nam oglasite na [info@kalmia.si](mailto:info@kalmia.si).
 
 Preberite tudi:
 
-• Kako je ORO z dobro začetno AI analizo pospešil proizvodnjo in znižal napake
+• [Kako je ORO z dobro začetno AI analizo pospešil proizvodnjo in znižal napake](/reference/oro-orodjarna)
 
-• Generativni ali lokalni AI? Če želite merljiv učinek, preberite vse o tem.
+• [Generativni ali lokalni AI? Če želite merljiv učinek, preberite vse o tem.](/blog/lokalni-vs-generativni-ai-poslovni-ucinek)

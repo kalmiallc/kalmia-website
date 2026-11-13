@@ -1,0 +1,123 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import Prose from '@components/Prose.astro';
+import NextRow from '@components/NextRow.astro';
+import CtaSection from '@components/CtaSection.astro';
+import { pathForSlug, type PageEntry } from '@lib/content';
+import type { BlogEntry } from '@lib/routes';
+import { formatDate, isoDay } from '@lib/format';
+import { ui, type Locale } from '@lib/i18n';
+import { publicImageSize } from '../plugins/image-size.mjs';
+import { enhanceHtml } from '@lib/html';
+
+interface Props {
+  locale: Locale;
+  entry: BlogEntry;
+  listPage: PageEntry;
+}
+
+const { locale, entry, listPage } = Astro.props;
+const p = entry.data;
+const list = listPage.data;
+if (list.template !== 'blog') throw new Error('Napačna predloga.');
+const t = ui(locale);
+const listHref = pathForSlug(locale, list.slug);
+const listLabel = list.breadcrumb ?? list.hero.h1;
+const base = p.seoTitle ?? p.title;
+const title = [...`${base} | Kalmia`].length <= 60 ? `${base} | Kalmia` : base;
+const cover = p.cover ? publicImageSize(p.cover) : null;
+if (p.cover && !cover) throw new Error(`content/blog/${entry.id}.md: naslovnica ${p.cover} ne obstaja v /public.`);
+const html = enhanceHtml(entry.rendered?.html ?? '', `content/blog/${entry.id}.md`);
+---
+
+<BaseLayout locale={locale} title={title} description={p.description} breadcrumbs={[{ label: listLabel, href: listHref }]}>
+  <article>
+    <header class="container hero">
+      <p class="meta">
+        <time datetime={isoDay(p.date)}>{formatDate(p.date, locale)}</time>
+        {
+          p.updated && (
+            <>
+              <span aria-hidden="true"> · </span>
+              {t.dates.updated} <time datetime={isoDay(p.updated)}>{formatDate(p.updated, locale)}</time>
+            </>
+          )
+        }
+        <span aria-hidden="true"> · </span>
+        <span>{p.author}</span>
+      </p>
+      <h1 class="hero-h1">{p.title}</h1>
+      {
+        p.cover && cover && (
+          <img src={p.cover} alt={p.coverAlt ?? ''} width={cover.width} height={cover.height} class="cover" fetchpriority="high" />
+        )
+      }
+    </header>
+    <Section borderTop>
+      <Prose><Fragment set:html={html} /></Prose>
+      {
+        p.tags.length > 0 && (
+          <ul class="tags">
+            {p.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        )
+      }
+    </Section>
+  </article>
+
+  <NextRow label={t.back} title={listLabel} href={listHref} />
+
+  <CtaSection locale={locale} title={list.cta.title} text={list.cta.text} eyebrow={list.cta.eyebrow} buttonLabel={list.cta.button} layout={list.cta.layout} />
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-top: var(--section-y);
+    padding-bottom: clamp(40px, 5vw, 64px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .meta {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--support);
+  }
+  .hero-h1 {
+    max-width: 960px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(32px, 4.2vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .cover {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    border-radius: var(--radius-md);
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 760px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .tags li {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 10px;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--line-tag);
+    font-size: 13px;
+  }
+</style>
