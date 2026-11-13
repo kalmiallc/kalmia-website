@@ -41,6 +41,12 @@ const { lang } = Astro.props;
   .prose :global(li + li) {
     margin-top: 0.35em;
   }
+  .prose :global(img) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+  }
   .prose :global(a) {
     color: var(--royal);
     text-decoration: underline;

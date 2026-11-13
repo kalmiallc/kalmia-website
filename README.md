@@ -7,7 +7,9 @@ Statična spletna stran Kalmia d.o.o. (Astro, TypeScript, Vercel). Pravila dela 
 - `npm install`: namestitev (Node 22.23.4 ali novejši)
 - `npm run dev`: razvojni strežnik na http://localhost:4321
 - `npm run build`: statična gradnja v `dist/`
-- `npm run check`: Astro check in preverjanje zgrajenih strani (`scripts/check-dist.mjs`); zaženi po `npm run build`
+- `npm run check`: Astro check, preverjanje zgrajenih strani (`scripts/check-dist.mjs`), test preusmeritev in usklajenost `vercel.json`; zaženi po `npm run build`
+- `npm run test:redirects -- --base https://kalmia.si`: test preusmeritev s stare strani na živi postavitvi
+- `npm run test:en`: preveri, da ena datoteka v `content/pages/en/` brez sprememb kode ustvari angleško stran s hreflang
 
 ## Struktura
 
