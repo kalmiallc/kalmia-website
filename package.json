@@ -10,7 +10,8 @@
     "check": "astro check && node scripts/check-dist.mjs && node scripts/test-redirects.mjs && node scripts/build-redirects.mjs --check",
     "astro": "astro",
     "prebuild": "node scripts/build-redirects.mjs",
-    "test:redirects": "node scripts/test-redirects.mjs"
+    "test:redirects": "node scripts/test-redirects.mjs",
+    "test:en": "node scripts/test-en.mjs"
   },
   "dependencies": {
     "astro": "^7.4.11"

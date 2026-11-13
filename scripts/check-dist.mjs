@@ -178,7 +178,26 @@ for (const file of htmlFiles) {
       const ld = JSON.parse(b[1]);
       const nodes = ld['@graph'] ?? [ld];
       if (!nodes.some((n) => n['@type'] === 'Organization')) err('JSON-LD nima Organization');
-      for (const n of nodes) if (!n['@type']) err('JSON-LD vozlišče brez @type');
+      // Obvezna polja po Googlovih pravilih za obogatene rezultate
+      const REQUIRED = {
+        Organization: ['name', 'url', 'logo'],
+        WebSite: ['name', 'url'],
+        ProfessionalService: ['name', 'address', 'url'],
+        BreadcrumbList: ['itemListElement'],
+        Service: ['name', 'provider'],
+        FAQPage: ['mainEntity'],
+        Article: ['headline', 'image', 'author', 'publisher'],
+        BlogPosting: ['headline', 'image', 'author', 'publisher', 'datePublished'],
+      };
+      const ids = new Set(nodes.map((n) => n['@id']).filter(Boolean));
+      for (const n of nodes) {
+        if (!n['@type']) err('JSON-LD vozlišče brez @type');
+        for (const k of REQUIRED[n['@type']] ?? []) if (n[k] == null || n[k] === '' || (Array.isArray(n[k]) && !n[k].length)) err(`JSON-LD ${n['@type']} brez ${k}`);
+        for (const [k, v] of Object.entries(n))
+          if (v && typeof v === 'object' && Object.keys(v).length === 1 && v['@id'] && !ids.has(v['@id'])) err(`JSON-LD ${n['@type']}.${k} kaže na neobstoječ @id`);
+        if (n['@type'] === 'FAQPage')
+          for (const q of n.mainEntity ?? []) if (!q.name || !q.acceptedAnswer?.text) err('JSON-LD FAQPage: vprašanje brez odgovora');
+      }
     } catch (e) {
       err(`neveljaven JSON-LD: ${e.message}`);
     }
