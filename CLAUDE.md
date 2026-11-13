@@ -11,7 +11,7 @@ Trajna pravila za delo na spletni strani kalmia.si. Velja za vsako sejo, tudi ko
 
 ## Tehnologija
 
-- Astro (statično generiranje), TypeScript, gostovanje na Vercelu, repozitorij na GitHubu.
+- Astro (statično generiranje), TypeScript, gostovanje na AWS (S3 in CloudFront prek SST, enako kot si-explorer), repozitorij na GitHubu. Deploy je opisan v `docs/deploy.md`.
 - Brez CMS, brez admin vmesnika, brez baze. Vsa vsebina je v mapi `/content` kot Markdown in JSON.
 - JavaScript na strani le, kjer je nujen (npr. odpiranje vprašanj FAQ). Vsa vsebina mora biti vidna brez JavaScripta.
 
@@ -48,7 +48,7 @@ Ko je naloga vsebinska (nov blog zapis, popravek besedila, nova referenca, sprem
 1. Spreminjaj SAMO datoteke v `/content` in slike v `/public/images`. Kode ne spreminjaj.
 2. Če vsebinska sprememba zahteva spremembo kode, se ustavi in vprašaj.
 3. Ustvari novo vejo in odpri pull request z jasnim opisom, kaj je spremenjeno. Nikoli ne potiskaj neposredno na `main`.
-4. Preveri, da `npm run build` uspe, in v opisu PR navedi povezavo na predogled na Vercelu.
+4. Preveri, da `npm run build` uspe. Po združitvi v `main` workflow Deploy stran objavi na okolje `dev`; povezava je v povzetku zagona. Produkcijo objavimo ročno (workflow Deploy, okolje `production`).
 
 ## Blog zapis
 

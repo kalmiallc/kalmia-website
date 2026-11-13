@@ -13,12 +13,12 @@ Nova kalmia.si, zgrajena natančno po prototipu, ki:
 ## 2. Tehnologija
 
 - **Astro** s statičnim generiranjem (output `static`), TypeScript, Astro Content Collections z Zod shemami za vso vsebino.
-- **Vercel** za gostovanje; vsak pull request dobi predogled. Predogledi in testne domene imajo `noindex` (glava `X-Robots-Tag: noindex` povsod razen na produkcijski domeni).
+- **AWS** (eu-central-1) za gostovanje: S3 in CloudFront prek SST, deploy z GitHub Actions, okolja `dev`, `staging`, `production` (enako kot si-explorer, podrobnosti v `docs/deploy.md`). Okolja razen produkcije imajo `noindex` (glava `X-Robots-Tag: noindex` povsod razen v okolju `production`).
 - **GitHub** repozitorij, delo prek vej in pull requestov.
 - Brez CMS, brez baze, brez admin vmesnika, brez obrazcev.
 - Pisave Urbanist in Space Grotesk gostovane lokalno (`@fontsource` ali datoteke v `/public/fonts`), `font-display: swap`, prednaložena le pisava za H1.
 - Slike prek `astro:assets` (AVIF/WebP, pravilne dimenzije, `loading="lazy"` razen nad pregibom).
-- Analitika brez piškotkov: Vercel Web Analytics ali Plausible (EU). Zato ni pasice za piškotke. Na strani Zasebnost to navedi.
+- Analitika brez piškotkov: Plausible (EU). Zato ni pasice za piškotke. Na strani Zasebnost to navedi.
 
 ## 3. Dvojezičnost (SL zdaj, EN kasneje)
 
@@ -193,7 +193,7 @@ Polja, ki imajo vrednost `[X]` ali `[merilo]`, se na strani ne prikažejo (kompo
 
 ## 8. Preusmeritve s stare strani (301)
 
-Stara stran: slovenščina na `/sl/…`, angleščina na korenu brez `/sl`. Preusmeritve so v `content/redirects.json` in se ob buildu prenesejo v `vercel.json`.
+Stara stran: slovenščina na `/sl/…`, angleščina na korenu brez `/sl`. Preusmeritve so v `content/redirects.json` in se ob deployu prenesejo v CloudFront funkcijo (`infra/edge.ts`, oblika datoteke v `docs/deploy.md`).
 
 | Stari URL | Novi URL |
 |---|---|
@@ -230,7 +230,7 @@ Pred zagonom:
 
 - Brez obrazcev in brez piškotkov za sledenje, zato brez pasice. Če kasneje dodamo orodje s piškotki, potrebujemo pasico s soglasjem.
 - Dostopnost WCAG 2.1 AA: kontrast, fokus, uporaba s tipkovnico (kazalo, FAQ), `prefers-reduced-motion`, povezave za preskok na vsebino.
-- Varnostne glave v `vercel.json`: HSTS, CSP (samo lastni viri in analitika), `X-Content-Type-Options`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy`.
+- Varnostne glave v `infra/edge.ts` (CloudFront funkcija ob odgovoru): HSTS, CSP (samo lastni viri in analitika), `X-Content-Type-Options`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy`.
 - Vse zunanje povezave `rel="noopener"`.
 
 ## 10. Merila sprejema
@@ -247,7 +247,7 @@ Za vsako stran:
 Za celoto:
 - `sitemap.xml`, `robots.txt`, `llms.txt`, `llms-full.txt` obstajajo in so pravilni,
 - vse preusmeritve iz razdelka 8 delujejo (test),
-- predogledne domene imajo `noindex`,
+- okolja `dev` in `staging` imajo `noindex`,
 - EN struktura: dodajanje ene datoteke `content/pages/en/storitve.md` brez sprememb kode ustvari `/en/services` s pravilnim `hreflang`.
 
 ## 11. Faze dela

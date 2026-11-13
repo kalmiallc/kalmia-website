@@ -1,0 +1,16 @@
+{
+  "name": "kalmia-website",
+  "private": true,
+  "type": "module",
+  "description": "Spletna stran kalmia.si. Astro (statično) in SST za deploy na AWS.",
+  "scripts": {
+    "deploy": "bash bin/deploy/deploy.sh",
+    "deploy:dev": "bash bin/deploy/deploy.sh dev",
+    "deploy:staging": "bash bin/deploy/deploy.sh staging",
+    "deploy:production": "bash bin/deploy/deploy.sh production",
+    "typecheck:infra": "bash scripts/check-infra.sh"
+  },
+  "devDependencies": {
+    "sst": "4.17.2"
+  }
+}
