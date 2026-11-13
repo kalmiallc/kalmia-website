@@ -1,5 +1,5 @@
 {
-  "comment": "Preusmeritve s stare strani (SPEC, razdelek 8), preverjene s sitemapom stare strani (kalmia.si/__sitemap__/sl.xml in en.xml). Ob buildu se prenesejo v vercel.json (faza 6). Stare poti blog zapisov se dodajo samodejno iz polja legacyUrl v content/blog. Angleški stari URL-ji vodijo s 302 na slovensko ustreznico, dokler EN strani ne obstajajo.",
+  "comment": "Preusmeritve s stare strani (SPEC, razdelek 8), preverjene s sitemapom stare strani (kalmia.si/__sitemap__/sl.xml in en.xml). Ob buildu se prenesejo v vercel.json (faza 6). Stare poti blog zapisov se dodajo samodejno iz polja legacyUrl v content/blog. Angleški stari URL-ji vodijo s 302 na slovensko ustreznico, dokler EN strani ne obstajajo. Stari angleški blog zapisi brez slovenske različice vodijo s 302 na /blog (faza 4).",
   "redirects": [
     {
       "from": "/sl",

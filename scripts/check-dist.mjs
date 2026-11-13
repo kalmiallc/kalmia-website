@@ -9,7 +9,7 @@
  *  - notranja povezava na neobstoječo stran ali sidro,
  *  - zunanja povezava v novem zavihku brez rel="noopener",
  *  - preskok v hierarhiji naslovov (npr. H2 → H4),
- *  - statusna oznaka iz prototipa, obrazec ali znesek v evrih.
+ *  - statusna oznaka iz prototipa, obrazec ali znesek v evrih (razen na straneh EU projektov).
  * Opozorila: predolg title (> 60) ali opis (> 155), pomišljaj v besedilu.
  */
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
@@ -158,7 +158,9 @@ for (const file of htmlFiles) {
   for (const label of STATUS_LABELS) {
     if (new RegExp(`>\\s*${label}\\s*<`, 'iu').test(html)) err(`statusna oznaka iz prototipa: ${label}`);
   }
-  if (/(€\s?\d|\d\s?€|\d\s?EUR\b)/.test(text)) err('stran vsebuje znesek');
+  // Izjema: strani EU projektov navajajo vrednost in sofinanciranje (obvezno obveščanje javnosti).
+  const isEuProject = /^\/(en\/projects|projekti)\//.test(url);
+  if (!isEuProject && /(€\s?\d|\d\s?€|\d\s?EUR\b)/.test(text)) err('stran vsebuje znesek');
   const dash = text.match(/.{0,30}\s[—–]\s.{0,30}/);
   if (dash) warn(`pomišljaj v besedilu: »${dash[0].trim()}«`);
 

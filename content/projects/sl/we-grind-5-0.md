@@ -1,5 +1,5 @@
 ---
-# Besedilo je dobesedno s stare strani (https://kalmia.si/sl/project/we-grind-5_0).
+# Besedilo je s stare strani (https://kalmia.si/sl/project/we-grind-5_0), s popravljenimi pravopisnimi napakami.
 title: "Inteligentni sistem za redukcijo vibracij med površinsko obdelavo (WE-Grind 5.0)"
 breadcrumb: "WE-Grind 5.0"
 description: "WE-Grind 5.0: inteligentni sistem za redukcijo vibracij med površinsko obdelavo. Projekt Weiler Abrasives, Nomnio in Kalmie, sofinanciran iz NOO."
@@ -17,7 +17,7 @@ legacyUrl: "/sl/project/we-grind-5_0"
 
 ## Opis in namen
 
-V obdobju januar 2024 – januar 2026 bo konzorcij podjetij WEILER ABRASIVES d.o.o., NOMNIO d.o.o. in KALMIA d.o.o. razvil in na trg lansiral radikalno in popolnoma novo rešitev za zmanjšanje okoljskih obremenitev pri obdelavi površin valjev. Izziv in poslovna priložnost konzorcija je razviti kompleksni tehnološki sistem, ki bo z uporabo na obstoječih brusnih strojih omogočal:
+V obdobju od januarja 2024 do januarja 2026 bo konzorcij podjetij WEILER ABRASIVES d.o.o., NOMNIO d.o.o. in KALMIA d.o.o. razvil in na trg lansiral radikalno in popolnoma novo rešitev za zmanjšanje okoljskih obremenitev pri obdelavi površin valjev. Izziv in poslovna priložnost konzorcija je razviti kompleksni tehnološki sistem, ki bo z uporabo na obstoječih brusnih strojih omogočal:
 
 - sprotno spremljanje podatkov o nastajanju vibracij,
 - zbiranje in analiziranje podatkov na IoT platformi,
@@ -30,7 +30,7 @@ Cilj projekta je z raziskavami in razvojem prispevati k zelenemu prehodu, poveč
 
 ## Rezultati
 
-Rezultat uspešno izvedenega RRI projekta bo razvit tehnični sistem WE-Grind 5.0, ki bo omogočal spremljanje »real time« podatkov o vibracijah Smart Wheel-a in sproti obveščal uporabnika preko mobilne aplikacije o predlaganih ukrepih za ohranjanje daljše življenjske dobe WE-Grind 5.0 in stroja na katerega je nameščen.
+Rezultat uspešno izvedenega RRI projekta bo razvit tehnični sistem WE-Grind 5.0, ki bo omogočal spremljanje »real time« podatkov o vibracijah Smart Wheel-a in sproti obveščal uporabnika preko mobilne aplikacije o predlaganih ukrepih za ohranjanje daljše življenjske dobe WE-Grind 5.0 in stroja, na katerega je nameščen.
 
 Skupna vrednost projekta: 604.570,80 EUR
 
@@ -38,7 +38,7 @@ Višina sofinanciranja: 299.978,84 EUR
 
 Konzorcijski partnerji:
 
-- WEILER ABRASIVES d.o.o
+- WEILER ABRASIVES d.o.o.
 - NOMNIO d.o.o.
 - Kalmia d.o.o.
 
