@@ -13,7 +13,7 @@ hero:
 clients: ["Krka", "ETI", "Iskraemeco", "Kontron", "Weiler Abrasives", "IBO GmbH", "Hypex", "Cestel", "ORO Orodjarna", "GO-ST", "UVC Solutions", "Medis", "Smučarska zveza Slovenije", "Strip's", "Ilirika", "ALEMO", "Extreme Vital", "Digital Receptionist", "Slovenia Explorer"]
 next:
   label: "Nazaj na začetek"
-  page: "vodnik"
+  page: "home"
 cta:
   layout: "split"
   title: "Vaš proces je lahko naslednji primer."

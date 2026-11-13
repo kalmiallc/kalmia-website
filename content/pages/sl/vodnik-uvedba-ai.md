@@ -6,7 +6,7 @@ slug: "vodnik-uvedba-ai"
 template: "vodnik"
 breadcrumb: "Vodnik"
 # Datum objave (date) in posodobitve (updated) v obliki LLLL-MM-DD se prikažeta na strani in v JSON-LD (Article).
-# Datum še ni potrjen, zato ga zaenkrat ni.
+date: 2026-11-13
 hero:
   eyebrow: "Vodnik za vodstvo podjetij"
   h1: "Kako se lotiti uvedbe AI v podjetju."

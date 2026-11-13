@@ -6,8 +6,6 @@ industry: "proizvodnja"
 tag: "Proizvodnja · ekstruzija plastike"
 order: 6
 hidden: false
-# Na strani Proizvodnja prikazana kot »v pripravi« (kot v prototipu)
-inPreparation: true
 showOn: ["reference", "proizvodnja"]
 orderOn:
   proizvodnja: 6

@@ -70,10 +70,7 @@ const pageBase = z.object({
   breadcrumb: text.optional(),
   /** Slika za deljenje (pot v /public), sicer privzeta. */
   ogImage: text.optional(),
-  /**
-   * true: vsebina še ni potrjena (SPEC, razdelek 12). Stran se zgradi, ker je v kazalu,
-   * a ima noindex, ni v sitemapu, llms.txt, hreflang in preklopniku jezika.
-   */
+  /** true: stran v tem jeziku ni objavljena (se ne zgradi, ni v sitemapu). */
   draft: z.boolean().default(false),
   date: isoDate.optional(),
   updated: isoDate.optional(),

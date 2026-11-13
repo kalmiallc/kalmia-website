@@ -5,8 +5,6 @@ translationKey: "ekipe"
 slug: "claude-chatgpt-za-ekipe"
 template: "ekipe"
 breadcrumb: "Claude ali ChatGPT za vašo ekipo"
-# Vsebina še ni potrjena (oznaka »Predelaj vsebino« v prototipu): ni v sitemapu, noindex.
-draft: true
 hero:
   eyebrow: "Claude ali ChatGPT za vašo ekipo"
   h1: "Vsak uporablja AI po svoje. Podjetje potrebuje skupen način."

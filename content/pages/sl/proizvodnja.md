@@ -5,8 +5,6 @@ translationKey: "proizvodnja"
 slug: "proizvodnja"
 template: "proizvodnja"
 breadcrumb: "Proizvodnja"
-# Vsebina še ni potrjena (oznaka »Predelati« v prototipu): ni v sitemapu, noindex.
-draft: true
 hero:
   h1: "Proizvodnja, ki jo vidite v realnem času."
   lead: "Od papirnih delovnih nalogov do MES, povezanega z ERP in stroji, in AI, ki pomaga pri planiranju. Za mala in srednja proizvodna podjetja, brez predragih sistemov."
@@ -29,13 +27,13 @@ cases:
   title: "Kaj smo zgradili pri strankah"
   allLink: "Vse reference"
   systemsLabel: "Sistemi:"
-  # Za reference z inPreparation: true (v prototipu ALEMO)
+  # Za reference z inPreparation: true
   inPreparationNote: "Študija primera je v pripravi. Podrobnosti dodamo kmalu."
   inPreparationTab: "v pripravi"
   # Prikazane so reference, ki imajo v showOn "proizvodnja", v vrstnem redu orderOn.proizvodnja.
 solutions:
   eyebrow: "Rešitve"
-  title: "Kaj gradimo za proizvodnja"
+  title: "Kaj gradimo za proizvodnjo"
   text: "Vsako rešitev prilagodimo vašim podatkom, sistemom in pravilom. Povežemo jo s tem, kar že uporabljate."
   items:
     - { title: "Kalmia MES", text: "Delovni nalogi, dokumentacija in status proizvodnje na tablicah, povezano z ERP in stroji.", benefit: "Brez papirja v proizvodnji" }

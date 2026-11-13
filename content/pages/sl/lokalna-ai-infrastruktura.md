@@ -5,8 +5,6 @@ translationKey: "lokalna-ai"
 slug: "lokalna-ai-infrastruktura"
 template: "lokalna-ai"
 breadcrumb: "Lokalna AI infrastruktura"
-# Vsebina še ni potrjena (oznaka »Za predebatirat« v prototipu): ni v sitemapu, noindex.
-draft: true
 hero:
   eyebrow: "Lokalna AI infrastruktura"
   h1: "AI, ki teče v vaši hiši."
