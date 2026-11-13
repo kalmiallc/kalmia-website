@@ -10,6 +10,9 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
+/** Datoteke v mapi, razvrščene (vrstni red datotečnega sistema se med okolji razlikuje). */
+const ls = (dir) => readdirSync(dir).sort();
+
 const ROOT = new URL('..', import.meta.url).pathname;
 const read = (p) => readFileSync(join(ROOT, p), 'utf8');
 const field = (text, name) => text.match(new RegExp(`^${name}:\\s*"?([^"\\n]+)"?\\s*$`, 'm'))?.[1];
@@ -19,7 +22,7 @@ const frontmatter = (text) => text.split(/^---\s*$/m)[1] ?? '';
 function listSlug(locale, template) {
   const dir = join(ROOT, 'content/pages', locale);
   if (!existsSync(dir)) return null;
-  for (const f of readdirSync(dir)) {
+  for (const f of ls(dir)) {
     const fm = frontmatter(readFileSync(join(dir, f), 'utf8'));
     if (field(fm, 'template') === template) return field(fm, 'slug');
   }
@@ -40,10 +43,10 @@ for (const [collection, template] of [
 ]) {
   const base = join(ROOT, 'content', collection);
   if (!existsSync(base)) continue;
-  for (const locale of readdirSync(base)) {
+  for (const locale of ls(base)) {
     const list = listSlug(locale, template);
     if (!list) continue;
-    for (const f of readdirSync(join(base, locale)).filter((x) => x.endsWith('.md'))) {
+    for (const f of ls(join(base, locale)).filter((x) => x.endsWith('.md'))) {
       const fm = frontmatter(readFileSync(join(base, locale, f), 'utf8'));
       const legacy = field(fm, 'legacyUrl');
       if (!legacy || /^draft:\s*true/m.test(fm)) continue;
@@ -54,7 +57,7 @@ for (const [collection, template] of [
 }
 
 // 3) legacyUrl iz pravnih besedil
-for (const f of readdirSync(join(ROOT, 'content/legal')).filter((x) => x.endsWith('.md'))) {
+for (const f of ls(join(ROOT, 'content/legal')).filter((x) => x.endsWith('.md'))) {
   const fm = frontmatter(read(`content/legal/${f}`));
   const legacy = field(fm, 'legacyUrl');
   if (legacy) add(legacy, `/${field(fm, 'slug')}`, 301, `content/legal/${f}`);
@@ -111,6 +114,10 @@ const checkOnly = process.argv.includes('--check') || process.env.VERCEL === '1'
 if (checkOnly) {
   if (current !== out) {
     console.error('vercel.json ni posodobljen s content/redirects.json in legacyUrl. Zaženite lokalno `npm run build` in commitajte vercel.json.');
+    const a = current.split('\n');
+    const b = out.split('\n');
+    const i = a.findIndex((line, n) => line !== b[n]);
+    console.error(`Prva razlika v vrstici ${i + 1}:\n  v repozitoriju: ${a[i]}\n  pričakovano:    ${b[i]}`);
     process.exit(1);
   }
   console.log(`vercel.json je posodobljen (${config.redirects.length} preusmeritev).`);
