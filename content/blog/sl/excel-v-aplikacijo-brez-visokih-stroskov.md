@@ -29,7 +29,7 @@ Sheets2App ne spreminja vašega procesa, spreminja le orodje. Aplikacija uporabn
 - Avtomatizira ročno delo: Nič več podvojenega vnašanja podatkov.
 - Preprečuje napake: Sistem samodejno nadzoruje vnose (npr. prepreči vnos besedila v polje za ceno).
 - Omogoča varen dostop: Natančno določite, kdo vidi katere podatke (npr. prodajalec vidi le svoje stranke, skladiščnik le zalogo).
-- Prinaša mobilnost: Do podatkov dostopate kjerkoli – na terenu, v proizvodnji ali na poti – prek telefona ali tablice.
+- Prinaša mobilnost: Do podatkov dostopate kjerkoli, na terenu, v proizvodnji ali na poti, prek telefona ali tablice.
 
 ## Primer iz prakse: Kako je podjetje GO-ST digitaliziralo proizvodnjo
 
@@ -51,7 +51,7 @@ Za večino podjetij je uvedba velikega ERP sistema (kot sta SAOP ali Microsoft B
 
 - Element · Tipičen ERP sistem · Kalmia Sheets2App
 - Stroški · Visoki (licence, vzdrževanje) · Nižji (\~19 % stroška ERP)
-- Čas uvedbe · 6–12 mesecev · 1 mesec
+- Čas uvedbe · od 6 do 12 mesecev · 1 mesec
 - Prilagodljivost · Rigidna (vi se prilagodite orodju) · Popolna (orodje se prilagodi vam)
 - Uporabniška izkušnja · Zahtevna in kompleksna · Enostavna, mobilna, prilagojena
 - Napredne funkcije · Standardne · Možnost AI nadgradenj (Kalmia Assistant), povezovanje z obstoječimi sistemi.

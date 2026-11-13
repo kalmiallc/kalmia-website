@@ -34,7 +34,7 @@ V vsakem podjetju so področja, kjer lahko copilot naredi veliko razliko v učin
 
 Gre za pomočnika, ki ni omejen na en sam tip nalog. Deluje kot asistent v različnih delih podjetja - tam, kjer rutinske informacije upočasnjujejo delo, AI asistent odpre prostor za hitrejše odločitve.
 
-## Kalmiin slovenski AI asistent – odprt, varen, po meri
+## Kalmiin slovenski AI asistent: odprt, varen, po meri
 
 Njegova posebnost ni le v tem, da prevzame vlogo copilota, ampak da to počne na način, ki je prilagojen slovenskemu okolju.
 

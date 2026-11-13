@@ -24,7 +24,7 @@ Kaj torej v resnici loči klasičnega chatbota, naprednega [AI asistenta](/lokal
 
 V Kalmii razvijamo vse tri tipe rešitev po meri podjetja - glede na to, kaj podjetje potrebuje danes in kam želi z umetno inteligenco v proizvodnji ali storitvah jutri.
 
-## Kaj je chatbot – in kje se ustavi njegova moč?
+## Kaj je chatbot in kje se ustavi njegova moč?
 
 Chatbot oziroma klepetalnik je prva stopnja avtomatizacije pogovora z vašimi (bodočimi) strankami. Deluje po principu vprašanje - odgovor in uporablja vnaprej pripravljene podatke, kot so npr. seznami najpogostejših vprašanj ali informacije iz cenikov. Ta tip AI podpore uporabnik je ključen za hitro odzivnost.
 
@@ -42,7 +42,7 @@ Murai spoštuje načela GDPR, torej strogo upošteva varstvo osebnih podatkov, i
 
 Kako smo povečali število rezervacij v hotelu in zmanjšali število emailov o najbolj osnovnih vprašanjih, si lahko preberete tukaj: [pameten bot za hotele](/blog/pamenti-bot-hoteli) - projekt, ki bi ga s klasičnim chatbotom preprosto ne bilo mogoče izvesti.
 
-## Kaj je AI asistent – in komu je namenjen?
+## Kaj je AI asistent in komu je namenjen?
 
 AI asistent gre še korak dlje.
 
@@ -54,7 +54,7 @@ Interni AI asistent je kot digitalni sodelavec, ki ne potrebuje uvajanja in niko
 
 Kalmiin AI asistent nadgradi ta koncept s povezovanjem v vaše obstoječe sisteme in prilagoditvijo jezika ter nalog glede na procese podjetja tako, da se vključi v način, kako vaša ekipa že dela.
 
-## Kaj je AI agent – in kako ga podjetja lahko uporabijo v svojo korist?
+## Kaj je AI agent in kako ga podjetja lahko uporabijo v svojo korist?
 
 AI agent je naslednja stopnja v razvoju - sistem, ki ne samo odgovarja, ampak tudi ukrepa.
 

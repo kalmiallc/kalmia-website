@@ -52,7 +52,7 @@ Skladnost ni le birokratska kljukica, je orodje za urejeno rast podjetja tako na
 
 Pomembno prednost lahko pridobite tudi na javnih EU razpisih, kjer postaja skladnost s standardi pomemben del pri ocenjevanju prijav. Nenazadnje pa lahko prihranite precej časa in sivih las, če se na zakonodajo, ki bo regulacijo AI verjetno še zaostrila, pripravite že danes.
 
-Jasno definirani procesi AI sistemov pa pomagajo tudi interni usklajenosti – odgovornosti so bolj jasne, odločitve sledljive, člani ekipe pa lahko sprejemajo bolj informirane odločitve.
+Jasno definirani procesi AI sistemov pa pomagajo tudi interni usklajenosti: odgovornosti so bolj jasne, odločitve sledljive, člani ekipe pa lahko sprejemajo bolj informirane odločitve.
 
 ## Kalmia olajša prehod v AI poslovanje?
 

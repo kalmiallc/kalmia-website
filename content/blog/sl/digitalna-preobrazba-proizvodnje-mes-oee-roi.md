@@ -12,7 +12,7 @@ translationKey: "blog-digitalna-preobrazba-proizvodnje-mes-oee-roi"
 legacyUrl: "/sl/blog/digitalna-preobrazba-proizvodnje-mes-oee-roi"
 ---
 
-V svetu sodobne proizvodnje pogosto slišimo, da so podatki ključni digitalni temelj vašega podjetja. A če smo povsem iskreni, podatki v surovi obliki – na papirju ali v nepreglednih Excelovih tabelah – podjetju ne prinašajo vrednosti. Vrednost nastane šele takrat, ko ti podatki postanejo orodje za odločanje v realnem času.
+V svetu sodobne proizvodnje pogosto slišimo, da so podatki ključni digitalni temelj vašega podjetja. A če smo povsem iskreni, podatki v surovi obliki, na papirju ali v nepreglednih Excelovih tabelah, podjetju ne prinašajo vrednosti. Vrednost nastane šele takrat, ko ti podatki postanejo orodje za odločanje v realnem času.
 
 Številni direktorji proizvodnje se še vedno soočajo z istim izzivom: kako vedeti, kje točno izgubljamo denar? Je to zaradi nenačrtovanih zastojev, prepočasnih strojev ali morda zaradi prevelikega izmeta? Odgovor se skriva v metriki OEE (Overall Equipment Effectiveness), ključ do njenega izboljšanja pa je sodoben MES sistem.
 
@@ -28,7 +28,7 @@ Ko vpeljete [Kalmia MES](/proizvodnja), se ti parametri začnejo spreminjati:
 - Zmogljivost: Ali vaši stroji delujejo s polno hitrostjo? MES takoj pokaže odstopanja med teoretično in dejansko hitrostjo cikla, kar omogoča takojšnje korektivne ukrepe.
 - Kakovost: S sprotnim spremljanjem parameterov kakovosti sistem omogoča hitrejše odkrivanje problemov v primeru napake.Napako zaznate pri prvem kosu, ne pri zadnjem.
 
-Posledica? Hitra povrnitev investicije (ROI). Zaradi povečane učinkovitosti in zmanjšanja stroškov dela, se strošek vpeljave Kalmia MES sistema običajno povrne v presenetljivo kratkem času – pogosto že v prvem letu delovanja.
+Posledica? Hitra povrnitev investicije (ROI). Zaradi povečane učinkovitosti in zmanjšanja stroškov dela, se strošek vpeljave Kalmia MES sistema običajno povrne v presenetljivo kratkem času, pogosto že v prvem letu delovanja.
 
 ## Kalmia MES: Moderna, dostopna in prilagodljiva alternativa "dinozavrom"
 
@@ -36,11 +36,11 @@ Tradicionalni MES sistemi so pogosto okorni, dragi in zahtevajo dolgotrajno uvaj
 
 ### 1. Nižji stroški in lažja vpeljava
 
-Ker uporabljamo sodobne tehnološke sklade in agilen pristop, je vpeljava našega sistema bistveno hitrejša. Ni vam treba zamenjati celotne infrastrukture – Kalmia MES se poveže z vašimi obstoječimi stroji in ERP sistemi.
+Ker uporabljamo sodobne tehnološke sklade in agilen pristop, je vpeljava našega sistema bistveno hitrejša. Ni vam treba zamenjati celotne infrastrukture: Kalmia MES se poveže z vašimi obstoječimi stroji in ERP sistemi.
 
 ### 2. User Experience (UX) na prvem mestu
 
-Proizvodni delavci niso IT strokovnjaki. Zato smo velik poudarek namenili uporabniški izkušnji. Vmesnik je intuitiven, pregleden in dostopen na tablicah, telefonih ali terminalih neposredno ob stroju. Če je sistem preprost za uporabo, ga bodo zaposleni z veseljem uporabljali – in to je ključ do verodostojnih podatkov.
+Proizvodni delavci niso IT strokovnjaki. Zato smo velik poudarek namenili uporabniški izkušnji. Vmesnik je intuitiven, pregleden in dostopen na tablicah, telefonih ali terminalih neposredno ob stroju. Če je sistem preprost za uporabo, ga bodo zaposleni z veseljem uporabljali. In to je ključ do verodostojnih podatkov.
 
 ### 3. Skalabilnost
 
@@ -72,7 +72,7 @@ Zakaj bi čakali, da se stroj pokvari? Naš sistem spremlja vibracije, temperatu
 
 ## Zaključek: Digitalna transformacija, ki opolnomoči ljudi
 
-Digitalizacija s [Kalmia MES](/proizvodnja) sistemom ni namenjena zamenjavi ljudi, temveč njihovemu opolnomočenju. Ko operaterjem in vodjem odstranite administrativno breme in jim podate jasne podatke, lahko svoj čas posvetijo tistemu, kar zares šteje – inovacijam in kakovosti.
+Digitalizacija s [Kalmia MES](/proizvodnja) sistemom ni namenjena zamenjavi ljudi, temveč njihovemu opolnomočenju. Ko operaterjem in vodjem odstranite administrativno breme in jim podate jasne podatke, lahko svoj čas posvetijo tistemu, kar zares šteje: inovacijam in kakovosti.
 
 Če želite povečati svojo učinkovitost, znižati stroške in stopiti ob bok najbolj naprednim podjetjem, je čas za prvi korak.
 

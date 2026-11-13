@@ -52,7 +52,7 @@ Dodatek [AI-asistenta](/lokalna-ai-infrastruktura) s pomočjo AI-agenta tako v s
 
 Digitalna transformacija v maloprodaji ni več le vprašanje prestiža, ampak preživetja. Uvedba AI agenta, ki razume logistične trende, pomeni prehod iz reaktivnega v proaktivno poslovanje. Namesto, da gasite požare, ko blaga zmanjka, gradite sistem, ki požare prepreči, še preden zagori.
 
-V Kalmii ne gradimo le programske opreme; gradimo digitalne kolege, ki vaše poslovanje naredijo agilno, odporno na spremembe in predvsem – dobičkonosno.
+V Kalmii ne gradimo le programske opreme; gradimo digitalne kolege, ki vaše poslovanje naredijo agilno, odporno na spremembe in predvsem dobičkonosno.
 
 Preberite tudi:
 

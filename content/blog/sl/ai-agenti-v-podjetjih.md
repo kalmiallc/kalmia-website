@@ -12,9 +12,9 @@ translationKey: "blog-ai-agenti-v-podjetjih"
 legacyUrl: "/sl/blog/ai-agenti-v-podjetjih"
 ---
 
-Umetna inteligenca ni več eksperimentalna tehnologija – postaja operativno orodje, ki podjetjem pomaga optimizirati procese, zmanjšati stroške in povečati učinkovitost. Danes govorimo o AI agentih. To niso le programi, ampak vaši novi digitalni sodelavci, ki znajo samostojno opraviti celotne naloge, sprejemati odločitve in vam prihraniti ure dolgočasnega dela.
+Umetna inteligenca ni več eksperimentalna tehnologija. Postaja operativno orodje, ki podjetjem pomaga optimizirati procese, zmanjšati stroške in povečati učinkovitost. Danes govorimo o AI agentih. To niso le programi, ampak vaši novi digitalni sodelavci, ki znajo samostojno opraviti celotne naloge, sprejemati odločitve in vam prihraniti ure dolgočasnega dela.
 
-Umetna inteligenca ni več le igrača za programerje – postala je orodje, s katerim podjetja delajo hitreje, ceneje in z manj napakami.
+Umetna inteligenca ni več le igrača za programerje. Postala je orodje, s katerim podjetja delajo hitreje, ceneje in z manj napakami.
 
 ## Kje v podjetju AI agenti ustvarjajo največ vrednosti?
 
@@ -88,12 +88,10 @@ Primer: Agent za pomoč pri komunikaciji s strankami - izračun prihranka v prve
 - Število mesečnih zahtevkov · 15000 · 15000
 - Število zaposlenih (FTE) v podpori · 10 · 7
 - Letni strošek dela (skupaj) · € 264.000,00 · € 184.800,00
-- Strošek vzpostavitve AI agenta · / · € 30.000,00
-- Letni prihranek · / · € 49.200,00
 
-AI agenti niso le še ena tehnološka novost, ampak ključ do podjetja, ki deluje hitreje, pametneje in brez nepotrebnega izgubljanja časa na rutinskih nalogah. Njihova prava moč ni v tem, da zamenjajo ljudi, temveč v tem, da vašo ekipo osvobodijo administrativnih bremen in ji omogočijo, da se končno posveti tistemu, kar zares šteje – strateškemu razvoju in odnosom.
+AI agenti niso le še ena tehnološka novost, ampak ključ do podjetja, ki deluje hitreje, pametneje in brez nepotrebnega izgubljanja časa na rutinskih nalogah. Njihova prava moč ni v tem, da zamenjajo ljudi, temveč v tem, da vašo ekipo osvobodijo administrativnih bremen in ji omogočijo, da se končno posveti tistemu, kar zares šteje: strateškemu razvoju in odnosom.
 
-Svet se spreminja hitro in prednost bodo imeli tisti, ki bodo tehnologijo posvojili prvi. Podjetja, ki bodo pravočasno prepoznala potencial AI agentov, bodo imela pomembno konkurenčno prednost – ne le v učinkovitosti, ampak tudi v sposobnosti prilagajanja in rasti.
+Svet se spreminja hitro in prednost bodo imeli tisti, ki bodo tehnologijo posvojili prvi. Podjetja, ki bodo pravočasno prepoznala potencial AI agentov, bodo imela pomembno konkurenčno prednost, ne le v učinkovitosti, ampak tudi v sposobnosti prilagajanja in rasti.
 
 V Kalmii podjetjem pomagamo pri celotnem ciklu vpeljave - od pregleda procesov do izvedbe.
 

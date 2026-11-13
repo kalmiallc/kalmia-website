@@ -57,12 +57,10 @@ Spodnja tabela prikazuje merljivo razliko pri avtomatizaciji tipičnega ponavlja
 - Število mesečnih zahtevkov · 1.000 ročno obdelanih · 1.000 avtonomno obdelanih
 - Potrebni FTE (polni delovni čas) · 3 zaposleni · 0,5 zaposlenega (samo nadzor)
 - Letni strošek dela · 90.000 € · 15.000 €
-- Strošek implementacije tehnologije · 0 € · 25.000 € (enkratno + vzdrževanje)
-- Letni prihranki · 0 € · 45.000 €+
 
 ## Konkurenčna prednost je v hitrosti prilagajanja
 
-Podjetja, ki razumejo, da je umetna inteligenca predvsem operativno orodje za reševanje konkretnih izzivov, že danes ustvarjajo občutno konkurenčno prednost. Zgodnje sprejemanje in postopna, varna implementacija – ob upoštevanju starih sistemov in upravljanja s podatki – ekipam omogoča, da se osredotočijo na strateške naloge, medtem ko AI prevzame rutino.
+Podjetja, ki razumejo, da je umetna inteligenca predvsem operativno orodje za reševanje konkretnih izzivov, že danes ustvarjajo občutno konkurenčno prednost. Zgodnje sprejemanje in postopna, varna implementacija, ob upoštevanju starih sistemov in upravljanja s podatki, ekipam omogoča, da se osredotočijo na strateške naloge, medtem ko AI prevzame rutino.
 
 Preberite tudi:
 
