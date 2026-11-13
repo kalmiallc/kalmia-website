@@ -11,7 +11,17 @@ Statična spletna stran Kalmia d.o.o. (Astro, TypeScript, Vercel). Pravila dela 
 
 ## Struktura
 
-- `content/`: vsa vsebina (Markdown, JSON). Besedila vmesnika v `content/i18n/<jezik>.json`, kazalo in noga v `content/navigation.json`, podatki o podjetju in `bookingUrl` v `content/site.json`.
+- `content/`: vsa vsebina (Markdown, JSON), sheme v `src/content.config.ts`.
+  - `site.json`: podjetje, kontakt, `bookingUrl`, seznam strank
+  - `navigation.json`: vrstice kazala in povezave v nogi
+  - `i18n/<jezik>.json`: besedila vmesnika
+  - `pages/<jezik>/*.md`: besedila strani (frontmatter po predlogi, polje `template`)
+  - `services/*.json`: ploščice A01–S04
+  - `cases/<jezik>/*.md`: reference
+  - `faq/<stran>.<jezik>.json`, `sources/*.json`: pogosta vprašanja, viri
+  - `blog/<jezik>/*.md`, `projects/<jezik>/*.md`, `legal/*.md`
+  - `redirects.json`: preusmeritve s stare strani
+- Build preveri sheme in povezave med datotekami (`src/lib/content.ts`) in se ob napaki ustavi z imenom datoteke.
 - `src/components/`: komponente (glava, kazalo, noga, ploščice, kartica reference, FAQ, temni odsek, poziv).
 - `src/layouts/BaseLayout.astro`: `<head>`, glava, noga.
 - `src/assets/fonts/`: Urbanist in Space Grotesk (OFL), gostovani lokalno prek Astro Fonts API.

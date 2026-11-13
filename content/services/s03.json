@@ -1,0 +1,10 @@
+{
+  "code": "S03",
+  "group": "podpora",
+  "order": 3,
+  "link": null,
+  "sl": {
+    "title": "IT podpora in varnostne kopije",
+    "description": "Strežnik pri vas, podatki v treh kopijah, mesečni pavšal."
+  }
+}

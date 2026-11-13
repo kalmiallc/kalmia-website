@@ -1,0 +1,20 @@
+{
+  "code": "U02",
+  "group": "uvedba",
+  "order": 2,
+  "link": {
+    "page": "ekipe"
+  },
+  "sl": {
+    "title": "Za razvijalce",
+    "description": "Postavimo razvojno okolje, v katerem tudi nerazvijalci sami gradijo rešitve z AI, na primer s Claude Code."
+  },
+  "onPages": {
+    "ekipe": {
+      "link": null,
+      "sl": {
+        "description": "Razvojno okolje, v katerem tudi nerazvijalci sami gradijo rešitve z AI, na primer s Claude Code."
+      }
+    }
+  }
+}

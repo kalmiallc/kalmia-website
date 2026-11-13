@@ -10,12 +10,14 @@ interface Props {
   locale: Locale;
   /** Besedilo gumba. Privzeto »Dogovorite se za pogovor«. */
   label?: string;
+  /** Krajše besedilo za ozke zaslone (pod 480 px), npr. v glavi. */
+  shortLabel?: string;
   /** header: 44 px (glava), md: 48 px, lg: 52 px, royal: 52 px na modri podlagi */
   size?: 'header' | 'md' | 'lg' | 'royal';
   class?: string;
 }
 
-const { locale, label, size = 'lg', class: className } = Astro.props;
+const { locale, label, shortLabel, size = 'lg', class: className } = Astro.props;
 const t = ui(locale);
 ---
 
@@ -25,7 +27,16 @@ const t = ui(locale);
   rel="noopener"
   class:list={['booking', `booking--${size}`, className]}
 >
-  {label ?? t.cta.book}<span aria-hidden="true">&nbsp;→</span><span class="visually-hidden"> {t.a11y.opensInNewTab}</span>
+  {
+    shortLabel ? (
+      <>
+        <span class="booking-full">{label ?? t.cta.book}</span>
+        <span class="booking-short">{shortLabel}</span>
+      </>
+    ) : (
+      (label ?? t.cta.book)
+    )
+  }<span aria-hidden="true">&nbsp;→</span><span class="visually-hidden"> {t.a11y.opensInNewTab}</span>
 </a>
 
 <style>
@@ -64,9 +75,28 @@ const t = ui(locale);
   .booking--royal:hover {
     color: var(--paper);
   }
+  .booking-short {
+    display: none;
+  }
+  /* Na ozkih zaslonih krajše besedilo in manjši gumb, da je v glavi v isti vrstici kot logotip */
+  @media (max-width: 479px) {
+    .booking-full {
+      display: none;
+    }
+    .booking-short {
+      display: inline;
+    }
+    .booking--header:has(.booking-short) {
+      padding: 0 14px;
+      font-size: 14px;
+    }
+  }
   @media (max-width: 420px) {
     .booking {
       white-space: normal;
+    }
+    .booking--header {
+      white-space: nowrap;
     }
   }
 </style>

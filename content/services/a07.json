@@ -1,0 +1,10 @@
+{
+  "code": "A07",
+  "group": "agenti",
+  "order": 7,
+  "link": null,
+  "sl": {
+    "title": "Upravljanje razpisov",
+    "description": "Poišče razpise in javna naročila, ki ustrezajo vašemu podjetju, in pomaga pri pripravi razpisne dokumentacije."
+  }
+}

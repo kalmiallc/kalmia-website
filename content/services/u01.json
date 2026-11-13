@@ -1,0 +1,20 @@
+{
+  "code": "U01",
+  "group": "uvedba",
+  "order": 1,
+  "link": {
+    "page": "ekipe"
+  },
+  "sl": {
+    "title": "Za ekipe in oddelke",
+    "description": "Skupna baza znanja, veščine za ponavljajoča se opravila, pravila rabe in izobraževanje ekipe."
+  },
+  "onPages": {
+    "ekipe": {
+      "link": null,
+      "sl": {
+        "description": "Skupna pravila, baza znanja in veščine za ponavljajoča se opravila. Ekipa dela po enakih pravilih in z istim znanjem."
+      }
+    }
+  }
+}

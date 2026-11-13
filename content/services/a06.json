@@ -1,0 +1,10 @@
+{
+  "code": "A06",
+  "group": "agenti",
+  "order": 6,
+  "link": null,
+  "sl": {
+    "title": "Nadzor kakovosti v proizvodnji",
+    "description": "Spremlja meritve iz proizvodnje in zazna odstopanja od dovoljenih mej. Odstopanja javi in zabeleži."
+  }
+}

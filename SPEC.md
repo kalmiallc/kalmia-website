@@ -264,5 +264,5 @@ Po vsaki fazi odpri PR in se ustavi za pregled.
 
 ## 12. Odprte točke
 
-- Vsebine z oznakami v prototipu, ki še niso potrjene: Lokalna AI (za predebatirat), Claude ali ChatGPT za vašo ekipo (predelaj vsebino), Proizvodnja (predelati), Reference (dopolniti: Halder brez kazalnika). Do potrditve te strani zgradi z `draft: true` (ne v sitemapu, `noindex`).
+- ~~Vsebine z oznakami v prototipu, ki še niso potrjene, zgradi z `draft: true`.~~ Odločeno 13. 11. 2026: Lokalna AI, Claude ali ChatGPT za vašo ekipo in Proizvodnja se objavijo in indeksirajo. Halder ostane brez kazalnika (komponenta ga preskoči).
 - Zasebnost in pogoji sta prenesena dobesedno s stare strani (v angleščini, omenjata kalmia.xyz in Google Analytics). Ne spreminjaj ju; posodobitev pripravi Mateja.

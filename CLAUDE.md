@@ -23,7 +23,7 @@ Trajna pravila za delo na spletni strani kalmia.si. Velja za vsako sejo, tudi ko
 - Kalmia se sklanja brez j: Kalmia, Kalmie, Kalmii, Kalmio, pri Kalmii, s Kalmio.
 - »nerazvijalci« pisano skupaj.
 - Odstotki s presledkom: 40 %, ne 40%.
-- Na strani NI cen in zneskov. Kategorije stroškov brez zneskov so dovoljene.
+- Na strani NI cen in zneskov. Kategorije stroškov brez zneskov so dovoljene. Izjema: strani EU projektov (`/projekti/...`) navajajo vrednost projekta in višino sofinanciranja, ker je to del obveznega obveščanja javnosti.
 - Malo marketinškega besedila. Konkretno, kratko, preverljivo.
 - Kartice in seznami, nikoli široke tabele z več stolpci.
 - Pri angleških prevodih ohrani isti ton: neposredno, brez pretiravanja, brez »revolutionize«, »unlock« in podobnih fraz.

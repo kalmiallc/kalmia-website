@@ -1,0 +1,25 @@
+{
+  "title": "Pogosta vprašanja.",
+  "items": [
+    {
+      "q": "Ali so lokalni modeli dovolj dobri?",
+      "a": "Za veliko nalog, kot so iskanje po dokumentih, povzemanje, razvrščanje in priprava osnutkov, da. Za najzahtevnejše naloge so modeli v oblaku še vedno močnejši. To ocenimo na vaših primerih, preden se odločite."
+    },
+    {
+      "q": "Ali potrebujemo svojo IT ekipo?",
+      "a": "Ne. Strojno opremo uredi partner, za modele in povezave poskrbimo mi. Če IT ekipo imate, jo vključimo pri varnosti in dostopih."
+    },
+    {
+      "q": "Ali deluje brez interneta?",
+      "a": "Da, če je to zahteva. Sistem lahko deluje popolnoma ločeno od zunanjega omrežja, posodobitve pa uredimo po dogovorjenem postopku."
+    },
+    {
+      "q": "Ali je možna kombinacija z oblakom?",
+      "a": "Da. Občutljive podatke obdelujemo lokalno, ostale naloge pa lahko tečejo v oblaku v EU."
+    },
+    {
+      "q": "Kdo je lastnik strojne opreme?",
+      "a": "Vi. Strežnik kupite ali najamete prek partnerja, modeli in podatki pa so na vaši opremi."
+    }
+  ]
+}

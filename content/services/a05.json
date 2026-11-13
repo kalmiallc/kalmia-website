@@ -1,0 +1,10 @@
+{
+  "code": "A05",
+  "group": "agenti",
+  "order": 5,
+  "link": null,
+  "sl": {
+    "title": "Razporejanje zalog med skladišči",
+    "description": "Spremlja zaloge, prodajo in odprta naročila ter pripravi predlog prerazporeditve artiklov med skladišči."
+  }
+}

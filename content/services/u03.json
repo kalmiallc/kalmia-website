@@ -1,0 +1,20 @@
+{
+  "code": "U03",
+  "group": "uvedba",
+  "order": 3,
+  "link": {
+    "page": "ekipe"
+  },
+  "sl": {
+    "title": "Delavnica",
+    "description": "Praktična delavnica na resničnih nalogah vaše ekipe. Vsak udeleženec odide z rešitvijo za svoje delo."
+  },
+  "onPages": {
+    "ekipe": {
+      "link": null,
+      "sl": {
+        "description": "Praktična delavnica na resničnih nalogah ekipe. Vsak udeleženec odide z rešitvijo za svoje delo."
+      }
+    }
+  }
+}

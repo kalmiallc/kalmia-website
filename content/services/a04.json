@@ -1,0 +1,10 @@
+{
+  "code": "A04",
+  "group": "agenti",
+  "order": 4,
+  "link": null,
+  "sl": {
+    "title": "Planiranje dela",
+    "description": "Glede na naloge, roke in razpoložljivost pripravi predlog plana ekip in opreme. Vodja ga potrdi."
+  }
+}
