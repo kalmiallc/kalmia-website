@@ -1,5 +1,5 @@
 {
-  "comment": "Preusmeritve s stare strani (SPEC, razdelek 8). Ob buildu se prenesejo v vercel.json (faza 6). Stare poti blog zapisov se dodajo samodejno iz polja legacyUrl v content/blog. Poti EU projektov razen WE-Grind 5.0 je treba preveriti na stari strani.",
+  "comment": "Preusmeritve s stare strani (SPEC, razdelek 8), preverjene s sitemapom stare strani (kalmia.si/__sitemap__/sl.xml in en.xml). Ob buildu se prenesejo v vercel.json (faza 6). Stare poti blog zapisov se dodajo samodejno iz polja legacyUrl v content/blog. Angleški stari URL-ji vodijo s 302 na slovensko ustreznico, dokler EN strani ne obstajajo.",
   "redirects": [
     {
       "from": "/sl",
@@ -87,6 +87,16 @@
       "status": 301
     },
     {
+      "from": "/sl/project/enerdao",
+      "to": "/projekti/enerdao",
+      "status": 301
+    },
+    {
+      "from": "/sl/project/hypex",
+      "to": "/projekti/one-4-0",
+      "status": 301
+    },
+    {
       "from": "/sl/privacy",
       "to": "/zasebnost",
       "status": 301
@@ -164,11 +174,6 @@
     {
       "from": "/project",
       "to": "/projekti",
-      "status": 302
-    },
-    {
-      "from": "/project/we-grind-5_0",
-      "to": "/projekti/we-grind-5-0",
       "status": 302
     },
     {

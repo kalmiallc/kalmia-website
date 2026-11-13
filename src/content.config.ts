@@ -365,20 +365,30 @@ const blog = defineCollection({
 
 const projects = defineCollection({
   loader: optionalGlob('./content/projects'),
-  schema: ({ image }) =>
-    z.object({
-      title: text,
-      description: text.max(155),
-      slug: z.string().regex(/^[a-z0-9-]+$/),
-      translationKey: text,
-      order: z.number().int().positive().default(1),
-      /** Logotipi financerjev, dobesedno s stare strani. */
-      funders: z.array(z.object({ name: text, logo: image(), alt: text })).default([]),
-      cover: image().optional(),
-      coverAlt: text.optional(),
-      legacyUrl: z.string().startsWith('/').optional(),
-      draft: z.boolean().default(false),
-    }),
+  schema: z.object({
+    /** Polni naslov projekta (H1), dobesedno s stare strani. */
+    title: text,
+    /** Kratko ime za drobtinice in seznam. */
+    breadcrumb: text,
+    description: text.max(155),
+    slug: z.string().regex(/^[a-z0-9-]+$/),
+    translationKey: text,
+    order: z.number().int().positive().default(1),
+    eyebrow: text.optional(),
+    /** Logotipi financerjev, dobesedno s stare strani, v /public/images/projects. */
+    logos: z
+      .array(
+        z.object({
+          src: z.string().startsWith('/images/projects/'),
+          alt: text,
+          width: z.number().int().positive(),
+          height: z.number().int().positive(),
+        })
+      )
+      .min(1),
+    legacyUrl: z.string().startsWith('/').optional(),
+    draft: z.boolean().default(false),
+  }),
 });
 
 /* ---------- Pravna besedila ---------- */

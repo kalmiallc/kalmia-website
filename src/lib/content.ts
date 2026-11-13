@@ -4,6 +4,7 @@
  * katero datoteko je treba popraviti.
  */
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { existsSync } from 'node:fs';
 import { LOCALES, homePath, normalizePath, type Locale } from './i18n';
 import navigation from '../../content/navigation.json';
 import sl from '../../content/i18n/sl.json';
@@ -204,6 +205,14 @@ export function validateContent(): Promise<void> {
         caseSlugs.add(c.data.slug);
         if (c.data.showOn.includes('proizvodnja') && !c.data.orderOn?.proizvodnja)
           errors.push(`${where}: showOn vsebuje "proizvodnja", manjka orderOn.proizvodnja.`);
+      }
+    }
+
+    // EU projekti: logotipi financerjev morajo obstajati v /public.
+    for (const p of await getCollection('projects')) {
+      for (const logo of p.data.logos) {
+        if (!existsSync(`${process.cwd()}/public${logo.src}`))
+          errors.push(`content/projects/${p.id}.md: manjka slika public${logo.src}.`);
       }
     }
 
