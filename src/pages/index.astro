@@ -2,13 +2,14 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import IndexRows from '@components/IndexRows.astro';
 import ClientList from '@components/ClientList.astro';
-import { getPage } from '@lib/pages';
+import { getPage } from '@lib/content';
 import { ui } from '@lib/i18n';
 import { site } from '@lib/site';
 
 const locale = 'sl';
 const t = ui(locale);
 const page = await getPage(locale, 'home');
+if (page.data.template !== 'home') throw new Error('Domača stran mora imeti template: "home".');
 const { title, description, h1, lead } = page.data;
 ---
 

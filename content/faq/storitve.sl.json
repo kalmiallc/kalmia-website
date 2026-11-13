@@ -1,0 +1,29 @@
+{
+  "title": "Pogosta vprašanja.",
+  "items": [
+    {
+      "q": "Ali moram začeti s temelji?",
+      "a": "Ne. Posamezen agent, na primer telefonski, lahko deluje tudi samostojno."
+    },
+    {
+      "q": "Ali lahko združim več delov?",
+      "a": "Da. Na pogovoru skupaj ugotovimo, kaj sodi skupaj."
+    },
+    {
+      "q": "Koliko časa traja postavitev?",
+      "a": "Priprava dokumentov približno en teden, posamezen agent en do dva tedna, programska oprema po meri dlje."
+    },
+    {
+      "q": "Ali potrebujem tehnično predznanje?",
+      "a": "Ne. Tehnologijo, postavitev in povezave uredimo mi."
+    },
+    {
+      "q": "Kaj se zgodi, če sodelovanje prekinem?",
+      "a": "Kar smo izdelali, ostane vaše. Delovanje je mogoče odpovedati mesečno."
+    },
+    {
+      "q": "Ali so rešitve skladne z GDPR?",
+      "a": "Da. Uporabljamo evropsko infrastrukturo in upoštevamo zahteve Akta o umetni inteligenci."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "sl": {
+    "items": [
+      {
+        "label": "Microsoft, 2026 Work Trend Index (povzetek v TechRadar, maj 2026)",
+        "url": "https://www.techradar.com/pro/every-business-leader-knows-the-world-is-changing-but-far-fewer-have-a-clear-picture-of-what-to-do-about-it-microsoft-flags-the-changing-world-of-ai-at-work-and-why-frontier-firms-are-leading-the-way"
+      },
+      {
+        "label": "Microsoft in LinkedIn, 2024 Work Trend Index (maj 2024)",
+        "url": "https://blogs.microsoft.com/blog/2024/05/08/microsoft-and-linkedin-release-the-2024-work-trend-index-on-the-state-of-ai-at-work/"
+      },
+      {
+        "label": "MIT NANDA, The GenAI Divide: State of AI in Business 2025 (povzetek v Computing)",
+        "url": "https://www.computing.co.uk/news/2025/ai/mit-report-95pc-corporate-generative-ai-pilots-fail"
+      },
+      {
+        "label": "McKinsey, The state of AI in 2026: On the road to ROI (avgust 2026)",
+        "url": "https://www.mckinsey.com.br/capabilities/quantumblack/our-insights/the-state-of-ai"
+      },
+      {
+        "label": "Stanford Digital Economy Lab, The Enterprise AI Playbook: Lessons from 51 Successful Deployments (2026)",
+        "url": "https://digitaleconomy.stanford.edu/publication/enterprise-ai-playbook"
+      },
+      {
+        "label": "Gibson Dunn, EU AI Act Omnibus Agreement (2026), o roku za AI pismenost in novih rokih za visokotvegane sisteme",
+        "url": "https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/"
+      },
+      {
+        "label": "GZS, Vodič uvajanja umetne inteligence v mala in srednja podjetja v Sloveniji (2023)",
+        "url": "https://ai4si.gzs.si/uploads/gpa9LkOc/Vodic_uvajanja_UIMSP-SI_web-3.pdf"
+      }
+    ]
+  }
+}

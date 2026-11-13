@@ -1,0 +1,12 @@
+{
+  "code": "S01",
+  "group": "podpora",
+  "order": 1,
+  "link": {
+    "page": "lokalna-ai"
+  },
+  "sl": {
+    "title": "Lokalni AI modeli",
+    "description": "Jezikovni modeli na vaših strežnikih, za podatke, ki ne smejo iz hiše. Postavitev in vzdrževanje uredimo prek naših partnerjev."
+  }
+}

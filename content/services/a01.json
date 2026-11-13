@@ -1,0 +1,10 @@
+{
+  "code": "A01",
+  "group": "agenti",
+  "order": 1,
+  "link": null,
+  "sl": {
+    "title": "Baza znanja podjetja",
+    "description": "Asistent, ki odgovarja iz vaših dokumentov, pravilnikov in postopkov. Teče v oblaku v EU ali na vaših strežnikih."
+  }
+}

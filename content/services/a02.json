@@ -1,0 +1,10 @@
+{
+  "code": "A02",
+  "group": "agenti",
+  "order": 2,
+  "link": null,
+  "sl": {
+    "title": "Triaža e-pošte",
+    "description": "Razvrsti prejeto pošto, jo usmeri in pripravi osnutke odgovorov."
+  }
+}

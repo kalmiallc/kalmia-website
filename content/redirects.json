@@ -1,0 +1,185 @@
+{
+  "comment": "Preusmeritve s stare strani (SPEC, razdelek 8). Ob buildu se prenesejo v vercel.json (faza 6). Stare poti blog zapisov se dodajo samodejno iz polja legacyUrl v content/blog. Poti EU projektov razen WE-Grind 5.0 je treba preveriti na stari strani.",
+  "redirects": [
+    {
+      "from": "/sl",
+      "to": "/",
+      "status": 301
+    },
+    {
+      "from": "/sl/ai-svetovanje",
+      "to": "/storitve",
+      "status": 301
+    },
+    {
+      "from": "/sl/workshops",
+      "to": "/claude-chatgpt-za-ekipe",
+      "status": 301
+    },
+    {
+      "from": "/sl/workshops/ai",
+      "to": "/claude-chatgpt-za-ekipe",
+      "status": 301
+    },
+    {
+      "from": "/sl/kalmia-ai-assistant",
+      "to": "/lokalna-ai-infrastruktura",
+      "status": 301
+    },
+    {
+      "from": "/sl/kalmia-sheets2app",
+      "to": "/storitve",
+      "status": 301
+    },
+    {
+      "from": "/sl/kalmia-mes",
+      "to": "/proizvodnja",
+      "status": 301
+    },
+    {
+      "from": "/sl/case/gost",
+      "to": "/reference/go-st",
+      "status": 301
+    },
+    {
+      "from": "/sl/case/oro",
+      "to": "/reference/oro-orodjarna",
+      "status": 301
+    },
+    {
+      "from": "/sl/case/weiler",
+      "to": "/reference/weiler-abrasives",
+      "status": 301
+    },
+    {
+      "from": "/sl/case/cestel",
+      "to": "/reference/cestel",
+      "status": 301
+    },
+    {
+      "from": "/sl/case/zymzo",
+      "to": "/reference/digital-receptionist",
+      "status": 301
+    },
+    {
+      "from": "/sl/case/steripro",
+      "to": "/reference/uvc-solutions",
+      "status": 301
+    },
+    {
+      "from": "/sl/case/eti",
+      "to": "/reference/eti",
+      "status": 301
+    },
+    {
+      "from": "/sl/blog",
+      "to": "/blog",
+      "status": 301
+    },
+    {
+      "from": "/sl/project",
+      "to": "/projekti",
+      "status": 301
+    },
+    {
+      "from": "/sl/project/we-grind-5_0",
+      "to": "/projekti/we-grind-5-0",
+      "status": 301
+    },
+    {
+      "from": "/sl/privacy",
+      "to": "/zasebnost",
+      "status": 301
+    },
+    {
+      "from": "/sl/terms",
+      "to": "/pogoji-uporabe",
+      "status": 301
+    },
+    {
+      "from": "/ai-svetovanje",
+      "to": "/storitve",
+      "status": 302
+    },
+    {
+      "from": "/workshops",
+      "to": "/claude-chatgpt-za-ekipe",
+      "status": 302
+    },
+    {
+      "from": "/workshops/ai",
+      "to": "/claude-chatgpt-za-ekipe",
+      "status": 302
+    },
+    {
+      "from": "/kalmia-ai-assistant",
+      "to": "/lokalna-ai-infrastruktura",
+      "status": 302
+    },
+    {
+      "from": "/kalmia-sheets2app",
+      "to": "/storitve",
+      "status": 302
+    },
+    {
+      "from": "/kalmia-mes",
+      "to": "/proizvodnja",
+      "status": 302
+    },
+    {
+      "from": "/case/gost",
+      "to": "/reference/go-st",
+      "status": 302
+    },
+    {
+      "from": "/case/oro",
+      "to": "/reference/oro-orodjarna",
+      "status": 302
+    },
+    {
+      "from": "/case/weiler",
+      "to": "/reference/weiler-abrasives",
+      "status": 302
+    },
+    {
+      "from": "/case/cestel",
+      "to": "/reference/cestel",
+      "status": 302
+    },
+    {
+      "from": "/case/zymzo",
+      "to": "/reference/digital-receptionist",
+      "status": 302
+    },
+    {
+      "from": "/case/steripro",
+      "to": "/reference/uvc-solutions",
+      "status": 302
+    },
+    {
+      "from": "/case/eti",
+      "to": "/reference/eti",
+      "status": 302
+    },
+    {
+      "from": "/project",
+      "to": "/projekti",
+      "status": 302
+    },
+    {
+      "from": "/project/we-grind-5_0",
+      "to": "/projekti/we-grind-5-0",
+      "status": 302
+    },
+    {
+      "from": "/privacy",
+      "to": "/zasebnost",
+      "status": 302
+    },
+    {
+      "from": "/terms",
+      "to": "/pogoji-uporabe",
+      "status": 302
+    }
+  ]
+}

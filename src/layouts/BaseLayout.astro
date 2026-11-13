@@ -10,6 +10,7 @@ import SiteHeader, { type Crumb } from '@components/SiteHeader.astro';
 import SiteFooter from '@components/SiteFooter.astro';
 import { HTML_LANG, OG_LOCALE, normalizePath, ui, type Locale } from '@lib/i18n';
 import { site } from '@lib/site';
+import { validateContent } from '@lib/content';
 
 interface Props {
   locale: Locale;
@@ -26,6 +27,8 @@ const path = normalizePath(Astro.url.pathname);
 
 if (!title?.trim()) throw new Error(`Stran ${path} nima naslova (title).`);
 if (!description?.trim()) throw new Error(`Stran ${path} nima meta opisa (description).`);
+
+await validateContent();
 
 const t = ui(locale);
 const canonical = new URL(path, site.url).href;

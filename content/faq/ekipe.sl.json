@@ -1,0 +1,25 @@
+{
+  "title": "Kar nas vprašajo pred začetkom.",
+  "items": [
+    {
+      "q": "Claude, ChatGPT ali Gemini?",
+      "a": "Delamo z vsemi in izberemo orodje, ki ustreza vašemu delu in zahtevam glede podatkov. Če licence že imate, začnemo z njimi."
+    },
+    {
+      "q": "Ali potrebujemo AI strategijo, preden začnemo?",
+      "a": "Ne. Začnemo s pilotom v eni ekipi. Pravila postavimo na začetku in jih dopolnjujemo sproti."
+    },
+    {
+      "q": "Ali morajo zaposleni znati programirati?",
+      "a": "Ne. Delajo v običajnem vmesniku, na svojih dokumentih in nalogah."
+    },
+    {
+      "q": "Kaj pa strah zaposlenih?",
+      "a": "O njem govorimo odkrito. Pokažemo, katero delo AI prevzame in katero ostane. Presoja in znanje ostaneta pri ljudeh."
+    },
+    {
+      "q": "Kaj, če ne bo zaživelo?",
+      "a": "Zato začnemo s pilotom. V podatkih o rabi vidimo, kaj se je obneslo, in skupaj odločimo, ali nadaljujemo."
+    }
+  ]
+}

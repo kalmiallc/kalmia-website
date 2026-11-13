@@ -1,0 +1,10 @@
+{
+  "code": "P01",
+  "group": "resitve",
+  "order": 1,
+  "link": null,
+  "sl": {
+    "title": "Lasten MES",
+    "description": "Pregled nad proizvodnjo v vašem sistemu, povezan z ERP in stroji, brez najete licence."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "code": "A03",
+  "group": "agenti",
+  "order": 3,
+  "link": null,
+  "sl": {
+    "title": "Priprava ponudb",
+    "description": "Iz povpraševanja pripravi osnutek ponudbe po vaših cenah in pravilih. Komercialist ga pregleda in pošlje."
+  }
+}
