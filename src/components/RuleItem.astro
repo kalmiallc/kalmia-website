@@ -10,7 +10,7 @@ interface Props {
   label?: string;
   tone?: 'dark' | 'light';
   /** Velikost naslova v px (prototip: 19, 20 ali 24). */
-  titleSize?: number;
+  titleSize?: 19 | 20 | 24;
 }
 
 const { title, text, label, tone = 'dark', titleSize = 20 } = Astro.props;
@@ -18,7 +18,7 @@ const { title, text, label, tone = 'dark', titleSize = 20 } = Astro.props;
 
 <div class:list={['ri', `ri--${tone}`]}>
   {label && <span class="ri-label">{label}</span>}
-  <h3 class="ri-title" style={`font-size: ${titleSize}px`}>{title}</h3>
+  <h3 class:list={['ri-title', `ri-title--${titleSize}`]}>{title}</h3>
   <p class="ri-text">{text}</p>
 </div>
 
@@ -47,6 +47,15 @@ const { title, text, label, tone = 'dark', titleSize = 20 } = Astro.props;
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.25;
+  }
+  .ri-title--19 {
+    font-size: 19px;
+  }
+  .ri-title--20 {
+    font-size: 20px;
+  }
+  .ri-title--24 {
+    font-size: 24px;
   }
   .ri--dark .ri-title {
     color: var(--paper);

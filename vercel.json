@@ -5,15 +5,525 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/sl",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/ai-svetovanje",
+      "destination": "/storitve",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/workshops",
+      "destination": "/claude-chatgpt-za-ekipe",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/workshops/ai",
+      "destination": "/claude-chatgpt-za-ekipe",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/kalmia-ai-assistant",
+      "destination": "/lokalna-ai-infrastruktura",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/kalmia-sheets2app",
+      "destination": "/storitve",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/kalmia-mes",
+      "destination": "/proizvodnja",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/case/gost",
+      "destination": "/reference/go-st",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/case/oro",
+      "destination": "/reference/oro-orodjarna",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/case/weiler",
+      "destination": "/reference/weiler-abrasives",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/case/cestel",
+      "destination": "/reference/cestel",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/case/zymzo",
+      "destination": "/reference/digital-receptionist",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/case/steripro",
+      "destination": "/reference/uvc-solutions",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/case/eti",
+      "destination": "/reference/eti",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/project",
+      "destination": "/projekti",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/project/we-grind-5_0",
+      "destination": "/projekti/we-grind-5-0",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/project/enerdao",
+      "destination": "/projekti/enerdao",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/project/hypex",
+      "destination": "/projekti/one-4-0",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/privacy",
+      "destination": "/zasebnost",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/terms",
+      "destination": "/pogoji-uporabe",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-svetovanje",
+      "destination": "/storitve",
+      "statusCode": 302
+    },
+    {
+      "source": "/workshops",
+      "destination": "/claude-chatgpt-za-ekipe",
+      "statusCode": 302
+    },
+    {
+      "source": "/workshops/ai",
+      "destination": "/claude-chatgpt-za-ekipe",
+      "statusCode": 302
+    },
+    {
+      "source": "/kalmia-ai-assistant",
+      "destination": "/lokalna-ai-infrastruktura",
+      "statusCode": 302
+    },
+    {
+      "source": "/kalmia-sheets2app",
+      "destination": "/storitve",
+      "statusCode": 302
+    },
+    {
+      "source": "/kalmia-mes",
+      "destination": "/proizvodnja",
+      "statusCode": 302
+    },
+    {
+      "source": "/case/gost",
+      "destination": "/reference/go-st",
+      "statusCode": 302
+    },
+    {
+      "source": "/case/oro",
+      "destination": "/reference/oro-orodjarna",
+      "statusCode": 302
+    },
+    {
+      "source": "/case/weiler",
+      "destination": "/reference/weiler-abrasives",
+      "statusCode": 302
+    },
+    {
+      "source": "/case/cestel",
+      "destination": "/reference/cestel",
+      "statusCode": 302
+    },
+    {
+      "source": "/case/zymzo",
+      "destination": "/reference/digital-receptionist",
+      "statusCode": 302
+    },
+    {
+      "source": "/case/steripro",
+      "destination": "/reference/uvc-solutions",
+      "statusCode": 302
+    },
+    {
+      "source": "/case/eti",
+      "destination": "/reference/eti",
+      "statusCode": 302
+    },
+    {
+      "source": "/project",
+      "destination": "/projekti",
+      "statusCode": 302
+    },
+    {
+      "source": "/privacy",
+      "destination": "/zasebnost",
+      "statusCode": 302
+    },
+    {
+      "source": "/terms",
+      "destination": "/pogoji-uporabe",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/AI-act-slovenija-important",
+      "destination": "/blog/ai-act-slovenija-pomembno",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/AI-in-manufacturing-vol-2",
+      "destination": "/blog/ai-v-proizvodnji-del-2",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/OpenClaw-ai-agent-security",
+      "destination": "/blog/openclaw-ai-agent-varnost",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/ai-agent-shipment-delay-checks",
+      "destination": "/blog/ai-agent-za-preverjanje-posiljk",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/ai-agent-travel-orders",
+      "destination": "/blog/ai-agent-potni-nalogi",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/ai-asistent-more-than-ms-copilot",
+      "destination": "/blog/ai-asistent-vec-kot-ms-copilot",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/ai-consulting-5-key-points",
+      "destination": "/blog/ai-svetovanje-5-kljucnih-nasvetov",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/ai-fast-wins-with-ai-automatization",
+      "destination": "/blog/ai-od-hitrih-zmag-do-avtomatizirane-produkcije",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/ai-in-manufacturing-saves-time",
+      "destination": "/blog/ai-v-proizvodnji-odstranite-ozka-grla",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/ai-logistics-agent-inventory-optimization",
+      "destination": "/blog/ai-agent-optimizacija-logistike",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/ai-security-less-risk-iso42001",
+      "destination": "/blog/ai-varnost-manj-tveganja-iso42001",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/become-part-of-the-5-percent-ai-success",
+      "destination": "/blog/lokalni-vs-generativni-ai-poslovni-ucinek",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/chatbot-vs-ai-assistant-vs-ai-agent-how-to-choose",
+      "destination": "/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/digital-transformation-manufacturing-kalmia-mes-oee-roi",
+      "destination": "/blog/digitalna-preobrazba-proizvodnje-mes-oee-roi",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/digitalization-sme-integrations",
+      "destination": "/blog/digitalizacija-msp-povezovanje",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/erp-bottlenecks-and-ai-solutions",
+      "destination": "/blog/erp-ozka-grla-in-ai-resitve",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/excel-to-app-without-high-costs",
+      "destination": "/blog/excel-v-aplikacijo-brez-visokih-stroskov",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/how-ai-agents-are-transforming-business",
+      "destination": "/blog/ai-agenti-v-podjetjih",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/kumo-or-kalmia",
+      "destination": "/blog/kumo-ali-kalmia",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/meet-murai-smart-chatbot",
+      "destination": "/blog/spoznajte-murai-pametni-chatbot",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/oro-we-built-an-mes-by-mistake",
+      "destination": "/blog/oro-pomotoma-smo-razvili-mes",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/practical-comparison-of-amd-ai-max-and-nvidia-rtx-spark",
+      "destination": "/blog",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/prepare-a-chatbot-that-actually-works",
+      "destination": "/blog",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/running-llms-on-amd-framework-vulkan-rocm",
+      "destination": "/blog",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/save-time-murai",
+      "destination": "/blog/prihranek-casa-murai",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/six-months-free-ai-model-usage-benefit-check",
+      "destination": "/blog/6-mesecev-brezplacne-uporabe-ai-modelov",
+      "statusCode": 302
+    },
+    {
+      "source": "/blog/smart-chat-bot-hotels",
+      "destination": "/blog/pamenti-bot-hoteli",
+      "statusCode": 302
+    },
+    {
+      "source": "/sl/blog/ai-v-proizvodnji-del-2",
+      "destination": "/blog/ai-v-proizvodnji-del-2",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-act-slovenija-pomembno",
+      "destination": "/blog/ai-act-slovenija-pomembno",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/6-mesecev-brezplacne-uporabe-AI-modelov",
+      "destination": "/blog/6-mesecev-brezplacne-uporabe-ai-modelov",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/AI-act-slovenija-pomembno",
+      "destination": "/blog/ai-act-slovenija-pomembno",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-agent-optimizacija-logistike",
+      "destination": "/blog/ai-agent-optimizacija-logistike",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-agent-potni-nalogi",
+      "destination": "/blog/ai-agent-potni-nalogi",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-agent-za-javne-razpise",
+      "destination": "/blog/ai-agent-za-javne-razpise",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-agent-za-preverjanje-posiljk",
+      "destination": "/blog/ai-agent-za-preverjanje-posiljk",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-agenti-v-podjetjih",
+      "destination": "/blog/ai-agenti-v-podjetjih",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-asistent-vec-kot-ms-copilot",
+      "destination": "/blog/ai-asistent-vec-kot-ms-copilot",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-od-hitrih-zmag-do-avtomatizirane-produkcije",
+      "destination": "/blog/ai-od-hitrih-zmag-do-avtomatizirane-produkcije",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-svetovanje-5-kljucnih-nasvetov",
+      "destination": "/blog/ai-svetovanje-5-kljucnih-nasvetov",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/AI-v-proizvodnji-del-2",
+      "destination": "/blog/ai-v-proizvodnji-del-2",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-v-proizvodnji-odstranite-ozka-grla",
+      "destination": "/blog/ai-v-proizvodnji-odstranite-ozka-grla",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/ai-varnost-manj-tveganja-iso42001",
+      "destination": "/blog/ai-varnost-manj-tveganja-iso42001",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/digitalizacija-msp-povezovanje",
+      "destination": "/blog/digitalizacija-msp-povezovanje",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/digitalna-preobrazba-proizvodnje-mes-oee-roi",
+      "destination": "/blog/digitalna-preobrazba-proizvodnje-mes-oee-roi",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/erp-ozka-grla-in-ai-resitve",
+      "destination": "/blog/erp-ozka-grla-in-ai-resitve",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/excel-v-aplikacijo-brez-visokih-stroskov",
+      "destination": "/blog/excel-v-aplikacijo-brez-visokih-stroskov",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje",
+      "destination": "/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/kumo-ali-kalmia",
+      "destination": "/blog/kumo-ali-kalmia",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/lokalni-vs-generativni-ai-poslovni-ucinek",
+      "destination": "/blog/lokalni-vs-generativni-ai-poslovni-ucinek",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/openclaw-ai-agent-varnost",
+      "destination": "/blog/openclaw-ai-agent-varnost",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/oro-pomotoma-smo-razvili-mes",
+      "destination": "/blog/oro-pomotoma-smo-razvili-mes",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/pamenti-bot-hoteli",
+      "destination": "/blog/pamenti-bot-hoteli",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/prihranek-casa-murai",
+      "destination": "/blog/prihranek-casa-murai",
+      "statusCode": 301
+    },
+    {
+      "source": "/sl/blog/spoznajte-murai-pametni-chatbot",
+      "destination": "/blog/spoznajte-murai-pametni-chatbot",
+      "statusCode": 301
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
-      "missing": [{ "type": "host", "value": "kalmia.si" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "missing": [
+        {
+          "type": "host",
+          "value": "kalmia.si"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     },
     {
       "source": "/_astro/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
     }
   ]
 }

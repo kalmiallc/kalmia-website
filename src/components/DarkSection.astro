@@ -11,9 +11,9 @@ interface Props {
   title: string;
   intro?: string;
   /** Najmanjša širina stolpca mreže (px). */
-  minColumn?: number;
-  /** Razmik mreže, npr. "28px" ali "28px 32px". */
-  gridGap?: string;
+  minColumn?: 240 | 280;
+  /** Razmik mreže: "28px" ali "28px 32px". */
+  gridGap?: '28px' | '28px 32px';
   id?: string;
 }
 
@@ -22,7 +22,7 @@ const { eyebrow, title, intro, minColumn = 280, gridGap = '28px', id } = Astro.p
 
 <Section tone="dark" gap={40} id={id}>
   <SectionHeading eyebrow={eyebrow} title={title} intro={intro} dark />
-  <div class="dk-grid" style={`--dk-min: ${minColumn}px; --dk-gap: ${gridGap}`}>
+  <div class:list={['dk-grid', `dk-min-${minColumn}`, { 'dk-gap-wide': gridGap === '28px 32px' }]}>
     <slot />
   </div>
   <slot name="after" />
@@ -31,7 +31,15 @@ const { eyebrow, title, intro, minColumn = 280, gridGap = '28px', id } = Astro.p
 <style>
   .dk-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--dk-min)), 1fr));
-    gap: var(--dk-gap);
+    gap: 28px;
+  }
+  .dk-min-240 {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+  .dk-min-280 {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  }
+  .dk-gap-wide {
+    gap: 28px 32px;
   }
 </style>

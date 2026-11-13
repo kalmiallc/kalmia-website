@@ -7,8 +7,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check && node scripts/check-dist.mjs",
-    "astro": "astro"
+    "check": "astro check && node scripts/check-dist.mjs && node scripts/test-redirects.mjs",
+    "astro": "astro",
+    "prebuild": "node scripts/build-redirects.mjs",
+    "test:redirects": "node scripts/test-redirects.mjs"
   },
   "dependencies": {
     "astro": "^7.4.11"

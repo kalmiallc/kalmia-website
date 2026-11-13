@@ -8,8 +8,8 @@ interface Props {
   tone?: 'white' | 'surface' | 'dark';
   /** Tanek rob nad odsekom, kot med belimi odseki v prototipu. */
   borderTop?: boolean;
-  /** Razmik med elementi znotraj odseka (px). */
-  gap?: number;
+  /** Razmik med elementi znotraj odseka (px). Brez atributa style zaradi CSP. */
+  gap?: 8 | 20 | 28 | 32 | 40;
   /** column: elementi drug pod drugim; split: naslov levo, vsebina desno. */
   layout?: 'column' | 'split';
   class?: string;
@@ -32,7 +32,7 @@ const {
   aria-labelledby={ariaLabelledby}
   class:list={['sec', `sec--${tone}`, { 'sec--rule': borderTop, 'on-dark': tone === 'dark' }, className]}
 >
-  <div class:list={['container', 'sec-inner', `sec-inner--${layout}`]} style={`--sec-gap: ${gap}px`}>
+  <div class:list={['container', 'sec-inner', `sec-inner--${layout}`, `sec-gap-${gap}`]}>
     <slot />
   </div>
 </section>
@@ -55,12 +55,28 @@ const {
   .sec-inner--column {
     display: flex;
     flex-direction: column;
-    gap: var(--sec-gap);
+  }
+  .sec-gap-8 {
+    gap: 8px;
+  }
+  .sec-gap-20 {
+    gap: 20px;
+  }
+  .sec-gap-28 {
+    gap: 28px;
+  }
+  .sec-gap-32 {
+    gap: 32px;
+  }
+  .sec-gap-40 {
+    gap: 40px;
+  }
+  .sec-inner--split {
+    gap: 32px 64px;
   }
   .sec-inner--split {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px 64px;
     align-items: start;
   }
 </style>
