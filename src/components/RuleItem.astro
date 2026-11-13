@@ -1,0 +1,64 @@
+---
+/**
+ * Postavka s črto na vrhu: na temnem odseku z Lime črto (Stroški, Varnost, Kako delamo),
+ * na svetlem z Ink črto (npr. »Začnite z enim procesom«).
+ */
+interface Props {
+  title: string;
+  text: string;
+  /** Neobvezna oznaka nad naslovom (npr. »Enkratno«). */
+  label?: string;
+  tone?: 'dark' | 'light';
+  /** Velikost naslova v px (prototip: 19, 20 ali 24). */
+  titleSize?: number;
+}
+
+const { title, text, label, tone = 'dark', titleSize = 20 } = Astro.props;
+---
+
+<div class:list={['ri', `ri--${tone}`]}>
+  {label && <span class="ri-label">{label}</span>}
+  <h3 class="ri-title" style={`font-size: ${titleSize}px`}>{title}</h3>
+  <p class="ri-text">{text}</p>
+</div>
+
+<style>
+  .ri {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 18px;
+  }
+  .ri--dark {
+    border-top: 2px solid var(--lime);
+  }
+  .ri--light {
+    border-top: 2px solid var(--ink);
+  }
+  .ri-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--lime);
+  }
+  .ri-title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .ri--dark .ri-title {
+    color: var(--paper);
+  }
+  .ri-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .ri--dark .ri-text {
+    color: var(--on-dark);
+  }
+  .ri--light .ri-text {
+    color: var(--text-muted);
+  }
+</style>

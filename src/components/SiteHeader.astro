@@ -1,0 +1,311 @@
+---
+/**
+ * Glava strani.
+ * variant="home": logotip in poziv (domača stran).
+ * variant="sub": logotip, drobtinice, gumb »Kazalo« z zložljivim panelom in poziv.
+ *
+ * Panel se na napravah z miško odpre ob prehodu (CSS), s tipkovnico ob fokusu (CSS),
+ * na zaslonih na dotik pa s klikom (majhen skript). Brez JavaScripta gumb vodi na
+ * kazalo na domači strani.
+ */
+import BookingLink from './BookingLink.astro';
+import IndexRows from './IndexRows.astro';
+import { homePath, ui, type Locale } from '@lib/i18n';
+import { site } from '@lib/site';
+
+export interface Crumb {
+  label: string;
+  /** Brez href je drobtinica trenutna stran. */
+  href?: string;
+}
+
+interface Props {
+  locale: Locale;
+  variant: 'home' | 'sub';
+  breadcrumbs?: Crumb[];
+  currentPath?: string;
+}
+
+const { locale, variant, breadcrumbs = [], currentPath } = Astro.props;
+const t = ui(locale);
+const home = homePath(locale);
+---
+
+{
+  variant === 'home' ? (
+    <header class="hdr hdr--home">
+      <div class="container hdr-bar">
+        <a href={home} aria-label={t.header.homeLabel} class="hdr-logo">
+          <img src={site.logo} alt="Kalmia" width="141" height="16" />
+        </a>
+        <BookingLink locale={locale} size="header" label={t.header.cta} />
+      </div>
+    </header>
+  ) : (
+    <header class="hdr hdr--sub kz-nav" data-kz-nav>
+      <div class="container hdr-bar">
+        <div class="hdr-left">
+          <a href={home} aria-label={t.header.homeLabelFromSubpage} class="hdr-logo">
+            <img src={site.logo} alt="Kalmia" width="141" height="16" />
+          </a>
+          {breadcrumbs.length > 0 && (
+            <nav aria-label={t.header.breadcrumbsLabel} class="crumbs">
+              <ol>
+                {breadcrumbs.map((c) => (
+                  <li>
+                    <span aria-hidden="true" class="crumb-sep">
+                      /
+                    </span>
+                    {c.href ? (
+                      <a href={c.href}>{c.label}</a>
+                    ) : (
+                      <span aria-current="page" class="crumb-current">
+                        {c.label}
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
+        </div>
+        <div class="hdr-right">
+          <a href={`${home}#kazalo`} class="kz-trigger" aria-controls="kz-panel" data-kz-trigger>
+            {t.header.indexButton} <span class="kz-caret" aria-hidden="true" data-kz-caret>▾</span>
+          </a>
+          <BookingLink locale={locale} size="header" label={t.header.cta} />
+        </div>
+      </div>
+      <div class="kz-panel" id="kz-panel" data-kz-panel data-open="false">
+        <div class="container kz-panel-inner">
+          <div class="kz-panel-head">
+            <span class="eyebrow">{t.index.heading}</span>
+            <a href={home} class="kz-home">
+              {t.index.toHome}
+              <span aria-hidden="true">&nbsp;→</span>
+            </a>
+          </div>
+          <IndexRows locale={locale} variant="panel" currentPath={currentPath} />
+        </div>
+      </div>
+    </header>
+  )
+}
+
+<script>
+  // Odpiranje panela s klikom ali tipko Enter (nujno za zaslone na dotik).
+  for (const nav of document.querySelectorAll<HTMLElement>('[data-kz-nav]')) {
+    const trigger = nav.querySelector<HTMLAnchorElement>('[data-kz-trigger]');
+    const panel = nav.querySelector<HTMLElement>('[data-kz-panel]');
+    const caret = nav.querySelector<HTMLElement>('[data-kz-caret]');
+    if (!trigger || !panel) continue;
+
+    trigger.setAttribute('role', 'button');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-haspopup', 'true');
+
+    const setOpen = (open: boolean) => {
+      panel.dataset.open = String(open);
+      trigger.setAttribute('aria-expanded', String(open));
+      if (caret) caret.textContent = open ? '▴' : '▾';
+    };
+
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      setOpen(panel.dataset.open !== 'true');
+    });
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key === ' ') {
+        e.preventDefault();
+        setOpen(panel.dataset.open !== 'true');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && panel.dataset.open === 'true') {
+        setOpen(false);
+        trigger.focus();
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (panel.dataset.open === 'true' && !nav.contains(e.target as Node)) setOpen(false);
+    });
+  }
+</script>
+
+<style>
+  .hdr {
+    border-bottom: 1px solid var(--line-soft);
+    background: var(--paper);
+  }
+  .hdr-bar {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hdr--home .hdr-bar {
+    gap: 16px 32px;
+  }
+  .hdr--sub .hdr-bar {
+    gap: 12px 32px;
+  }
+  .hdr-logo {
+    display: flex;
+    align-items: center;
+    height: 44px;
+  }
+  .hdr-logo img {
+    height: 16px;
+    width: auto;
+    display: block;
+  }
+
+  /* Podstrani */
+  .kz-nav {
+    position: relative;
+    z-index: 20;
+  }
+  .hdr-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 16px;
+    min-width: 0;
+  }
+  .crumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    color: var(--support);
+  }
+  .crumbs li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .crumb-sep {
+    color: var(--line-strong);
+  }
+  .crumbs a {
+    color: var(--support);
+  }
+  .crumbs a:hover {
+    color: var(--ink);
+  }
+  .crumb-current {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .hdr-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 20px;
+  }
+  .kz-trigger {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 16px;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius-xs);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+  }
+  /* Most med gumbom in panelom, da se panel ob premiku miške ne zapre.
+     Samo pri miški: na dotik bi prekril poziv pod gumbom. */
+  @media (hover: hover) {
+    .kz-trigger::after {
+      content: '';
+      position: absolute;
+      left: -16px;
+      right: -16px;
+      top: 100%;
+      height: 30px;
+    }
+  }
+  .kz-caret {
+    font-size: 11px;
+  }
+
+  .kz-panel {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--paper);
+    border-bottom: 2px solid var(--ink);
+    box-shadow: 0 16px 32px rgba(35, 36, 43, 0.1);
+    max-height: calc(100vh - 100%);
+    overflow-y: auto;
+  }
+  .kz-panel-inner {
+    padding-top: 20px;
+    padding-bottom: 12px;
+  }
+  .kz-panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 8px;
+  }
+  .kz-home {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--royal);
+  }
+
+  /* Odpiranje: fokus s tipkovnico, prehod z miško, na zaslonih na dotik klik (data-open) */
+  .kz-nav:has(.kz-trigger:focus-visible) .kz-panel,
+  .kz-panel:focus-within {
+    display: block;
+  }
+  @media (hover: none) {
+    .kz-panel[data-open='true'] {
+      display: block;
+    }
+    .kz-trigger[aria-expanded='true'] {
+      background: var(--ink);
+      color: var(--paper);
+    }
+  }
+  .kz-trigger:focus-visible,
+  .kz-nav:has(.kz-panel:focus-within) .kz-trigger {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  @media (hover: hover) {
+    .kz-nav:has(.kz-trigger:hover) .kz-panel,
+    .kz-panel:hover {
+      display: block;
+    }
+    .kz-trigger:hover,
+    .kz-nav:has(.kz-panel:hover) .kz-trigger {
+      background: var(--ink);
+      color: var(--paper);
+    }
+  }
+</style>

@@ -1,0 +1,203 @@
+---
+/**
+ * Vrstice kazala. Vir: content/navigation.json.
+ * variant="home": velike vrstice na domači strani.
+ * variant="panel": manjše vrstice v zložljivem panelu na podstraneh.
+ * Hover: modra različica (ozadje Royal, številka na Lime).
+ */
+import { indexRows } from '@lib/navigation';
+import { normalizePath, ui, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  variant: 'home' | 'panel';
+  /** Pot trenutne strani, da jo označimo z aria-current="page". */
+  currentPath?: string;
+  id?: string;
+}
+
+const { locale, variant, currentPath, id } = Astro.props;
+const t = ui(locale);
+const rows = indexRows(locale);
+const current = currentPath ? normalizePath(currentPath) : undefined;
+---
+
+<nav aria-label={t.index.navLabel} class:list={['kz', `kz--${variant}`]} id={id}>
+  {
+    rows.map((row) => {
+      const isCurrent = current === row.path;
+      return (
+        <a href={row.path} class="kz-row" aria-current={isCurrent ? 'page' : undefined}>
+          <span class="kz-numcol">
+            <span class:list={['kz-num', { 'kz-on': isCurrent }]}>{row.number}</span>
+          </span>
+          <span class="kz-main">
+            <span class="kz-title">
+              {row.title}
+              <span class="kz-arrow" aria-hidden="true">
+                →
+              </span>
+            </span>
+            <span class="kz-desc">{row.description}</span>
+          </span>
+          {variant === 'panel' && (
+            <span class="kz-here">{isCurrent && <span class="kz-here-label">{t.index.currentPage}</span>}</span>
+          )}
+        </a>
+      );
+    })
+  }
+</nav>
+
+<style>
+  .kz {
+    display: flex;
+    flex-direction: column;
+  }
+  .kz-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    color: var(--ink);
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: background-color 0.2s ease;
+  }
+  .kz-num {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    background: var(--chip);
+    transition: background-color 0.15s ease;
+  }
+  .kz-num.kz-on {
+    background: var(--lime);
+  }
+  .kz-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .kz-title {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    transition: transform 0.25s ease;
+  }
+  .kz-arrow {
+    display: inline-block;
+    margin-left: 0.3em;
+    color: var(--royal);
+    opacity: 0;
+    transform: translateX(-7px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+  .kz-desc {
+    font-size: 14px;
+    color: var(--support);
+    transition: color 0.25s ease;
+  }
+
+  /* Modra različica hoverja */
+  .kz-row:hover,
+  .kz-row:focus-visible {
+    background: var(--royal);
+    color: var(--paper);
+  }
+  .kz-row:hover .kz-num,
+  .kz-row:focus-visible .kz-num {
+    background: var(--lime);
+    color: var(--ink);
+  }
+  .kz-row:hover .kz-title,
+  .kz-row:focus-visible .kz-title {
+    transform: translateX(6px);
+  }
+  .kz-row:hover .kz-arrow,
+  .kz-row:focus-visible .kz-arrow {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--lime);
+  }
+  .kz-row:hover .kz-desc,
+  .kz-row:focus-visible .kz-desc {
+    color: var(--royal-tint);
+  }
+  .kz-row:hover .kz-here-label,
+  .kz-row:focus-visible .kz-here-label {
+    color: var(--lime);
+  }
+
+  /* Domača stran */
+  .kz--home .kz-row {
+    gap: 9.8px 28px;
+    padding-top: 22.4px;
+    padding-bottom: 22.4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .kz--home .kz-row:last-child {
+    border-bottom: 2px solid var(--ink);
+  }
+  .kz--home .kz-numcol {
+    flex: 0 0 39.2px;
+  }
+  .kz--home .kz-num {
+    padding: 1.4px 5.6px;
+    border-radius: 2.1px;
+  }
+  .kz--home .kz-main {
+    flex: 3 1 364px;
+    gap: 7px;
+  }
+  .kz--home .kz-title {
+    font-size: clamp(19.6px, 2.38vw, 30.8px);
+    line-height: 1.1;
+  }
+  .kz--home .kz-desc {
+    line-height: 1.6;
+  }
+
+  /* Panel na podstraneh */
+  .kz--panel .kz-row {
+    gap: 8px 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-top: 1px solid var(--line);
+  }
+  .kz--panel .kz-numcol {
+    flex: 0 0 36px;
+  }
+  .kz--panel .kz-num {
+    padding: 1px 5px;
+    border-radius: var(--radius-xs);
+  }
+  .kz--panel .kz-main {
+    flex: 3 1 360px;
+    gap: 4px;
+  }
+  .kz--panel .kz-title {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  .kz--panel .kz-desc {
+    line-height: 1.55;
+  }
+  .kz-here {
+    flex: 0 0 auto;
+  }
+  .kz-here-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--royal);
+  }
+  /* Minimum 390 px: vrstica ne sme povzročiti vodoravnega drsenja */
+  .kz-main {
+    min-width: 0;
+  }
+</style>

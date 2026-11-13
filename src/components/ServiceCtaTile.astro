@@ -1,0 +1,97 @@
+---
+/**
+ * Temna ploščica s pozivom na koncu mreže ploščic. Vodi na bookingUrl.
+ */
+import { site } from '@lib/site';
+import { ui, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  eyebrow: string;
+  title: string;
+  description: string;
+  /** Besedilo povezave, privzeto »Pogovorimo se«. */
+  linkLabel?: string;
+  headingLevel?: 'h3' | 'h4';
+}
+
+const { locale, eyebrow, title, description, linkLabel, headingLevel = 'h3' } = Astro.props;
+const t = ui(locale);
+const Heading = headingLevel;
+---
+
+<a href={site.bookingUrl} target="_blank" rel="noopener" class="sv-cta on-dark">
+  <span class="sv-cta-eyebrow">{eyebrow}</span>
+  <Heading class="sv-cta-title">{title}</Heading>
+  <span class="sv-cta-desc">{description}</span>
+  <span class="sv-cta-link">
+    {linkLabel ?? t.cta.talk}<span aria-hidden="true">&nbsp;→</span><span class="visually-hidden"> {t.a11y.opensInNewTab}</span>
+  </span>
+</a>
+
+<style>
+  .sv-cta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 18px 20px;
+    background: var(--block-ink);
+    border: 1px solid var(--block-ink);
+    border-radius: var(--radius-md);
+    color: var(--paper);
+    overflow: hidden;
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  .sv-cta::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: var(--lime);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  .sv-cta:hover,
+  .sv-cta:focus-visible {
+    border-color: var(--ink);
+    transform: translateY(-2px);
+    color: var(--paper);
+  }
+  .sv-cta:hover::after,
+  .sv-cta:focus-visible::after {
+    transform: scaleX(1);
+  }
+  .sv-cta-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--lime);
+  }
+  .sv-cta-title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.25;
+    color: var(--paper);
+  }
+  .sv-cta-desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--on-dark);
+  }
+  .sv-cta-link {
+    margin-top: auto;
+    padding-top: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--lime);
+  }
+</style>

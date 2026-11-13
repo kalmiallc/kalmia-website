@@ -1,0 +1,13 @@
+---
+/** Mreža ploščic: samodejno število stolpcev, najmanj 240 px na ploščico. */
+---
+
+<div class="tile-grid"><slot /></div>
+
+<style>
+  .tile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+    gap: 12px;
+  }
+</style>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import IndexRows from '@components/IndexRows.astro';
+import ClientList from '@components/ClientList.astro';
+import { getPage } from '@lib/pages';
+import { ui } from '@lib/i18n';
+import { site } from '@lib/site';
+
+const locale = 'sl';
+const t = ui(locale);
+const page = await getPage(locale, 'home');
+const { title, description, h1, lead } = page.data;
+---
+
+<BaseLayout locale={locale} title={title} description={description} variant="home">
+  <div class="container">
+    <div class="intro">
+      <div class="intro-copy">
+        <h1 class="h1">{h1}</h1>
+        {lead && <p class="intro-lead">{lead}</p>}
+      </div>
+    </div>
+
+    <h2 class="eyebrow kz-head" id="kazalo">{t.index.heading}</h2>
+    <IndexRows locale={locale} variant="home" />
+
+    <div class="clients">
+      <ClientList locale={locale} names={site.clients} variant="inline" />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 48px;
+    align-items: stretch;
+    padding: clamp(32px, 4vw, 56px) 0 clamp(40px, 5vw, 64px);
+  }
+  .intro-copy {
+    flex: 1 1 640px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .intro-lead {
+    max-width: 700px;
+    font-size: clamp(18px, 1.6vw, 21px);
+    line-height: 1.85;
+  }
+  .kz-head {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 8.4px;
+    border-bottom: 2px solid var(--ink);
+    scroll-margin-top: 16px;
+  }
+  .clients {
+    padding: 25.2px 0 clamp(33.6px, 4.2vw, 50.4px);
+  }
+</style>

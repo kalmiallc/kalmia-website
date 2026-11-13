@@ -1,0 +1,16 @@
+{
+  "comment": "Poti, ki so že povezane (kazalo, noga), a jih zgradimo v kasnejših fazah. Preverjanje povezav jih začasno dovoli. Seznam izpraznimo v fazi 3.",
+  "routes": [
+    "/storitve",
+    "/vodnik-uvedba-ai",
+    "/lokalna-ai-infrastruktura",
+    "/claude-chatgpt-za-ekipe",
+    "/proizvodnja",
+    "/reference",
+    "/reference/weiler-abrasives",
+    "/blog",
+    "/projekti",
+    "/zasebnost",
+    "/pogoji-uporabe"
+  ]
+}

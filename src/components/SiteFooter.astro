@@ -1,0 +1,93 @@
+---
+/**
+ * Noga: logotip, naslov podjetja in povezave iz content/navigation.json (footer).
+ * variant="home": brez zgornjega roba (nad njo je bela vsebina).
+ * variant="sub": z robom, ker je nad njo navadno temen poziv.
+ */
+import { addressLine, site } from '@lib/site';
+import { footerLinks } from '@lib/navigation';
+import { ui, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  variant?: 'home' | 'sub';
+}
+
+const { locale, variant = 'sub' } = Astro.props;
+const t = ui(locale);
+const links = footerLinks(locale);
+---
+
+<footer class:list={['ftr', 'on-dark', `ftr--${variant}`]}>
+  <div class="container ftr-bar">
+    <img src={site.logoOnDark} alt={t.footer.logoAlt} width="124" height="14" class="ftr-logo" />
+    <div class="ftr-meta">
+      <span>{addressLine()}</span>
+      {
+        links.length > 0 && (
+          <nav aria-label={t.footer.navLabel}>
+            <ul class="ftr-links">
+              {links.map((l) => (
+                <li>
+                  <a href={l.path}>{l.title}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )
+      }
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ftr {
+    background: var(--block-ink);
+    color: var(--paper);
+  }
+  .ftr--sub {
+    border-top: 1px solid var(--line-dark);
+  }
+  .ftr-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 28px;
+  }
+  .ftr--home .ftr-bar {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .ftr--sub .ftr-bar {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .ftr-logo {
+    height: 14px;
+    width: auto;
+    display: block;
+  }
+  .ftr-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 28px;
+    font-size: 13px;
+    color: var(--on-dark-muted);
+  }
+  .ftr-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ftr-links a {
+    color: var(--on-dark);
+  }
+  .ftr-links a:hover {
+    color: var(--paper);
+  }
+</style>

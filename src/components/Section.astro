@@ -1,0 +1,66 @@
+---
+/**
+ * Odsek strani v vsebniku 1248 px.
+ * tone: white (privzeto), surface (svetlo siva #f6f6f7) ali dark (BlockInk).
+ */
+interface Props {
+  id?: string;
+  tone?: 'white' | 'surface' | 'dark';
+  /** Tanek rob nad odsekom, kot med belimi odseki v prototipu. */
+  borderTop?: boolean;
+  /** Razmik med elementi znotraj odseka (px). */
+  gap?: number;
+  /** column: elementi drug pod drugim; split: naslov levo, vsebina desno. */
+  layout?: 'column' | 'split';
+  class?: string;
+  ariaLabelledby?: string;
+}
+
+const {
+  id,
+  tone = 'white',
+  borderTop = false,
+  gap = 28,
+  layout = 'column',
+  class: className,
+  ariaLabelledby,
+} = Astro.props;
+---
+
+<section
+  id={id}
+  aria-labelledby={ariaLabelledby}
+  class:list={['sec', `sec--${tone}`, { 'sec--rule': borderTop, 'on-dark': tone === 'dark' }, className]}
+>
+  <div class:list={['container', 'sec-inner', `sec-inner--${layout}`]} style={`--sec-gap: ${gap}px`}>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .sec--surface {
+    background: var(--surface);
+  }
+  .sec--dark {
+    background: var(--block-ink);
+    color: var(--paper);
+  }
+  .sec--rule {
+    border-top: 1px solid var(--line-soft);
+  }
+  .sec-inner {
+    padding-top: var(--section-y);
+    padding-bottom: var(--section-y);
+  }
+  .sec-inner--column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sec-gap);
+  }
+  .sec-inner--split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 64px;
+    align-items: start;
+  }
+</style>

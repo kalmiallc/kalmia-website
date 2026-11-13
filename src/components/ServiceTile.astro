@@ -1,0 +1,123 @@
+---
+/**
+ * Ploščica storitve (A01–A07, P01–P03, U01–U03, S01–S04).
+ * - href = null: statična ploščica, brez puščice, ni klikljiva.
+ * - href = pot: ploščica je povezava, z okroglo ikono s puščico.
+ * Za temno ploščico s pozivom uporabi ServiceCtaTile.
+ */
+interface Props {
+  code: string;
+  title: string;
+  description: string;
+  href?: string | null;
+  /** Raven naslova, privzeto h3 (ploščice so pod naslovom odseka h2). */
+  headingLevel?: 'h3' | 'h4';
+}
+
+const { code, title, description, href = null, headingLevel = 'h3' } = Astro.props;
+const Tag = href ? 'a' : 'div';
+const Heading = headingLevel;
+---
+
+<Tag href={href ?? undefined} class:list={['sv-tile', { 'sv-static': !href }]}>
+  <span class="sv-top">
+    <span class="sv-code">{code}</span>
+    {href && <span class="sv-go" aria-hidden="true">→</span>}
+  </span>
+  <Heading class="sv-title">{title}</Heading>
+  <span class="sv-desc">{description}</span>
+</Tag>
+
+<style>
+  .sv-tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 18px 20px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    color: var(--ink);
+    overflow: hidden;
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  .sv-tile::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: var(--lime);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  a.sv-tile:hover,
+  a.sv-tile:focus-visible {
+    border-color: var(--ink);
+    transform: translateY(-2px);
+    color: var(--ink);
+  }
+  a.sv-tile:hover::after,
+  a.sv-tile:focus-visible::after {
+    transform: scaleX(1);
+  }
+  .sv-static {
+    cursor: default;
+  }
+  .sv-static::after {
+    display: none;
+  }
+  .sv-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sv-code {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 7px;
+    border-radius: var(--radius-xs);
+    background: var(--chip);
+    color: var(--ink);
+  }
+  .sv-go {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    color: var(--royal);
+    font-size: 14px;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+  a.sv-tile:hover .sv-go,
+  a.sv-tile:focus-visible .sv-go {
+    background: var(--royal);
+    border-color: var(--royal);
+    color: var(--paper);
+  }
+  .sv-title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.25;
+  }
+  .sv-desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--support);
+  }
+</style>

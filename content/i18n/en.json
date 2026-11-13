@@ -1,0 +1,40 @@
+{
+  "skipToContent": "Skip to content",
+  "header": {
+    "homeLabel": "Kalmia, home page",
+    "homeLabelFromSubpage": "Kalmia, to the index",
+    "breadcrumbsLabel": "Breadcrumbs",
+    "cta": "Talk about your processes",
+    "indexButton": "Index"
+  },
+  "index": {
+    "heading": "Index",
+    "navLabel": "Site index",
+    "toHome": "To the home page",
+    "currentPage": "This page"
+  },
+  "clients": {
+    "heading": "Companies we have worked with"
+  },
+  "footer": {
+    "logoAlt": "Kalmia",
+    "navLabel": "Footer"
+  },
+  "cta": {
+    "talk": "Let's talk",
+    "book": "Book a conversation",
+    "eyebrow": "First step"
+  },
+  "faq": {
+    "eyebrow": "Questions"
+  },
+  "cases": {
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "result": "Result",
+    "readMore": "More about this case study"
+  },
+  "a11y": {
+    "opensInNewTab": "(opens in a new tab)"
+  }
+}

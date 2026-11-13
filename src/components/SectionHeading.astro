@@ -1,0 +1,60 @@
+---
+/**
+ * Naslov odseka: oznaka (eyebrow), H2 in neobvezen uvod.
+ * size="sm": manjši H2 z debelo črto spodaj (odseki s ploščicami).
+ * size="lg": velik H2 (večina odsekov).
+ */
+interface Props {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  size?: 'sm' | 'lg';
+  /** Debela črta pod naslovom (pri size="sm" privzeto vklopljena). */
+  ruled?: boolean;
+  /** Barve za temno podlago. */
+  dark?: boolean;
+  id?: string;
+  class?: string;
+}
+
+const { eyebrow, title, intro, size = 'lg', ruled = size === 'sm', dark = false, id, class: className } = Astro.props;
+---
+
+<div class:list={['sh', `sh--${size}`, { 'sh--ruled': ruled, 'sh--dark': dark }, className]}>
+  {eyebrow && <div class="eyebrow sh-eyebrow">{eyebrow}</div>}
+  <h2 id={id} class:list={[size === 'sm' ? 'h2-sm' : 'h2-lg', 'sh-title']}>{title}</h2>
+  {intro && <p class="sh-intro">{intro}</p>}
+  <slot />
+</div>
+
+<style>
+  .sh {
+    display: flex;
+    flex-direction: column;
+  }
+  .sh--lg {
+    gap: 16px;
+    max-width: 760px;
+  }
+  .sh--sm {
+    gap: 10px;
+  }
+  .sh--ruled {
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .sh-intro {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .sh--dark .sh-eyebrow {
+    color: var(--on-dark-muted);
+  }
+  .sh--dark .sh-title {
+    color: var(--paper);
+  }
+  .sh--dark .sh-intro {
+    color: var(--on-dark);
+  }
+</style>

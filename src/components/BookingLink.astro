@@ -1,0 +1,72 @@
+---
+/**
+ * Poziv na rezervacijo termina. URL vedno iz content/site.json (bookingUrl),
+ * odpre se v novem zavihku.
+ */
+import { site } from '@lib/site';
+import { ui, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  /** Besedilo gumba. Privzeto »Dogovorite se za pogovor«. */
+  label?: string;
+  /** header: 44 px (glava), md: 48 px, lg: 52 px, royal: 52 px na modri podlagi */
+  size?: 'header' | 'md' | 'lg' | 'royal';
+  class?: string;
+}
+
+const { locale, label, size = 'lg', class: className } = Astro.props;
+const t = ui(locale);
+---
+
+<a
+  href={site.bookingUrl}
+  target="_blank"
+  rel="noopener"
+  class:list={['booking', `booking--${size}`, className]}
+>
+  {label ?? t.cta.book}<span aria-hidden="true">&nbsp;→</span><span class="visually-hidden"> {t.a11y.opensInNewTab}</span>
+</a>
+
+<style>
+  .booking {
+    display: inline-flex;
+    align-items: center;
+    background: var(--lime);
+    color: var(--ink);
+    border-radius: var(--radius-xs);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .booking:hover {
+    color: var(--ink);
+  }
+  .booking--header {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+  .booking--md {
+    height: 48px;
+    padding: 0 22px;
+    font-size: 15px;
+  }
+  .booking--lg,
+  .booking--royal {
+    height: 52px;
+    padding: 0 26px;
+    font-size: 16px;
+  }
+  .booking--royal {
+    background: var(--royal);
+    color: var(--paper);
+  }
+  .booking--royal:hover {
+    color: var(--paper);
+  }
+  @media (max-width: 420px) {
+    .booking {
+      white-space: normal;
+    }
+  }
+</style>

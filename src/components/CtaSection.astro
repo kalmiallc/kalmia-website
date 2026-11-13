@@ -1,0 +1,98 @@
+---
+/**
+ * Poziv (»Prvi korak«) na temni podlagi z gumbom za rezervacijo termina.
+ * layout="stack": naslov, besedilo in gumb drug pod drugim.
+ * layout="split": gumb desno od besedila (Reference, Proizvodnja).
+ */
+import BookingLink from './BookingLink.astro';
+import { ui, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  text: string;
+  eyebrow?: string;
+  buttonLabel?: string;
+  layout?: 'stack' | 'split';
+  borderTop?: boolean;
+}
+
+const { locale, title, text, eyebrow, buttonLabel, layout = 'stack', borderTop = false } = Astro.props;
+const t = ui(locale);
+---
+
+<section class:list={['cta', 'on-dark', `cta--${layout}`, { 'cta--rule': borderTop }]}>
+  <div class="container cta-inner">
+    <div class="cta-copy">
+      <div class="eyebrow cta-eyebrow">{eyebrow ?? t.cta.eyebrow}</div>
+      <h2 class="h2-lg cta-title">{title}</h2>
+      <p class="cta-text">{text}</p>
+      {
+        layout === 'stack' && (
+          <div class="cta-btn-stack">
+            <BookingLink locale={locale} size="lg" label={buttonLabel} />
+          </div>
+        )
+      }
+    </div>
+    {
+      layout === 'split' && (
+        <div class="cta-btn-split">
+          <BookingLink locale={locale} size="lg" label={buttonLabel} />
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .cta {
+    background: var(--block-ink);
+    color: var(--paper);
+  }
+  .cta--rule {
+    border-top: 1px solid var(--line-dark);
+  }
+  .cta-inner {
+    padding-top: var(--section-y);
+    padding-bottom: var(--section-y);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 64px;
+  }
+  .cta--split .cta-inner {
+    align-items: end;
+  }
+  .cta--stack .cta-inner {
+    align-items: start;
+  }
+  .cta-copy {
+    flex: 2 1 520px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cta-eyebrow {
+    color: var(--on-dark-muted);
+  }
+  .cta-title {
+    color: var(--paper);
+  }
+  .cta-text {
+    max-width: 620px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--on-dark);
+  }
+  .cta-btn-stack {
+    padding-top: 8px;
+  }
+  .cta-btn-split {
+    flex: 1 1 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 24px;
+  }
+</style>

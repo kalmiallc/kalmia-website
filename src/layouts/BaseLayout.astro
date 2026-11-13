@@ -1,0 +1,71 @@
+---
+/**
+ * Osnovna postavitev vseh strani: <head> (title, opis, canonical, pisave),
+ * povezava za preskok na vsebino, glava, <main> in noga.
+ * Build se ustavi, če stran nima naslova ali opisa.
+ */
+import { Font } from 'astro:assets';
+import '../styles/global.css';
+import SiteHeader, { type Crumb } from '@components/SiteHeader.astro';
+import SiteFooter from '@components/SiteFooter.astro';
+import { HTML_LANG, OG_LOCALE, normalizePath, ui, type Locale } from '@lib/i18n';
+import { site } from '@lib/site';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  /** Glava in noga: domača stran ali podstran. */
+  variant?: 'home' | 'sub';
+  breadcrumbs?: Crumb[];
+  noindex?: boolean;
+}
+
+const { locale, title, description, variant = 'sub', breadcrumbs = [], noindex = false } = Astro.props;
+const path = normalizePath(Astro.url.pathname);
+
+if (!title?.trim()) throw new Error(`Stran ${path} nima naslova (title).`);
+if (!description?.trim()) throw new Error(`Stran ${path} nima meta opisa (description).`);
+
+const t = ui(locale);
+const canonical = new URL(path, site.url).href;
+---
+
+<!doctype html>
+<html lang={HTML_LANG[locale]}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kalmia" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={OG_LOCALE[locale]} />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <Font cssVariable="--font-display" preload />
+    <Font cssVariable="--font-body" />
+    <slot name="head" />
+  </head>
+  <body>
+    <a href="#vsebina" class="skip-link">{t.skipToContent}</a>
+    <SiteHeader locale={locale} variant={variant} breadcrumbs={breadcrumbs} currentPath={path} />
+    <main id="vsebina" tabindex="-1">
+      <slot />
+    </main>
+    <SiteFooter locale={locale} variant={variant} />
+  </body>
+</html>
+
+<style>
+  main:focus {
+    outline: none;
+  }
+</style>
