@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<title>Vodnik za uvedbo AI</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700;800&amp;family=Manrope:wght@500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;font-family:'Space Grotesk','Manrope',sans-serif;background:#ffffff;color:#26262a;-webkit-font-smoothing:antialiased}
+a{color:#3345cb;text-decoration:none}a:hover{color:#26262a}
+.kz-num{background:#f0f0f2;transition:background-color .15s ease}.kz-num.kz-on{background:#d9f91e}
+.kz-row:hover .kz-num,.kz-row:focus-visible .kz-num{background:#d9f91e}
+.kz-title{display:inline-block;transition:transform .25s ease}
+.kz-arrow{display:inline-block;margin-left:.3em;color:#3345cb;opacity:0;transform:translateX(-7px);transition:opacity .25s ease,transform .25s ease}
+.kz-desc{color:#6b6b70;transition:color .25s ease}
+.kz-row:hover .kz-title,.kz-row:focus-visible .kz-title{transform:translateX(6px)}
+.kz-row:hover .kz-arrow,.kz-row:focus-visible .kz-arrow{opacity:1;transform:translateX(0)}
+.kz-row:hover .kz-desc,.kz-row:focus-visible .kz-desc{color:#26262a}
+@media (prefers-reduced-motion: reduce){.kz-title,.kz-arrow,.kz-desc,.kz-num{transition:none}}
+.kz-trigger{position:relative;background:#ffffff;color:#26262a;transition:background-color .15s ease,color .15s ease}
+.kz-trigger::after{content:'';position:absolute;left:-16px;right:-16px;top:100%;height:30px}
+.kz-panel{display:none}
+.kz-nav:has(.kz-trigger:hover) .kz-panel,.kz-panel:hover,.kz-panel:focus-within,.kz-nav:has(.kz-trigger:focus-visible) .kz-panel{display:block}
+.kz-trigger:hover,.kz-trigger:focus-visible,.kz-nav:has(.kz-panel:hover) .kz-trigger,.kz-nav:has(.kz-panel:focus-within) .kz-trigger{background:#26262a;color:#ffffff}
+@media (hover: none){.kz-panel[data-open="true"]{display:block}.kz-trigger[aria-expanded="true"]{background:#26262a;color:#ffffff}}
+</style>
+</helmet>
+<div style="width: 100%; box-sizing: border-box; background: #ffffff; color: #26262a; font-family: 'Space Grotesk', 'Manrope', sans-serif; font-size: 16px; line-height: 1.63">
+
+<!-- NAV: drobtinica + gumb Kazalo -->
+<div class="kz-nav" style="position: relative; z-index: 20; border-bottom: 1px solid #e6e6e9; background: #ffffff">
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: 18px clamp(20px, 5vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; min-width: 0">
+<a href="Kazalo.dc.html" aria-label="Kalmia, na kazalo" style="display: flex; align-items: center; height: 44px"><img src="/_blob/bc6ec1bb04474120739808ba057af3ef" alt="Kalmia" style="height: 16px; width: auto; display: block"></a>
+<nav aria-label="Drobtinice" style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #6b6b70"><span aria-hidden="true" style="color: #c9c9cf">/</span><span aria-current="page" style="display: inline-flex; align-items: center; gap: 8px; color: #26262a; font-weight: 600">Vodnik</span></nav>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px">
+<button type="button" class="kz-trigger" onClick="{{ toggleInd }}" aria-expanded="{{ indExpanded }}" aria-haspopup="true" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid #26262a; border-radius: 2px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Kazalo <span style="font-size: 11px">{{ indArrow }}</span></button>
+<a href="https://calendar.app.google/1gRbpXL6jMbbH7NN7" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; height: 44px; padding: 0 20px; background: #d9f91e; color: #26262a; border-radius: 2px; font-size: 15px; font-weight: 600">Pogovor o vaših procesih →</a>
+</div>
+</div>
+<div class="kz-panel" data-open="{{ indExpanded }}" style="position: absolute; left: 0; right: 0; top: 100%; background: #ffffff; border-bottom: 2px solid #26262a; box-shadow: 0 16px 32px rgba(35, 36, 43, 0.10)">
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: 20px clamp(20px, 5vw, 48px) 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 8px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #6b6b70">Kazalo</span><a href="Kazalo.dc.html" style="display: inline-flex; align-items: center; height: 44px; font-size: 14px; font-weight: 600; color: #3345cb">Na prvo stran →</a></div>
+<nav aria-label="Kazalo strani" style="display: flex; flex-direction: column">
+<a href="Storitve.dc.html" class="kz-row" style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 36px"><span class="kz-num" style="display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 5px; border-radius: 2px; color: #26262a">01</span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 4px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2">Naše AI storitve<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.55">AI agenti, programske rešitve po meri z integriranimi AI agenti, lokalni modeli in stalna podpora.</span></span><span style="flex: 0 0 auto"></span></a>
+<a href="Vodnik-AI.dc.html" class="kz-row" aria-current="page" style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 36px"><span class="kz-num kz-on" style="display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 5px; border-radius: 2px; color: #26262a">02</span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 4px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2">Kako varno in učinkovito uvesti AI v podjetje<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.55">Na kaj misliti, preden začnete: procesi, podatki, varnost, zakonodaja, infrastruktura, znanje podjetja, modeli, ljudje in izbira partnerja.</span></span><span style="flex: 0 0 auto"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #3345cb">Ta stran</span></span></a>
+<a href="Lokalna-AI.dc.html" class="kz-row" style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 36px"><span class="kz-num" style="display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 5px; border-radius: 2px; color: #26262a">03</span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 4px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2">Lokalna AI infrastruktura<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.55">AI na vaših strežnikih: modeli, baza znanja in agenti, ne da bi podatki zapustili podjetje.</span></span><span style="flex: 0 0 auto"></span></a>
+<a href="Uvedba-AI-v2.dc.html" class="kz-row" style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 36px"><span class="kz-num" style="display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 5px; border-radius: 2px; color: #26262a">04</span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 4px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2">Claude ali ChatGPT za vašo ekipo<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.55">Usklajena uporaba v ekipi, oddelku ali v vodstvu podjetja. Vsi delajo po enakih pravilih in z istim znanjem podjetja.</span></span><span style="flex: 0 0 auto"></span></a>
+<a href="Industrije-proizvodnja.dc.html" class="kz-row" style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 36px"><span class="kz-num" style="display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 5px; border-radius: 2px; color: #26262a">05</span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 4px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2">Proizvodna industrija, digitalizacija in AI<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.55">Kalmia MES, povezan z ERP in stroji, AI planiranje in napovedno vzdrževanje.</span></span><span style="flex: 0 0 auto"></span></a>
+<a href="Reference.dc.html" class="kz-row" style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 36px"><span class="kz-num" style="display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 5px; border-radius: 2px; color: #26262a">06</span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 4px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2">Reference<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.55">Od digitalizacije proizvodnje do AI agentov. Za vsak projekt izziv, rešitev in rezultat.</span></span><span style="flex: 0 0 auto"></span></a>
+</nav>
+</div>
+</div>
+</div>
+
+<!-- HERO -->
+<div>
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 48px) clamp(48px, 6vw, 72px); display: flex; flex-wrap: wrap; gap: 40px 64px; align-items: center">
+<div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px"><span style="display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 2px; background: #d9f91e; color: #26262a; font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase">Za pregled</span><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #6b6b70">Vodnik za vodstvo podjetij</span></div>
+<h1 style="margin: 0; max-width: 900px; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(38px, 5vw, 60px); line-height: 1.08; letter-spacing: -0.01em">Kako se lotiti uvedbe AI v podjetju.</h1>
+<p style="margin: 0; max-width: 760px; font-size: 19px; line-height: 1.6; color: #45454b">Večina podjetij AI že uporablja, merljiv učinek pa vidijo redka. Razlika le redko tiči v modelu. Odloča, ali so pred orodji postavili temelje: procese, podatke, pravila, povezave, znanje podjetja in ljudi, ki z AI znajo delati. Ta vodnik povzema, na kaj misliti in v kakšnem vrstnem redu.</p>
+</div>
+</div>
+</div>
+
+<!-- VARNOST -->
+<div style="background: #ffffff; border-top: 1px solid #e6e6e9">
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: clamp(40px, 5vw, 64px) clamp(20px, 5vw, 48px) clamp(56px, 7vw, 80px); display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: end">
+<div style="flex: 1 1 480px; display: flex; flex-direction: column; gap: 16px"><div style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" style="flex: none"><path d="M12 2 L20 5 V11 C20 16 16.5 20 12 22 C7.5 20 4 16 4 11 V5 Z" fill="#3345cb"></path><path d="M8.2 12.2 L11 15 L16 9.6" fill="none" stroke="#d9f91e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #6b6b70">Varnost in skladnost</span></div><h2 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Varno in skladno z regulativo.</h2></div>
+<p style="flex: 1 1 380px; margin: 0; font-size: 16px; line-height: 1.6; color: #45454b">Podatki ostanejo v EU ali na vaših strežnikih. Pri vsaki uvedbi upoštevamo pravila, ki veljajo za vaše podjetje.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 22px 20px; background: #f6f6f7; border: 1px solid #e1e1e6; border-top: 4px solid #3345cb; border-radius: 4px"><span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1; color: #3345cb">GDPR</span><span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 17px; line-height: 1.3">Varstvo osebnih podatkov</span><span style="font-size: 14px; line-height: 1.55; color: #45454b">Pravna podlaga za obdelavo in pogodba o obdelavi z vsakim ponudnikom AI.</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 22px 20px; background: #f6f6f7; border: 1px solid #e1e1e6; border-top: 4px solid #3345cb; border-radius: 4px"><span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1; color: #3345cb">AI Act</span><span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 17px; line-height: 1.3">Akt EU o umetni inteligenci</span><span style="font-size: 14px; line-height: 1.55; color: #45454b">AI pismenost zaposlenih in ustrezna raven nadzora glede na tveganje rabe.</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 22px 20px; background: #f6f6f7; border: 1px solid #e1e1e6; border-top: 4px solid #3345cb; border-radius: 4px"><span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1; color: #3345cb">NIS2</span><span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 17px; line-height: 1.3">Kibernetska varnost</span><span style="font-size: 14px; line-height: 1.55; color: #45454b">Ukrepi varnosti za podjetja v ključnih sektorjih, tudi pri dobaviteljih.</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 22px 20px; background: #f6f6f7; border: 1px solid #e1e1e6; border-top: 4px solid #3345cb; border-radius: 4px"><span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.1; color: #3345cb">DPIA</span><span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 17px; line-height: 1.3">Ocena učinka na varstvo podatkov</span><span style="font-size: 14px; line-height: 1.55; color: #45454b">Pred uvedbo, kadar je tveganje za posameznike visoko.</span></div>
+</div>
+</div>
+</div>
+
+<!-- RAZISKAVE -->
+<div style="background: #f6f6f7">
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 48px); display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px"><div style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #6b6b70">Kaj kažejo raziskave</div><h2 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Učinek AI ni odvisen od orodja. Odvisen je od procesov in vodstva.</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+<div style="background: #ffffff; border-radius: 4px; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 48px; line-height: 1; color: #26262a">67 %</span>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #26262a">vpliva na učinek AI izhaja iz organizacije (kultura, podpora vodstva, kadrovske prakse). Iz veščin posameznikov le 32 %.</p>
+<span style="margin-top: auto; padding-top: 8px; font-size: 13px; line-height: 1.45; color: #6b6b70">Microsoft, Work Trend Index 2026</span>
+</div>
+<div style="background: #ffffff; border-radius: 4px; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 48px; line-height: 1; color: #26262a">6 %</span>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #26262a">podjetij AI pripisuje 5 % ali več dobička iz poslovanja (EBIT). Kar 75 % med njimi je ob uvedbi temeljito preoblikovalo delovne procese.</p>
+<span style="margin-top: auto; padding-top: 8px; font-size: 13px; line-height: 1.45; color: #6b6b70">McKinsey, The state of AI, 2026</span>
+</div>
+<div style="background: #ffffff; border-radius: 4px; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 48px; line-height: 1; color: #26262a">95 %</span>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #26262a">pilotnih projektov generativne AI ni prineslo merljivega finančnega učinka. Glavni razlog je slaba vpetost v delovne procese.</p>
+<span style="margin-top: auto; padding-top: 8px; font-size: 13px; line-height: 1.45; color: #6b6b70">MIT NANDA, The GenAI Divide, 2025</span>
+</div>
+<div style="background: #ffffff; border-radius: 4px; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: 48px; line-height: 1; color: #26262a">77 %</span>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #26262a">najtežjih izzivov pri uspešnih uvedbah AI ni bilo tehnoloških. Šlo je za upravljanje sprememb, kakovost podatkov in prenovo procesov.</p>
+<span style="margin-top: auto; padding-top: 8px; font-size: 13px; line-height: 1.45; color: #6b6b70">Stanford Digital Economy Lab, 2026</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- KORAKI -->
+<div>
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 48px); display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px; padding-bottom: 32px"><div style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #6b6b70">Na kaj misliti</div><h2 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Tri faze, v tem vrstnem redu.</h2><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #45454b">Faze se prekrivajo in ponavljajo. Vrstni red pa šteje: agent, ki ga zgradite pred temelji, boste kasneje gradili še enkrat.</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px; padding: 48px 0; border-top: 2px solid #26262a">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: flex-end; gap: 16px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #3345cb">Korak 1 od 3 · temelji</span></div><div aria-hidden="true" style="display: flex; gap: 6px; max-width: 220px"><span style="flex: 1; height: 4px; border-radius: 2px; background: #3345cb"></span><span style="flex: 1; height: 4px; border-radius: 2px; background: #e1e1e6"></span><span style="flex: 1; height: 4px; border-radius: 2px; background: #e1e1e6"></span></div>
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.2">Najprej temelji.</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #45454b">Preden izberete orodje, morate vedeti, kako delo danes teče, kje so podatki in kaj zakon dovoljuje. Vsak naslednji korak gradi na tem.</p>
+</div>
+<div style="flex: 2 1 600px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">Analiza procesov</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">Popišite, kako delo res teče: kdo kaj prejme, prepiše, preveri in kam zapiše. AI okrepi proces, kakršen je. Slab proces postane le hitreje slab.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">Podatki</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">Kje so podatki, v kakšni obliki so in kdo ima dostop. Popolni niso pogoj: v Stanfordovi raziskavi uspešnih uvedb jih je imelo le 6 % podjetij povsem pripravljene. Pomembno je, da so dosegljivi in da veste, kateri so občutljivi.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">Skladnost z zakonodajo</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">AI Act zahteva AI pismenost zaposlenih. GDPR zahteva pravno podlago in pogodbo o obdelavi s ponudnikom, pri visokem tveganju pa oceno učinka (DPIA). NIS2 v ključnih sektorjih zahteva ukrepe kibernetske varnosti.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">Varna infrastruktura</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">Odločite, kje AI teče: v oblaku ponudnika, v oblaku v EU ali na vaših strežnikih. Izbira je odvisna od občutljivosti podatkov in pravil, ki jih morate spoštovati. Varna infrastruktura pomeni nadzor dostopa, šifrirane podatke in zapis, kdo je kaj uporabil.</p>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px; padding: 48px 0; border-top: 2px solid #26262a">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: flex-end; gap: 16px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #3345cb">Korak 2 od 3 · povezave in znanje</span></div><div aria-hidden="true" style="display: flex; gap: 6px; max-width: 220px"><span style="flex: 1; height: 4px; border-radius: 2px; background: #3345cb"></span><span style="flex: 1; height: 4px; border-radius: 2px; background: #3345cb"></span><span style="flex: 1; height: 4px; border-radius: 2px; background: #e1e1e6"></span></div>
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.2">AI mora delati z vašimi sistemi in vašim znanjem.</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #45454b">Splošni klepetalnik ne pozna vaših cen, strank in postopkov. Koristen postane, ko je povezan s sistemi in znanjem podjetja.</p>
+</div>
+<div style="flex: 2 1 600px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">Integracije</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">AI mora brati in pisati tam, kjer ekipa že dela: v e-pošti, dokumentih, ERP, CRM, MES in drugih sistemih. Po MIT-jevi raziskavi iz leta 2025 večina pilotov ne doseže merljivega učinka prav zato, ker ostanejo ob strani, zunaj delovnih procesov.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">Baza znanja</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">Dokumenti, pravila, predloge, postopki, veščine in odgovori na pogosta vprašanja, zapisani tako, da jih AI lahko uporablja. Tako AI deluje po pravilih in znanju podjetja, ne po splošnem znanju. Znanje pa ne odide s posameznikom.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">Izbira jezikovnih modelov</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">Claude, ChatGPT, Gemini in odprti modeli se hitro spreminjajo. V Stanfordovi raziskavi je bil model pri 42 % uvedb popolnoma zamenljiv. Trajna vrednost je v tem, kako je model vpet v vaše procese in podatke. Izbira modela zato ni prva odločitev.</p>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px; padding: 48px 0; border-top: 2px solid #26262a">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: flex-end; gap: 16px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #3345cb">Korak 3 od 3 · ljudje in agenti</span></div><div aria-hidden="true" style="display: flex; gap: 6px; max-width: 220px"><span style="flex: 1; height: 4px; border-radius: 2px; background: #3345cb"></span><span style="flex: 1; height: 4px; border-radius: 2px; background: #3345cb"></span><span style="flex: 1; height: 4px; border-radius: 2px; background: #3345cb"></span></div>
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.2">Šele nato široka uporaba in agenti.</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #45454b">Ko so temelji in povezave urejeni, AI preide iz posameznih poskusov v vsakdanje delo ekip in procesov.</p>
+</div>
+<div style="flex: 2 1 600px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">AI agenti po meri</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">Agent prevzame ponavljajoče se delo v enem procesu: prebere, pripravi in zapiše v vaš sistem. Človek potrdi. Začnemo z enim procesom, izmerimo rezultat in šele nato dodamo naslednjega.</p><a href="Storitve.dc.html#agenti" style="margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 600; color: #3345cb">Naše AI storitve →</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">Usklajena uporaba v ekipah</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">Po Microsoftovi raziskavi iz leta 2024 78 % uporabnikov AI pri delu uporablja lastna orodja. Skupno orodje, jasna pravila in delavnice na resničnih nalogah spremenijo posamezne poskuse v skupen način dela v ekipi, oddelku ali vodstvu.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 22px; border-radius: 4px; background: #f6f6f7">
+<h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.25">Izobraževanje zaposlenih</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #45454b">Zaposleni morajo vedeti, za kaj je AI dober, kje se moti in kako preveriti rezultat. To je pogoj za varno uporabo in hkrati obveznost po Aktu o umetni inteligenci.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PARTNER -->
+<div style="border-top: 1px solid #e6e6e9">
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 48px); display: flex; flex-wrap: wrap; gap: 32px 64px">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 16px"><div style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #6b6b70">Izbira partnerja</div><h2 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Kaj vprašati, preden izberete partnerja.</h2><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #45454b">Agenta je danes mogoče postaviti hitro in poceni. Težje je zagotoviti, da varno dela z vašimi podatki, je skladen z zakonodajo, povezan z vašimi sistemi in vzdrževan tudi čez leto dni. Pri izbiri partnerja zato ne primerjajte le cene prvega agenta, ampak celotno pot.</p></div>
+<ol style="flex: 1 1 520px; margin: 0; padding: 0; list-style: none; border-bottom: 1px solid #e1e1e6">
+<li style="display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid #e1e1e6"><span style="flex: 0 0 28px; font-size: 13px; font-weight: 700; color: #3345cb">01</span><span style="font-size: 17px; line-height: 1.5">Ali začne z analizo vaših procesov ali s predstavitvijo orodja?</span></li>
+<li style="display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid #e1e1e6"><span style="flex: 0 0 28px; font-size: 13px; font-weight: 700; color: #3345cb">02</span><span style="font-size: 17px; line-height: 1.5">Ali pozna sisteme, s katerimi delate (ERP, MES, e-pošta, dokumenti)?</span></li>
+<li style="display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid #e1e1e6"><span style="flex: 0 0 28px; font-size: 13px; font-weight: 700; color: #3345cb">03</span><span style="font-size: 17px; line-height: 1.5">Kje bodo vaši podatki in kdo bo lastnik rešitve, ki nastane?</span></li>
+<li style="display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid #e1e1e6"><span style="flex: 0 0 28px; font-size: 13px; font-weight: 700; color: #3345cb">04</span><span style="font-size: 17px; line-height: 1.5">Ali predlaga majhen začetek z merljivim rezultatom?</span></li>
+<li style="display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid #e1e1e6"><span style="flex: 0 0 28px; font-size: 13px; font-weight: 700; color: #3345cb">05</span><span style="font-size: 17px; line-height: 1.5">Ali ostane z vami po uvedbi, za vzdrževanje, dopolnitve in nove procese?</span></li>
+<li style="display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid #e1e1e6"><span style="flex: 0 0 28px; font-size: 13px; font-weight: 700; color: #3345cb">06</span><span style="font-size: 17px; line-height: 1.5">Ali vam pove, kje AI ne bo pomagal?</span></li>
+</ol>
+</div>
+</div>
+
+<!-- NAŠ NAČIN -->
+<div style="background: #23242b; color: #ffffff">
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 48px); display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px"><div style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #9a9aa2">Kako delamo pri Kalmii</div><h2 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 1.15; color: #ffffff">Z malimi in srednjimi podjetji delamo postopno in dolgoročno.</h2><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #c9c9cf">Ne prodamo enega projekta in odidemo. Z vami gradimo korak za korakom in ostanemo, ko AI že dela.</p></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 2px solid #d9f91e"><h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 20px; color: #ffffff">Dolgoročno sodelovanje</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #c9c9cf">AI ni enkraten projekt. Modeli, orodja in vaši procesi se spreminjajo, zato ostanemo z vami tudi po uvedbi.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 2px solid #d9f91e"><h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 20px; color: #ffffff">Postopna uvedba</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #c9c9cf">En proces, izmerjen rezultat, nato naslednji. Vlagate v tisto, kar je že pokazalo učinek.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 2px solid #d9f91e"><h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 20px; color: #ffffff">Najprej temelji</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #c9c9cf">Procesi, podatki, pravila, povezave in znanje podjetja, preden gradimo agente.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 2px solid #d9f91e"><h3 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 600; font-size: 20px; color: #ffffff">Ljudje ostanejo v središču</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #c9c9cf">Ekipe naučimo delati z AI. Odločitve ostanejo pri ljudeh.</p></div>
+</div>
+</div>
+</div>
+
+<!-- STORITVE -->
+<div>
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 48px); display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px; padding-bottom: 16px"><div style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #6b6b70">Kje vam lahko pomagamo</div><h2 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 1.15">Naslednji korak.</h2></div>
+<nav aria-label="Storitve" style="display: flex; flex-direction: column; border-top: 2px solid #26262a">
+<a href="Storitve.dc.html" class="kz-row" style="display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 39px"><span class="kz-num" aria-hidden="true" style="display: inline-block; width: 20px; height: 18px; border-radius: 2px; vertical-align: middle"></span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 6px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.15">Naše AI storitve<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.6">AI agenti, programske rešitve po meri z integriranimi AI agenti, lokalni modeli in stalna podpora.</span></span></a>
+<a href="Uvedba-AI-v2.dc.html" class="kz-row" style="display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 39px"><span class="kz-num" aria-hidden="true" style="display: inline-block; width: 20px; height: 18px; border-radius: 2px; vertical-align: middle"></span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 6px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.15">Claude ali ChatGPT za vašo ekipo<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.6">Usklajena uporaba v ekipi, oddelku ali v vodstvu podjetja. Vsi delajo po enakih pravilih in z istim znanjem podjetja.</span></span></a>
+<a href="Industrije-proizvodnja.dc.html" class="kz-row" style="display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 39px"><span class="kz-num" aria-hidden="true" style="display: inline-block; width: 20px; height: 18px; border-radius: 2px; vertical-align: middle"></span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 6px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.15">Proizvodna industrija, digitalizacija in AI<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.6">Kalmia MES, povezan z ERP in stroji, AI planiranje in napovedno vzdrževanje.</span></span></a>
+<a href="Reference.dc.html" class="kz-row" style="display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #e1e1e6; color: #26262a"><span style="flex: 0 0 39px"><span class="kz-num" aria-hidden="true" style="display: inline-block; width: 20px; height: 18px; border-radius: 2px; vertical-align: middle"></span></span><span style="flex: 3 1 360px; display: flex; flex-direction: column; gap: 6px"><span class="kz-title" style="font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.15">Reference<span class="kz-arrow" aria-hidden="true">→</span></span><span class="kz-desc" style="font-size: 14px; line-height: 1.6">Od digitalizacije proizvodnje do AI agentov. Za vsak projekt izziv, rešitev in rezultat.</span></span></a>
+</nav>
+</div>
+</div>
+
+<!-- VIRI -->
+<div style="border-top: 1px solid #e6e6e9">
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: clamp(40px, 5vw, 64px) clamp(20px, 5vw, 48px); display: flex; flex-wrap: wrap; gap: 24px 64px">
+<div style="flex: 1 1 260px"><div style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #6b6b70">Viri</div></div>
+<ul style="flex: 3 1 620px; margin: 0; padding: 0; list-style: none; border-bottom: 1px solid #e1e1e6">
+<li style="padding: 10px 0; border-top: 1px solid #e1e1e6; font-size: 14px; line-height: 1.5"><a href="https://www.techradar.com/pro/every-business-leader-knows-the-world-is-changing-but-far-fewer-have-a-clear-picture-of-what-to-do-about-it-microsoft-flags-the-changing-world-of-ai-at-work-and-why-frontier-firms-are-leading-the-way" style="color: #3345cb">Microsoft, 2026 Work Trend Index (povzetek v TechRadar, maj 2026)</a></li>
+<li style="padding: 10px 0; border-top: 1px solid #e1e1e6; font-size: 14px; line-height: 1.5"><a href="https://blogs.microsoft.com/blog/2024/05/08/microsoft-and-linkedin-release-the-2024-work-trend-index-on-the-state-of-ai-at-work/" style="color: #3345cb">Microsoft in LinkedIn, 2024 Work Trend Index (maj 2024)</a></li>
+<li style="padding: 10px 0; border-top: 1px solid #e1e1e6; font-size: 14px; line-height: 1.5"><a href="https://www.computing.co.uk/news/2025/ai/mit-report-95pc-corporate-generative-ai-pilots-fail" style="color: #3345cb">MIT NANDA, The GenAI Divide: State of AI in Business 2025 (povzetek v Computing)</a></li>
+<li style="padding: 10px 0; border-top: 1px solid #e1e1e6; font-size: 14px; line-height: 1.5"><a href="https://www.mckinsey.com.br/capabilities/quantumblack/our-insights/the-state-of-ai" style="color: #3345cb">McKinsey, The state of AI in 2026: On the road to ROI (avgust 2026)</a></li>
+<li style="padding: 10px 0; border-top: 1px solid #e1e1e6; font-size: 14px; line-height: 1.5"><a href="https://digitaleconomy.stanford.edu/publication/enterprise-ai-playbook" style="color: #3345cb">Stanford Digital Economy Lab, The Enterprise AI Playbook: Lessons from 51 Successful Deployments (2026)</a></li>
+<li style="padding: 10px 0; border-top: 1px solid #e1e1e6; font-size: 14px; line-height: 1.5"><a href="https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/" style="color: #3345cb">Gibson Dunn, EU AI Act Omnibus Agreement (2026), o roku za AI pismenost in novih rokih za visokotvegane sisteme</a></li>
+<li style="padding: 10px 0; border-top: 1px solid #e1e1e6; font-size: 14px; line-height: 1.5"><a href="https://ai4si.gzs.si/uploads/gpa9LkOc/Vodic_uvajanja_UIMSP-SI_web-3.pdf" style="color: #3345cb">GZS, Vodič uvajanja umetne inteligence v mala in srednja podjetja v Sloveniji (2023)</a></li>
+</ul>
+</div>
+</div>
+
+<!-- POZIV -->
+<div style="background: #23242b; color: #ffffff; border-top: 1px solid #3a3b44">
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 48px); display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: start">
+<div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: #9a9aa2">Prvi korak</div>
+<h2 style="margin: 0; font-family: 'Urbanist', 'Manrope', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 1.15; color: #ffffff">Kje ste danes?</h2>
+<p style="margin: 0; max-width: 620px; font-size: 17px; line-height: 1.6; color: #c9c9cf">Na prvem pogovoru pregledamo vaše procese, podatke in orodja, ki jih ekipa že uporablja.</p>
+<div style="padding-top: 8px"><a href="https://calendar.app.google/1gRbpXL6jMbbH7NN7" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; height: 52px; padding: 0 26px; background: #d9f91e; color: #26262a; border-radius: 2px; font-weight: 600; font-size: 16px">Dogovorite se za pogovor →</a></div>
+</div>
+</div>
+</div>
+<!-- FOOTER -->
+<div style="background: #23242b; border-top: 1px solid #3a3b44">
+<div style="max-width: 1248px; margin: 0 auto; box-sizing: border-box; padding: 28px clamp(20px, 5vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px">
+<img src="/_blob/0f946543b6f14a66da96da7f35893660" alt="Kalmia" style="height: 14px; width: auto; display: block">
+<span style="font-size: 13px; color: #9a9aa2">Kalmia, d. o. o., Kapucinski trg 7, Škofja Loka</span>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { indOpen: false };
+  }
+  renderVals() {
+    var self = this;
+    var open = this.state.indOpen;
+    return {
+      indOpen: open,
+      indExpanded: open ? 'true' : 'false',
+      indArrow: open ? '▴' : '▾',
+      toggleInd: function () { self.setState({ indOpen: !self.state.indOpen }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

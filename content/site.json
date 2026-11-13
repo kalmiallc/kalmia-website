@@ -1,0 +1,14 @@
+{
+  "name": "Kalmia d.o.o.",
+  "legalName": "Kalmia, d. o. o.",
+  "url": "https://kalmia.si",
+  "address": { "street": "Kapucinski trg 7", "postalCode": "4220", "city": "Škofja Loka", "country": "SI" },
+  "vatId": "SI55684530",
+  "email": "info@kalmia.si",
+  "phone": null,
+  "bookingUrl": "https://calendar.app.google/1gRbpXL6jMbbH7NN7",
+  "linkedin": "https://www.linkedin.com/company/kalmialtd",
+  "logo": "/brand/kalmia-logo.svg",
+  "logoOnDark": "/brand/kalmia-logo-white.svg",
+  "clients": ["Extreme Vital", "ETI", "Modra zavarovalnica", "Iskraemeco", "Big Bang", "Kontron", "Donat", "Weiler Abrasives", "Medis", "Smučarska zveza Slovenije", "Cestel", "Metronik", "GO-ST", "UVC Solutions", "ORO Orodjarna", "Mestna občina Kranj", "Digital Receptionist", "Slovenia Explorer"]
+}
