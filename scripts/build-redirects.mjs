@@ -4,8 +4,9 @@
  * (blog, EU projekti, pravna besedila) ter varnostne glave.
  *
  * Lokalno (npm run build) datoteko zapiše; spremembo commitajte.
- * Na Vercelu (VERCEL=1) in z --check samo preveri, da je vercel.json posodobljen,
- * sicer se build ustavi. Vercel bere vercel.json pred buildom, zato mora biti v repozitoriju.
+ * Z --check (npm run check) preveri, da je vercel.json posodobljen, sicer napaka.
+ * Na Vercelu (VERCEL=1) le izpiše opozorilo: Vercel bere vercel.json pred buildom,
+ * zato mora biti posodobljen že v repozitoriju (to zagotovi npm run check).
  */
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -110,8 +111,11 @@ const config = {
 
 const out = JSON.stringify(config, null, 2) + '\n';
 const current = existsSync(join(ROOT, 'vercel.json')) ? read('vercel.json') : '';
-const checkOnly = process.argv.includes('--check') || process.env.VERCEL === '1';
-if (checkOnly) {
+const checkOnly = process.argv.includes('--check');
+if (process.env.VERCEL === '1' && !checkOnly) {
+  if (current !== out) console.warn('Opozorilo: vercel.json v repozitoriju ni posodobljen. Zaženite lokalno `npm run build` in commitajte vercel.json.');
+  else console.log(`vercel.json je posodobljen (${config.redirects.length} preusmeritev).`);
+} else if (checkOnly) {
   if (current !== out) {
     console.error('vercel.json ni posodobljen s content/redirects.json in legacyUrl. Zaženite lokalno `npm run build` in commitajte vercel.json.');
     const a = current.split('\n');
