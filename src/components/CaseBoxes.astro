@@ -1,0 +1,169 @@
+---
+/**
+ * Izziv, rešitev, rezultat (kazalniki) in oznake reference. Uporabljata ga kartica
+ * reference in podstran reference. Nepotrjene vrednosti ([X], [merilo]) se ne prikažejo.
+ */
+import { ui, type Locale } from '@lib/i18n';
+import { isPlaceholder, warnPlaceholder, withoutPlaceholders } from '@lib/placeholders';
+
+export interface Kpi {
+  v: string;
+  t: string;
+}
+
+interface Props {
+  locale: Locale;
+  name: string;
+  challenge: string[];
+  solution: string[];
+  kpis: Kpi[];
+  tags: string[];
+  /** Raven naslovov okvirjev (na podstrani h2), sicer navadna oznaka. */
+  labelTag?: 'span' | 'h2' | 'h3';
+}
+
+const { locale, name, challenge, solution, kpis, tags, labelTag = 'span' } = Astro.props;
+const t = ui(locale);
+const Label = labelTag;
+const where = `referenci "${name}"`;
+const shownKpis = withoutPlaceholders(kpis, (k) => [k.v, k.t], where);
+const clean = (list: string[]) =>
+  list.filter((x) => {
+    if (isPlaceholder(x)) warnPlaceholder(where, x);
+    return !isPlaceholder(x);
+  });
+const shownChallenge = clean(challenge);
+const shownSolution = clean(solution);
+---
+
+<div class="case-grid">
+  {
+    shownChallenge.length > 0 && (
+      <div class="case-box">
+        <Label class="case-label">{t.cases.challenge}</Label>
+        <ul>
+          {shownChallenge.map((x) => (
+            <li>{x}</li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+  {
+    shownSolution.length > 0 && (
+      <div class="case-box">
+        <Label class="case-label case-label--royal">{t.cases.solution}</Label>
+        <ul>
+          {shownSolution.map((x) => (
+            <li>{x}</li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+  {
+    shownKpis.length > 0 && (
+      <div class="case-box case-box--dark">
+        <Label class="case-label case-label--dark">{t.cases.result}</Label>
+        <ul>
+          {shownKpis.map((k) => (
+            <li class="kpi">
+              <span class="kpi-v">{k.v}</span>
+              <span class="kpi-t">{k.t}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+</div>
+{
+  tags.length > 0 && (
+    <ul class="case-tags">
+      {tags.map((s) => (
+        <li>{s}</li>
+      ))}
+    </ul>
+  )
+}
+
+<style>
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 16px;
+  }
+  .case-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    border-radius: var(--radius-md);
+    background: var(--surface);
+  }
+  .case-box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .case-box--dark {
+    background: var(--block-ink);
+  }
+  .case-label {
+    margin: 0;
+    font-family: var(--font-text);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.63;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--support);
+  }
+  .case-label--royal {
+    color: var(--royal);
+  }
+  .case-label--dark {
+    color: var(--on-dark);
+  }
+  .kpi {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: 4px;
+  }
+  .kpi-v {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--lime);
+  }
+  .kpi-t {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--paper);
+  }
+  .case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .case-tags li {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 10px;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--line-tag);
+    font-size: 13px;
+  }
+</style>

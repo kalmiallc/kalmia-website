@@ -1,0 +1,78 @@
+---
+/** Oštevilčen seznam korakov (»Kako poteka«), neobvezno z vrstico »Rezultat:«. */
+interface Props {
+  steps: { title: string; text: string; result?: string }[];
+  resultLabel?: string;
+}
+
+const { steps, resultLabel } = Astro.props;
+---
+
+<ol class="sl">
+  {
+    steps.map((s, i) => (
+      <li class="sl-item">
+        <span class="sl-num" aria-hidden="true">
+          {String(i + 1).padStart(2, '0')}
+        </span>
+        <span class="sl-body">
+          <h3 class="sl-title">{s.title}</h3>
+          <span class="sl-text">{s.text}</span>
+          {s.result && (
+            <span class="sl-result">
+              <span class="sl-result-label">{resultLabel}</span> {s.result}
+            </span>
+          )}
+        </span>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .sl {
+    flex: 2 1 560px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .sl-item {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+  }
+  .sl-num {
+    flex: 0 0 32px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--royal);
+  }
+  .sl-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .sl-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .sl-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .sl-result {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .sl-result-label {
+    font-weight: 600;
+  }
+</style>

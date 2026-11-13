@@ -2,15 +2,9 @@
 /**
  * Kartica reference: oznaka panoge, ime, uvod, izziv, rešitev, rezultat (kazalniki) in oznake.
  * Če ima referenca podstran (href), je kartica klikljiva in ima okroglo ikono s puščico.
- * Kazalniki z vrednostjo [X] ali [merilo] se ne prikažejo (opozorilo ob buildu).
  */
-import { ui, type Locale } from '@lib/i18n';
-import { isPlaceholder, warnPlaceholder, withoutPlaceholders } from '@lib/placeholders';
-
-export interface Kpi {
-  v: string;
-  t: string;
-}
+import CaseBoxes, { type Kpi } from './CaseBoxes.astro';
+import type { Locale } from '@lib/i18n';
 
 interface Props {
   locale: Locale;
@@ -26,17 +20,7 @@ interface Props {
 }
 
 const { locale, name, tag, lead, challenge, solution, kpis, tags, href = null, headingLevel = 'h2' } = Astro.props;
-const t = ui(locale);
 const Heading = headingLevel;
-const where = `referenci "${name}"`;
-const shownKpis = withoutPlaceholders(kpis, (k) => [k.v, k.t], where);
-const clean = (list: string[]) =>
-  list.filter((x) => {
-    if (isPlaceholder(x)) warnPlaceholder(where, x);
-    return !isPlaceholder(x);
-  });
-const shownChallenge = clean(challenge);
-const shownSolution = clean(solution);
 ---
 
 <article class:list={['case', { 'case--link': href }]}>
@@ -50,56 +34,7 @@ const shownSolution = clean(solution);
     </div>
     {href && <span class="case-go" aria-hidden="true">→</span>}
   </div>
-  <div class="case-grid">
-    {
-      shownChallenge.length > 0 && (
-        <div class="case-box">
-          <span class="case-label">{t.cases.challenge}</span>
-          <ul>
-            {shownChallenge.map((x) => (
-              <li>{x}</li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
-    {
-      shownSolution.length > 0 && (
-        <div class="case-box">
-          <span class="case-label case-label--royal">{t.cases.solution}</span>
-          <ul>
-            {shownSolution.map((x) => (
-              <li>{x}</li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
-    {
-      shownKpis.length > 0 && (
-        <div class="case-box case-box--dark">
-          <span class="case-label case-label--dark">{t.cases.result}</span>
-          <ul>
-            {shownKpis.map((k) => (
-              <li class="kpi">
-                <span class="kpi-v">{k.v}</span>
-                <span class="kpi-t">{k.t}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
-  </div>
-  {
-    tags.length > 0 && (
-      <ul class="case-tags">
-        {tags.map((s) => (
-          <li>{s}</li>
-        ))}
-      </ul>
-    )
-  }
+  <CaseBoxes locale={locale} name={name} challenge={challenge} solution={solution} kpis={kpis} tags={tags} />
 </article>
 
 <style>
@@ -183,80 +118,5 @@ const shownSolution = clean(solution);
     background: var(--royal);
     border-color: var(--royal);
     color: var(--paper);
-  }
-  .case-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap: 16px;
-  }
-  .case-box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 18px;
-    border-radius: var(--radius-md);
-    background: var(--surface);
-  }
-  .case-box ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .case-box--dark {
-    background: var(--block-ink);
-  }
-  .case-label {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: var(--support);
-  }
-  .case-label--royal {
-    color: var(--royal);
-  }
-  .case-label--dark {
-    color: var(--on-dark);
-  }
-  .kpi {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    padding-bottom: 4px;
-  }
-  .kpi-v {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 1.1;
-    color: var(--lime);
-  }
-  .kpi-t {
-    font-size: 14px;
-    line-height: 1.45;
-    color: var(--paper);
-  }
-  .case-tags {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .case-tags li {
-    display: inline-flex;
-    align-items: center;
-    min-height: 30px;
-    padding: 0 10px;
-    border-radius: var(--radius-xs);
-    border: 1px solid var(--line-tag);
-    font-size: 13px;
   }
 </style>

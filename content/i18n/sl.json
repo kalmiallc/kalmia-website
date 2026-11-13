@@ -37,5 +37,19 @@
   },
   "a11y": {
     "opensInNewTab": "(odpre se v novem zavihku)"
+  },
+  "dates": {
+    "published": "Objavljeno",
+    "updated": "Posodobljeno"
+  },
+  "back": "Nazaj",
+  "notFound": {
+    "title": "Strani ni mogoče najti | Kalmia",
+    "description": "Stran, ki jo iščete, ne obstaja ali je bila premaknjena.",
+    "h1": "Strani ni mogoče najti.",
+    "text": "Stran, ki jo iščete, ne obstaja ali je bila premaknjena. Izberite stran v kazalu ali se dogovorite za pogovor."
+  },
+  "projects": {
+    "listLabel": "Seznam EU projektov"
   }
 }

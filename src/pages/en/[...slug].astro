@@ -1,0 +1,16 @@
+---
+/**
+ * Vse angleške strani. Zgradijo se samodejno, ko v content/<zbirka>/en/ obstaja datoteka
+ * (npr. content/pages/en/storitve.md z angleškim slugom "services" → /en/services).
+ */
+import RouteView from '../../templates/RouteView.astro';
+import { routesFor, type RouteProps } from '@lib/routes';
+
+export async function getStaticPaths() {
+  return routesFor('en');
+}
+
+const props = Astro.props as RouteProps;
+---
+
+<RouteView {...props} />

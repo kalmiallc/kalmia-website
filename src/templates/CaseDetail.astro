@@ -1,0 +1,89 @@
+---
+/**
+ * Podstran reference: ista vsebina kot kartica na seznamu (uvod, izziv, rešitev,
+ * rezultat, oznake) in poziv na pogovor (SPEC, razdelek 4).
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import CaseBoxes from '@components/CaseBoxes.astro';
+import NextRow from '@components/NextRow.astro';
+import CtaSection from '@components/CtaSection.astro';
+import { pathForSlug, type CaseEntry, type PageEntry } from '@lib/content';
+import { ui, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  entry: CaseEntry;
+  listPage: PageEntry;
+}
+
+const { locale, entry, listPage } = Astro.props;
+const c = entry.data;
+const list = listPage.data;
+if (list.template !== 'reference') throw new Error('Napačna predloga.');
+const t = ui(locale);
+const listHref = pathForSlug(locale, list.slug);
+const listLabel = list.breadcrumb ?? list.hero.h1;
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${c.title}: ${listLabel} | Kalmia`}
+  description={c.description}
+  breadcrumbs={[{ label: listLabel, href: listHref }, { label: c.title }]}
+>
+  <div class="container hero">
+    <span class="hero-tag">{c.tag}</span>
+    <h1 class="hero-h1">{c.title}</h1>
+    <p class="hero-lead">{c.lead}</p>
+  </div>
+
+  <Section tone="surface" gap={20}>
+    <div class="case-body">
+      <CaseBoxes locale={locale} name={c.title} challenge={c.izziv} solution={c.resitev} kpis={c.kpis} tags={c.tags} labelTag="h2" />
+    </div>
+  </Section>
+
+  <NextRow label={t.back} title={listLabel} href={listHref} />
+
+  <CtaSection locale={locale} layout={list.cta.layout} title={list.cta.title} text={list.cta.text} eyebrow={list.cta.eyebrow} buttonLabel={list.cta.button} />
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-top: var(--section-y);
+    padding-bottom: clamp(40px, 5vw, 64px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-tag {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--royal);
+  }
+  .hero-h1 {
+    max-width: 960px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+  .hero-lead {
+    max-width: 760px;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+  .case-body {
+    background: var(--paper);
+    border-radius: var(--radius-lg);
+    padding: clamp(22px, 3vw, 36px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+</style>

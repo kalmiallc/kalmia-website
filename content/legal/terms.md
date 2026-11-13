@@ -1,5 +1,11 @@
 ---
 title: "Splošni pogoji"
+h1: "Pogoji uporabe"
+slug: "pogoji-uporabe"
+translationKey: "terms"
+# Besedilo je dobesedno s stare strani (v angleščini). Posodobitev pripravi Mateja.
+lang: "en"
+description: "Splošni pogoji uporabe spletne strani Kalmia: uporaba vsebine, intelektualna lastnina, odgovornost in veljavno pravo."
 legacyUrl: "/sl/terms"
 ---
 

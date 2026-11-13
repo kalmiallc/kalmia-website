@@ -2,23 +2,27 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import IndexRows from '@components/IndexRows.astro';
 import ClientList from '@components/ClientList.astro';
-import { getPage } from '@lib/content';
-import { ui } from '@lib/i18n';
+import { ui, type Locale } from '@lib/i18n';
 import { site } from '@lib/site';
+import type { PageEntry } from '@lib/content';
 
-const locale = 'sl';
+interface Props {
+  locale: Locale;
+  entry: PageEntry;
+}
+
+const { locale, entry } = Astro.props;
+const d = entry.data;
+if (d.template !== 'home') throw new Error('Napačna predloga.');
 const t = ui(locale);
-const page = await getPage(locale, 'home');
-if (page.data.template !== 'home') throw new Error('Domača stran mora imeti template: "home".');
-const { title, description, h1, lead } = page.data;
 ---
 
-<BaseLayout locale={locale} title={title} description={description} variant="home">
+<BaseLayout locale={locale} title={d.title} description={d.description} variant="home">
   <div class="container">
     <div class="intro">
       <div class="intro-copy">
-        <h1 class="h1">{h1}</h1>
-        {lead && <p class="intro-lead">{lead}</p>}
+        <h1 class="h1">{d.h1}</h1>
+        <p class="intro-lead">{d.lead}</p>
       </div>
     </div>
 
@@ -53,9 +57,6 @@ const { title, description, h1, lead } = page.data;
   }
   .kz-head {
     margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
     padding-bottom: 8.4px;
     border-bottom: 2px solid var(--ink);
     scroll-margin-top: 16px;

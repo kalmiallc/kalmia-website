@@ -1,0 +1,486 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import SectionHeading from '@components/SectionHeading.astro';
+import DarkSection from '@components/DarkSection.astro';
+import RuleItem from '@components/RuleItem.astro';
+import LinkRows from '@components/LinkRows.astro';
+import CtaSection from '@components/CtaSection.astro';
+import { getSources, pagePath, type PageEntry } from '@lib/content';
+import { indexRows } from '@lib/navigation';
+import { formatDate, isoDay } from '@lib/format';
+import { ui, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  entry: PageEntry;
+}
+
+const { locale, entry } = Astro.props;
+const d = entry.data;
+if (d.template !== 'vodnik') throw new Error('Napačna predloga.');
+const t = ui(locale);
+
+const phases = await Promise.all(
+  d.steps.phases.map(async (p) => ({
+    ...p,
+    cards: await Promise.all(
+      p.cards.map(async (c) => ({ ...c, href: c.link ? await pagePath(locale, c.link.page, c.link.anchor) : null }))
+    ),
+  }))
+);
+const nav = indexRows(locale);
+const nextRows = await Promise.all(
+  d.next.pages.map(async (key) => {
+    const row = nav.find((r) => r.key === key);
+    if (!row) throw new Error(`Vodnik: stran "${key}" ni v kazalu (content/navigation.json).`);
+    return { href: await pagePath(locale, key), title: row.title, description: row.description };
+  })
+);
+const sources = await getSources(locale, d.sources.key);
+---
+
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+  <div class="container hero">
+    <div class="hero-copy">
+      {d.hero.eyebrow && <div class="eyebrow">{d.hero.eyebrow}</div>}
+      <h1 class="hero-h1">{d.hero.h1}</h1>
+      <p class="hero-lead">{d.hero.lead}</p>
+      {
+        d.date && (
+          <p class="dates">
+            {t.dates.published} <time datetime={isoDay(d.date)}>{formatDate(d.date, locale)}</time>
+            {d.updated && (
+              <>
+                <span aria-hidden="true"> · </span>
+                {t.dates.updated} <time datetime={isoDay(d.updated)}>{formatDate(d.updated, locale)}</time>
+              </>
+            )}
+          </p>
+        )
+      }
+    </div>
+  </div>
+
+  <section class="compliance" aria-labelledby="skladnost">
+    <div class="container compliance-inner">
+      <div class="compliance-head">
+        <div class="compliance-title">
+          <div class="compliance-eyebrow">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
+              <path d="M12 2 L20 5 V11 C20 16 16.5 20 12 22 C7.5 20 4 16 4 11 V5 Z" fill="#3345cb"></path>
+              <path d="M8.2 12.2 L11 15 L16 9.6" fill="none" stroke="#d9f91e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <span class="eyebrow">{d.compliance.eyebrow}</span>
+          </div>
+          <h2 class="h2-lg" id="skladnost">{d.compliance.title}</h2>
+        </div>
+        <p class="compliance-text">{d.compliance.text}</p>
+      </div>
+      <div class="grid-240">
+        {
+          d.compliance.items.map((x) => (
+            <div class="reg">
+              <span class="reg-abbr">{x.abbr}</span>
+              <h3 class="reg-title">{x.title}</h3>
+              <p class="reg-text">{x.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <Section tone="surface" gap={40}>
+    <SectionHeading eyebrow={d.research.eyebrow} title={d.research.title} />
+    <div class="grid-240 grid-gap-20">
+      {
+        d.research.items.map((x) => (
+          <div class="stat">
+            <span class="stat-v">{x.value}</span>
+            <p class="stat-t">{x.text}</p>
+            <span class="stat-src">{x.source}</span>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section gap={8}>
+    <SectionHeading eyebrow={d.steps.eyebrow} title={d.steps.title} intro={d.steps.intro} class="steps-head" />
+    {
+      phases.map((p, i) => (
+        <div class="phase">
+          <div class="phase-intro">
+            <span class="phase-label">{p.label}</span>
+            <div class="phase-bar" aria-hidden="true">
+              {phases.map((_, j) => (
+                <span class:list={['phase-seg', { 'phase-seg--on': j <= i }]} />
+              ))}
+            </div>
+            <h3 class="phase-title">{p.title}</h3>
+            <p class="phase-text">{p.text}</p>
+          </div>
+          <div class="phase-cards">
+            {p.cards.map((c) => (
+              <div class="pcard">
+                <h4 class="pcard-title">{c.title}</h4>
+                <p class="pcard-text">{c.text}</p>
+                {c.href && c.link && (
+                  <a href={c.href} class="pcard-link">
+                    {c.link.label}
+                    <span aria-hidden="true">&nbsp;→</span>
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </Section>
+
+  <Section layout="split" borderTop>
+    <div class="partner-head">
+      <div class="eyebrow">{d.partner.eyebrow}</div>
+      <h2 class="h2-lg">{d.partner.title}</h2>
+      <p class="partner-text">{d.partner.text}</p>
+    </div>
+    <ol class="questions">
+      {
+        d.partner.questions.map((q, i) => (
+          <li>
+            <span class="q-num" aria-hidden="true">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <span class="q-text">{q}</span>
+          </li>
+        ))
+      }
+    </ol>
+  </Section>
+
+  <DarkSection eyebrow={d.approach.eyebrow} title={d.approach.title} intro={d.approach.intro} minColumn={240}>
+    {d.approach.items.map((x) => <RuleItem title={x.title} text={x.text} />)}
+  </DarkSection>
+
+  <Section gap={8}>
+    <SectionHeading eyebrow={d.next.eyebrow} title={d.next.title} class="next-head" />
+    <LinkRows rows={nextRows} ariaLabel={d.next.title} />
+  </Section>
+
+  <section class="sources" aria-labelledby="viri">
+    <div class="container sources-inner">
+      <div class="sources-head"><h2 class="eyebrow sources-title" id="viri">{d.sources.eyebrow}</h2></div>
+      <ul class="sources-list">
+        {
+          sources.map((s) => (
+            <li>
+              <a href={s.url} rel="noopener">
+                {s.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <CtaSection locale={locale} borderTop title={d.cta.title} text={d.cta.text} eyebrow={d.cta.eyebrow} buttonLabel={d.cta.button} layout={d.cta.layout} />
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-top: clamp(56px, 8vw, 104px);
+    padding-bottom: clamp(48px, 6vw, 72px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 64px;
+    align-items: center;
+  }
+  .hero-copy {
+    flex: 1 1 560px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  .hero-h1 {
+    max-width: 900px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+  .hero-lead {
+    max-width: 760px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .dates {
+    font-size: 14px;
+    color: var(--support);
+  }
+
+  .compliance {
+    border-top: 1px solid var(--line-soft);
+  }
+  .compliance-inner {
+    padding-top: clamp(40px, 5vw, 64px);
+    padding-bottom: clamp(56px, 7vw, 80px);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .compliance-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 64px;
+    align-items: end;
+  }
+  .compliance-title {
+    flex: 1 1 480px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .compliance-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .compliance-eyebrow svg {
+    flex: none;
+  }
+  .compliance-text {
+    flex: 1 1 380px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .grid-240 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 16px;
+  }
+  .grid-gap-20 {
+    gap: 20px;
+  }
+  .reg {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 22px 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--royal);
+    border-radius: var(--radius-md);
+  }
+  .reg-abbr {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1;
+    color: var(--royal);
+  }
+  .reg-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+  .reg-text {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .stat {
+    background: var(--paper);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .stat-v {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+  }
+  .stat-t {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .stat-src {
+    margin-top: auto;
+    padding-top: 8px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--support);
+  }
+
+  :global(.steps-head) {
+    padding-bottom: 32px;
+  }
+  .phase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 64px;
+    padding: 48px 0;
+    border-top: 2px solid var(--ink);
+  }
+  .phase-intro {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .phase-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--royal);
+  }
+  .phase-bar {
+    display: flex;
+    gap: 6px;
+    max-width: 220px;
+  }
+  .phase-seg {
+    flex: 1;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--line);
+  }
+  .phase-seg--on {
+    background: var(--royal);
+  }
+  .phase-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(24px, 2.4vw, 30px);
+    line-height: 1.2;
+  }
+  .phase-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .phase-cards {
+    flex: 2 1 600px;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 16px;
+  }
+  .pcard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px 22px;
+    border-radius: var(--radius-md);
+    background: var(--surface);
+  }
+  .pcard-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.25;
+  }
+  .pcard-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .pcard-link {
+    margin-top: auto;
+    padding-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--royal);
+  }
+
+  .partner-head {
+    flex: 1 1 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .partner-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .questions {
+    flex: 1 1 520px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .questions li {
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .q-num {
+    flex: 0 0 28px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--royal);
+  }
+  .q-text {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  :global(.next-head) {
+    padding-bottom: 16px;
+  }
+
+  .sources {
+    border-top: 1px solid var(--line-soft);
+  }
+  .sources-inner {
+    padding-top: clamp(40px, 5vw, 64px);
+    padding-bottom: clamp(40px, 5vw, 64px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 64px;
+  }
+  .sources-head {
+    flex: 1 1 260px;
+  }
+  .sources-title {
+    margin: 0;
+  }
+  .sources-list {
+    flex: 3 1 620px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .sources-list li {
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .sources-list a {
+    overflow-wrap: anywhere;
+  }
+</style>

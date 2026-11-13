@@ -37,5 +37,19 @@
   },
   "a11y": {
     "opensInNewTab": "(opens in a new tab)"
+  },
+  "dates": {
+    "published": "Published",
+    "updated": "Updated"
+  },
+  "back": "Back",
+  "notFound": {
+    "title": "Page not found | Kalmia",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "h1": "Page not found.",
+    "text": "The page you are looking for does not exist or has been moved. Choose a page from the index or book a conversation."
+  },
+  "projects": {
+    "listLabel": "List of EU projects"
   }
 }

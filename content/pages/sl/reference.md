@@ -14,6 +14,7 @@ clients: ["Krka", "ETI", "Iskraemeco", "Kontron", "Weiler Abrasives", "IBO GmbH"
 next:
   label: "Nazaj na začetek"
   page: "home"
+  title: "Kazalo"
 cta:
   layout: "split"
   title: "Vaš proces je lahko naslednji primer."

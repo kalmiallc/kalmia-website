@@ -1,0 +1,13 @@
+---
+/** Vse slovenske strani. Vsebina: /content (glej src/lib/routes.ts). */
+import RouteView from '../templates/RouteView.astro';
+import { routesFor, type RouteProps } from '@lib/routes';
+
+export async function getStaticPaths() {
+  return routesFor('sl');
+}
+
+const props = Astro.props as RouteProps;
+---
+
+<RouteView {...props} />
