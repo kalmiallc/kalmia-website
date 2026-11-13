@@ -1,0 +1,58 @@
+{
+  "index": [
+    {
+      "key": "storitve",
+      "sl": {
+        "title": "Naše AI storitve",
+        "description": "AI agenti, programske rešitve po meri z integriranimi AI agenti, lokalni modeli in stalna podpora.",
+        "path": "/storitve"
+      }
+    },
+    {
+      "key": "vodnik",
+      "sl": {
+        "title": "Kako varno in učinkovito uvesti AI v podjetje",
+        "description": "Na kaj misliti, preden začnete: procesi, podatki, varnost, zakonodaja, infrastruktura, znanje podjetja, modeli, ljudje in izbira partnerja.",
+        "path": "/vodnik-uvedba-ai"
+      }
+    },
+    {
+      "key": "lokalna-ai",
+      "sl": {
+        "title": "Lokalna AI infrastruktura",
+        "description": "AI na vaših strežnikih: modeli, baza znanja in agenti, ne da bi podatki zapustili podjetje.",
+        "path": "/lokalna-ai-infrastruktura"
+      }
+    },
+    {
+      "key": "ekipe",
+      "sl": {
+        "title": "Claude ali ChatGPT za vašo ekipo",
+        "description": "Usklajena uporaba v ekipi, oddelku ali v vodstvu podjetja. Vsi delajo po enakih pravilih in z istim znanjem podjetja.",
+        "path": "/claude-chatgpt-za-ekipe"
+      }
+    },
+    {
+      "key": "proizvodnja",
+      "sl": {
+        "title": "Proizvodna industrija, digitalizacija in AI",
+        "description": "Kalmia MES, povezan z ERP in stroji, AI planiranje in napovedno vzdrževanje.",
+        "path": "/proizvodnja"
+      }
+    },
+    {
+      "key": "reference",
+      "sl": {
+        "title": "Reference",
+        "description": "Od digitalizacije proizvodnje do AI agentov. Za vsak projekt izziv, rešitev in rezultat.",
+        "path": "/reference"
+      }
+    }
+  ],
+  "footer": [
+    { "key": "blog", "sl": { "title": "Blog", "path": "/blog" } },
+    { "key": "projekti", "sl": { "title": "EU projekti", "path": "/projekti" } },
+    { "key": "zasebnost", "sl": { "title": "Zasebnost", "path": "/zasebnost" } },
+    { "key": "pogoji", "sl": { "title": "Pogoji uporabe", "path": "/pogoji-uporabe" } }
+  ]
+}

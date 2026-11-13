@@ -1,0 +1,59 @@
+---
+/**
+ * Seznam strank »Z nami so delali«.
+ * variant="inline": oznaka in imena v isti vrstici (domača stran).
+ * variant="stacked": oznaka nad večjimi imeni (Reference).
+ */
+import { ui, type Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  names: string[];
+  variant?: 'inline' | 'stacked';
+}
+
+const { locale, names, variant = 'inline' } = Astro.props;
+const t = ui(locale);
+---
+
+<div class:list={['cl', `cl--${variant}`]}>
+  <h2 class="eyebrow cl-head">{t.clients.heading}</h2>
+  <ul class="cl-names">
+    {names.map((n) => <li>{n}</li>)}
+  </ul>
+</div>
+
+<style>
+  .cl-head {
+    margin: 0;
+  }
+  .cl-names {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--support);
+  }
+  .cl--inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8.4px 25.2px;
+  }
+  .cl--inline .cl-names {
+    gap: 7px 22.4px;
+    font-size: 15px;
+  }
+  .cl--stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .cl--stacked .cl-names {
+    gap: 12px 36px;
+    font-size: 19px;
+  }
+</style>

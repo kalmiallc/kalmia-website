@@ -1,0 +1,37 @@
+---
+/**
+ * Temni odsek (BlockInk namesto čiste črne): oznaka, naslov, uvod in mreža postavk z Lime črto.
+ * Postavke podaj kot otroke (RuleItem) ali dodatno vsebino v slot "after".
+ */
+import Section from './Section.astro';
+import SectionHeading from './SectionHeading.astro';
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  /** Najmanjša širina stolpca mreže (px). */
+  minColumn?: number;
+  /** Razmik mreže, npr. "28px" ali "28px 32px". */
+  gridGap?: string;
+  id?: string;
+}
+
+const { eyebrow, title, intro, minColumn = 280, gridGap = '28px', id } = Astro.props;
+---
+
+<Section tone="dark" gap={40} id={id}>
+  <SectionHeading eyebrow={eyebrow} title={title} intro={intro} dark />
+  <div class="dk-grid" style={`--dk-min: ${minColumn}px; --dk-gap: ${gridGap}`}>
+    <slot />
+  </div>
+  <slot name="after" />
+</Section>
+
+<style>
+  .dk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--dk-min)), 1fr));
+    gap: var(--dk-gap);
+  }
+</style>

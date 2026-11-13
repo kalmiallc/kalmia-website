@@ -1,0 +1,40 @@
+{
+  "skipToContent": "Preskoči na vsebino",
+  "header": {
+    "homeLabel": "Kalmia, domača stran",
+    "homeLabelFromSubpage": "Kalmia, na kazalo",
+    "breadcrumbsLabel": "Drobtinice",
+    "cta": "Pogovor o vaših procesih",
+    "indexButton": "Kazalo"
+  },
+  "index": {
+    "heading": "Kazalo",
+    "navLabel": "Kazalo strani",
+    "toHome": "Na prvo stran",
+    "currentPage": "Ta stran"
+  },
+  "clients": {
+    "heading": "Z nami so delali"
+  },
+  "footer": {
+    "logoAlt": "Kalmia",
+    "navLabel": "Noga"
+  },
+  "cta": {
+    "talk": "Pogovorimo se",
+    "book": "Dogovorite se za pogovor",
+    "eyebrow": "Prvi korak"
+  },
+  "faq": {
+    "eyebrow": "Vprašanja"
+  },
+  "cases": {
+    "challenge": "Izziv",
+    "solution": "Rešitev",
+    "result": "Rezultat",
+    "readMore": "Več o referenci"
+  },
+  "a11y": {
+    "opensInNewTab": "(odpre se v novem zavihku)"
+  }
+}

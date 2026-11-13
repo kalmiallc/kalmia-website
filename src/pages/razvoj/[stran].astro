@@ -1,0 +1,129 @@
+---
+/**
+ * Predogled osnovnih komponent za pregled faze 1.
+ * Zgradi se samo zunaj produkcije (VERCEL_ENV !== "production") in ima noindex.
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import SectionHeading from '@components/SectionHeading.astro';
+import TileGrid from '@components/TileGrid.astro';
+import ServiceTile from '@components/ServiceTile.astro';
+import ServiceCtaTile from '@components/ServiceCtaTile.astro';
+import CaseCard from '@components/CaseCard.astro';
+import Faq from '@components/Faq.astro';
+import DarkSection from '@components/DarkSection.astro';
+import RuleItem from '@components/RuleItem.astro';
+import CtaSection from '@components/CtaSection.astro';
+import ClientList from '@components/ClientList.astro';
+import BookingLink from '@components/BookingLink.astro';
+import * as f from '../../dev/fixtures';
+import { VERCEL_ENV } from 'astro:env/server';
+
+export function getStaticPaths() {
+  if (VERCEL_ENV === 'production') return [];
+  return [{ params: { stran: 'komponente' } }];
+}
+
+const locale = 'sl';
+---
+
+<BaseLayout
+  locale={locale}
+  title="Predogled komponent (faza 1)"
+  description="Notranja stran za pregled osnovnih komponent. Ni del produkcijske strani."
+  breadcrumbs={[{ label: 'Predogled komponent' }]}
+  noindex
+>
+  <Section>
+    <h1 class="h1">Predogled komponent</h1>
+    <p>Vzorčna vsebina je iz prototipa. Stran ni del produkcije.</p>
+  </Section>
+
+  <Section id="agenti" borderTop>
+    <SectionHeading size="sm" eyebrow="01 · Ploščice brez podstrani" title="AI agenti za ponavljajoče se delo." />
+    <TileGrid>
+      {f.agentTiles.map((x) => <ServiceTile {...x} />)}
+      <ServiceCtaTile locale={locale} {...f.ctaTile} />
+    </TileGrid>
+  </Section>
+
+  <Section tone="surface" borderTop>
+    <SectionHeading size="sm" eyebrow="02 · Ploščice s podstranjo" title="Uvedba AI orodij, kot so Claude, ChatGPT in Gemini, v vsakdanje delo ekip." />
+    <TileGrid>
+      {f.linkedTiles.map((x) => <ServiceTile {...x} />)}
+    </TileGrid>
+  </Section>
+
+  <DarkSection eyebrow={f.costs.eyebrow} title={f.costs.title}>
+    {f.costs.items.map((x) => <RuleItem label={x.label} title={x.title} text={x.text} titleSize={24} />)}
+    <div slot="after" class="costs-after">
+      <p>{f.costs.note}</p>
+      <BookingLink locale={locale} size="md" label={f.costs.button} />
+    </div>
+  </DarkSection>
+
+  <Faq locale={locale} title="Pogosta vprašanja." items={f.faq} />
+
+  <Section tone="surface" gap={28}>
+    <CaseCard locale={locale} {...f.weiler} href="/reference/weiler-abrasives" />
+    <CaseCard locale={locale} {...f.halder} />
+  </Section>
+
+  <Section>
+    <ClientList locale={locale} names={f.referenceClients} variant="stacked" />
+  </Section>
+
+  <DarkSection eyebrow={f.howWeWork.eyebrow} title={f.howWeWork.title} intro={f.howWeWork.intro} minColumn={240}>
+    {f.howWeWork.items.map((x) => <RuleItem title={x.title} text={x.text} />)}
+  </DarkSection>
+
+  <Section layout="split" borderTop>
+    <div class="start-head">
+      <div class="eyebrow">Kako začnemo</div>
+      <h2 class="h2-lg">Začnite z enim procesom.</h2>
+    </div>
+    <div class="start-grid">
+      {f.startSmall.map((x) => <RuleItem tone="light" title={x.title} text={x.text} titleSize={19} />)}
+    </div>
+  </Section>
+
+  <CtaSection
+    locale={locale}
+    layout="split"
+    title="Vaš proces je lahko naslednji primer."
+    text="Brezplačen 60-minutni pogovor. Pogledamo, kje ste danes in kaj bi bil smiseln prvi korak."
+  />
+  <CtaSection
+    locale={locale}
+    borderTop
+    title="Kje ste danes?"
+    text="Na prvem pogovoru pregledamo vaše procese, podatke in orodja, ki jih ekipa že uporablja."
+  />
+</BaseLayout>
+
+<style>
+  .costs-after {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 32px;
+  }
+  .costs-after p {
+    max-width: 620px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--on-dark-muted);
+  }
+  .start-head {
+    flex: 1 1 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .start-grid {
+    flex: 2 1 560px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+</style>

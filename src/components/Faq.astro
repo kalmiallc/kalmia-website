@@ -1,0 +1,104 @@
+---
+/**
+ * Pogosta vprašanja. Naslov levo, vprašanja desno. Odpiranje z <details>, brez JavaScripta:
+ * odgovori so v HTML in vidni iskalnikom.
+ */
+import Section from './Section.astro';
+import { ui, type Locale } from '@lib/i18n';
+
+export interface FaqItem {
+  q: string;
+  a: string;
+}
+
+interface Props {
+  locale: Locale;
+  title: string;
+  items: FaqItem[];
+  eyebrow?: string;
+  borderTop?: boolean;
+  id?: string;
+}
+
+const { locale, title, items, eyebrow, borderTop = false, id } = Astro.props;
+const t = ui(locale);
+---
+
+<Section layout="split" borderTop={borderTop} id={id}>
+  <div class="faq-head">
+    <div class="eyebrow">{eyebrow ?? t.faq.eyebrow}</div>
+    <h2 class="h2-lg">{title}</h2>
+  </div>
+  <div class="faq-list">
+    {
+      items.map((item) => (
+        <details class="faq">
+          <summary>
+            <h3 class="faq-q">{item.q}</h3>
+            <span class="faq-ic" aria-hidden="true">
+              +
+            </span>
+          </summary>
+          <p class="faq-a">{item.a}</p>
+        </details>
+      ))
+    }
+  </div>
+</Section>
+
+<style>
+  .faq-head {
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .faq-list {
+    flex: 2 1 560px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--line);
+  }
+  .faq {
+    border-top: 1px solid var(--line);
+  }
+  .faq > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    min-height: 44px;
+    padding: 16px 0;
+  }
+  .faq > summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-q {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+  .faq-ic {
+    flex: none;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--royal);
+    transition: transform 0.2s ease;
+  }
+  .faq[open] .faq-ic {
+    transform: rotate(45deg);
+  }
+  .faq-a {
+    margin: 0;
+    padding: 0 0 20px;
+    max-width: 720px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+</style>
