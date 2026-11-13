@@ -22,7 +22,8 @@ Statična spletna stran Kalmia d.o.o. (Astro, TypeScript, Vercel). Pravila dela 
   - `blog/<jezik>/*.md`, `projects/<jezik>/*.md`, `legal/*.md`
   - `redirects.json`: preusmeritve s stare strani
 - Build preveri sheme in povezave med datotekami (`src/lib/content.ts`) in se ob napaki ustavi z imenom datoteke.
+- `src/pages/[...slug].astro` (SL) in `src/pages/en/[...slug].astro` (EN): vse strani iz `/content`, poti sestavi `src/lib/routes.ts`. Nova datoteka v `content/<zbirka>/en/` ustvari angleško stran brez spremembe kode.
+- `src/templates/`: predloga za vsako vrsto strani (polje `template` v `content/pages`), podstrani referenc in projektov, pravne strani, 404.
 - `src/components/`: komponente (glava, kazalo, noga, ploščice, kartica reference, FAQ, temni odsek, poziv).
 - `src/layouts/BaseLayout.astro`: `<head>`, glava, noga.
 - `src/assets/fonts/`: Urbanist in Space Grotesk (OFL), gostovani lokalno prek Astro Fonts API.
-- `/razvoj/komponente`: predogled komponent, zgradi se le zunaj produkcije.

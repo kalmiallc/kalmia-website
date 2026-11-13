@@ -1,0 +1,63 @@
+---
+/** Kartice s številko in modro črto na vrhu (Lokalna AI: »Kaj pomeni lokalno«, Ekipe: »Kaj dobite«). */
+interface Props {
+  items: { title: string; text: string }[];
+  /** Najmanjša širina kartice v px. */
+  min?: number;
+  tone?: 'surface' | 'white';
+}
+
+const { items, min = 240, tone = 'surface' } = Astro.props;
+---
+
+<div class="nc" style={`--nc-min: ${min}px`}>
+  {
+    items.map((x, i) => (
+      <div class:list={['nc-card', `nc-card--${tone}`]}>
+        <span class="nc-num" aria-hidden="true">
+          {String(i + 1).padStart(2, '0')}
+        </span>
+        <h3 class="nc-title">{x.title}</h3>
+        <p class="nc-text">{x.text}</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .nc {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--nc-min)), 1fr));
+    gap: 16px;
+  }
+  .nc-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px 22px;
+    border-radius: var(--radius-md);
+    border-top: 4px solid var(--royal);
+  }
+  .nc-card--surface {
+    background: var(--surface);
+  }
+  .nc-card--white {
+    background: var(--paper);
+  }
+  .nc-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--royal);
+  }
+  .nc-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+  .nc-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+</style>

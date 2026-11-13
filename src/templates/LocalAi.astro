@@ -1,0 +1,202 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import SectionHeading from '@components/SectionHeading.astro';
+import NumberedCards from '@components/NumberedCards.astro';
+import DarkSection from '@components/DarkSection.astro';
+import RuleItem from '@components/RuleItem.astro';
+import StepList from '@components/StepList.astro';
+import Faq from '@components/Faq.astro';
+import CtaSection from '@components/CtaSection.astro';
+import { getFaq, type PageEntry } from '@lib/content';
+import { inlineAccent } from '@lib/format';
+import type { Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  entry: PageEntry;
+}
+
+const { locale, entry } = Astro.props;
+const d = entry.data;
+if (d.template !== 'lokalna-ai') throw new Error('Napačna predloga.');
+const faq = await getFaq(locale, d.faq);
+---
+
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+  <div class="container hero">
+    <div class="hero-copy">
+      {d.hero.eyebrow && <div class="eyebrow">{d.hero.eyebrow}</div>}
+      <h1 class="h1">{d.hero.h1}</h1>
+      <p class="hero-lead" set:html={inlineAccent(d.hero.lead)} />
+    </div>
+  </div>
+
+  <Section borderTop gap={32}>
+    <SectionHeading eyebrow={d.meaning.eyebrow} title={d.meaning.title} />
+    <NumberedCards items={d.meaning.items} min={240} />
+  </Section>
+
+  <Section tone="surface" layout="split">
+    <div class="when-head">
+      <div class="eyebrow">{d.when.eyebrow}</div>
+      <h2 class="h2-lg">{d.when.title}</h2>
+      <p class="muted-16">{d.when.text}</p>
+    </div>
+    <ul class="when-list">
+      {
+        d.when.items.map((x) => (
+          <li>
+            <span class="when-mark" aria-hidden="true" />
+            <span>{x}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </Section>
+
+  <DarkSection eyebrow={d.security.eyebrow} title={d.security.title} gridGap="28px 32px">
+    {d.security.items.map((x) => <RuleItem title={x.title} text={x.text} />)}
+  </DarkSection>
+
+  <Section tone="surface" gap={32}>
+    <div class="costs-head">
+      <div class="costs-title">
+        <div class="eyebrow">{d.costs.eyebrow}</div>
+        <h2 class="h2-lg">{d.costs.title}</h2>
+      </div>
+      <p class="costs-text muted-16">{d.costs.text}</p>
+    </div>
+    <div class="costs-grid">
+      {
+        d.costs.items.map((x) => (
+          <div class="cost">
+            <span class="cost-label">{x.label}</span>
+            <h3 class="cost-title">{x.title}</h3>
+            <p class="cost-text">{x.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section layout="split">
+    <div class="process-head">
+      <div class="eyebrow">{d.process.eyebrow}</div>
+      <h2 class="h2-lg">{d.process.title}</h2>
+    </div>
+    <StepList steps={d.process.steps} />
+  </Section>
+
+  <Faq locale={locale} title={faq.title} items={faq.items} borderTop />
+
+  <CtaSection locale={locale} title={d.cta.title} text={d.cta.text} eyebrow={d.cta.eyebrow} buttonLabel={d.cta.button} layout={d.cta.layout} />
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 5vw, 72px);
+    padding-bottom: clamp(48px, 6vw, 80px);
+  }
+  .hero-copy {
+    max-width: 860px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .hero-lead {
+    max-width: 720px;
+    font-size: clamp(18px, 1.6vw, 21px);
+    line-height: 1.85;
+  }
+  .muted-16 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .when-head {
+    flex: 1 1 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .when-list {
+    flex: 1 1 520px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .when-list li {
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .when-mark {
+    flex: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--lime);
+    transform: translateY(1px);
+  }
+  .costs-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 64px;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .costs-title {
+    flex: 1 1 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .costs-text {
+    flex: 1 1 380px;
+  }
+  .costs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 12px;
+  }
+  .cost {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 22px 20px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+  }
+  .cost-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--royal);
+  }
+  .cost-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+  .cost-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .process-head {
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+</style>

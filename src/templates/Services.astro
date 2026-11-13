@@ -1,0 +1,140 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import SectionHeading from '@components/SectionHeading.astro';
+import TileGrid from '@components/TileGrid.astro';
+import ServiceTile from '@components/ServiceTile.astro';
+import ServiceCtaTile from '@components/ServiceCtaTile.astro';
+import DarkSection from '@components/DarkSection.astro';
+import RuleItem from '@components/RuleItem.astro';
+import BookingLink from '@components/BookingLink.astro';
+import Faq from '@components/Faq.astro';
+import { getFaq, getTiles, pagePath, type PageEntry } from '@lib/content';
+import { inlineAccent } from '@lib/format';
+import type { Locale } from '@lib/i18n';
+
+interface Props {
+  locale: Locale;
+  entry: PageEntry;
+}
+
+const { locale, entry } = Astro.props;
+const d = entry.data;
+if (d.template !== 'storitve') throw new Error('Napačna predloga.');
+const key = d.translationKey;
+
+const groups = await Promise.all(d.groups.map(async (g) => ({ ...g, tiles: await getTiles(locale, key, g.group) })));
+const deeper = d.hero.deeper
+  ? { label: d.hero.deeper.label, links: await Promise.all(d.hero.deeper.links.map(async (l) => ({ label: l.label, href: await pagePath(locale, l.page, l.anchor) }))) }
+  : null;
+const faq = await getFaq(locale, d.faq);
+---
+
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+  <div class="container">
+    <div class="hero">
+      <div class="hero-copy">
+        {d.hero.eyebrow && <div class="eyebrow">{d.hero.eyebrow}</div>}
+        <h1 class="h1">{d.hero.h1}</h1>
+        <p class="hero-lead" set:html={inlineAccent(d.hero.lead)} />
+        {
+          deeper && (
+            <div class="deeper">
+              <span class="deeper-label">{deeper.label}</span>
+              {deeper.links.map((l) => (
+                <>
+                  <span aria-hidden="true" class="deeper-dot">
+                    ·
+                  </span>
+                  <a href={l.href} class="deeper-link">
+                    {l.label}
+                    <span aria-hidden="true">&nbsp;→</span>
+                  </a>
+                </>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  {
+    groups.map((g, i) => (
+      <Section id={g.id} tone={i % 2 ? 'surface' : 'white'} borderTop>
+        <SectionHeading size="sm" eyebrow={g.eyebrow} title={g.title} />
+        <TileGrid>
+          {g.tiles.map((tile) => (
+            <ServiceTile {...tile} />
+          ))}
+          {g.cta && <ServiceCtaTile locale={locale} {...g.cta} />}
+        </TileGrid>
+      </Section>
+    ))
+  }
+
+  <DarkSection eyebrow={d.costs.eyebrow} title={d.costs.title}>
+    {d.costs.items.map((x) => <RuleItem label={x.label} title={x.title} text={x.text} titleSize={24} />)}
+    <div slot="after" class="costs-after">
+      <p>{d.costs.note}</p>
+      <BookingLink locale={locale} size="md" label={d.costs.button} />
+    </div>
+  </DarkSection>
+
+  <Faq locale={locale} title={faq.title} items={faq.items} />
+</BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 48px;
+    align-items: stretch;
+    padding: clamp(40px, 5vw, 72px) 0 clamp(40px, 5vw, 64px);
+  }
+  .hero-copy {
+    flex: 1 1 640px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .hero-lead {
+    max-width: 700px;
+    font-size: clamp(18px, 1.6vw, 21px);
+    line-height: 1.85;
+  }
+  .deeper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+    font-size: 15px;
+  }
+  .deeper-label {
+    font-weight: 500;
+    color: var(--support);
+  }
+  .deeper-dot {
+    color: var(--support);
+  }
+  .deeper-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 600;
+    color: var(--royal);
+  }
+  .costs-after {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 32px;
+  }
+  .costs-after p {
+    max-width: 620px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--on-dark-muted);
+  }
+</style>

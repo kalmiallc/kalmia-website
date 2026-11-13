@@ -1,0 +1,90 @@
+---
+/** Povezava na naslednjo stran (»Naprej«, »Nazaj na začetek«) nad pozivom. */
+interface Props {
+  label: string;
+  title: string;
+  href: string;
+}
+
+const { label, title, href } = Astro.props;
+---
+
+<div class="nr-wrap">
+  <div class="container">
+    <a href={href} class="nr">
+      <span class="eyebrow">{label}</span>
+      <span class="nr-main">
+        <span class="nr-num" aria-hidden="true"></span>
+        <span class="nr-title">
+          {title}
+          <span class="nr-arrow" aria-hidden="true">→</span>
+        </span>
+      </span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .nr-wrap {
+    border-top: 1px solid var(--line-soft);
+  }
+  .nr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px 32px;
+    padding: 36px 0;
+    color: var(--ink);
+  }
+  .nr:hover {
+    color: var(--ink);
+  }
+  .nr-main {
+    flex: 1 1 420px;
+    min-width: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .nr-num {
+    flex: none;
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    border-radius: var(--radius-xs);
+    background: var(--chip);
+    transition: background-color 0.15s ease;
+  }
+  .nr-title {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.15;
+    transition: transform 0.25s ease;
+  }
+  .nr-arrow {
+    display: inline-block;
+    margin-left: 0.3em;
+    color: var(--royal);
+    opacity: 0;
+    transform: translateX(-7px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+  .nr:hover .nr-num,
+  .nr:focus-visible .nr-num {
+    background: var(--lime);
+  }
+  .nr:hover .nr-title,
+  .nr:focus-visible .nr-title {
+    transform: translateX(6px);
+  }
+  .nr:hover .nr-arrow,
+  .nr:focus-visible .nr-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+</style>

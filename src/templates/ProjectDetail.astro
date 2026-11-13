@@ -1,0 +1,71 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import Prose from '@components/Prose.astro';
+import NextRow from '@components/NextRow.astro';
+import { pathForSlug, type PageEntry } from '@lib/content';
+import type { ProjectEntry } from '@lib/routes';
+import { ui, type Locale } from '@lib/i18n';
+import { render } from 'astro:content';
+
+interface Props {
+  locale: Locale;
+  entry: ProjectEntry;
+  listPage: PageEntry;
+}
+
+const { locale, entry, listPage } = Astro.props;
+const p = entry.data;
+const list = listPage.data;
+if (list.template !== 'projekti') throw new Error('Napačna predloga.');
+const t = ui(locale);
+const listHref = pathForSlug(locale, list.slug);
+const listLabel = list.breadcrumb ?? list.hero.h1;
+const { Content } = await render(entry);
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${p.breadcrumb}: ${listLabel} | Kalmia`}
+  description={p.description}
+  breadcrumbs={[{ label: listLabel, href: listHref }, { label: p.breadcrumb }]}
+>
+  <div class="container hero">
+    {p.eyebrow && <div class="eyebrow">{p.eyebrow}</div>}
+    <h1 class="hero-h1">{p.title}</h1>
+    {
+      p.logos.map((logo) => (
+        <img src={logo.src} alt={logo.alt} width={logo.width} height={logo.height} class="logos" />
+      ))
+    }
+  </div>
+
+  <Section borderTop>
+    <Prose><Content /></Prose>
+  </Section>
+
+  <NextRow label={t.back} title={listLabel} href={listHref} />
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-top: var(--section-y);
+    padding-bottom: clamp(40px, 5vw, 64px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .hero-h1 {
+    max-width: 960px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(32px, 4.2vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .logos {
+    width: 100%;
+    max-width: 778px;
+    height: auto;
+  }
+</style>

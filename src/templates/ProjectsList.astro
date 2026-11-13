@@ -1,0 +1,60 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import LinkRows from '@components/LinkRows.astro';
+import { entryLocale, pathForSlug, type PageEntry } from '@lib/content';
+import { ui, type Locale } from '@lib/i18n';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  locale: Locale;
+  entry: PageEntry;
+}
+
+const { locale, entry } = Astro.props;
+const d = entry.data;
+if (d.template !== 'projekti') throw new Error('Napačna predloga.');
+const t = ui(locale);
+const projects = (await getCollection('projects', (e) => entryLocale(e) === locale && !e.data.draft)).sort(
+  (a, b) => a.data.order - b.data.order
+);
+const rows = projects.map((p) => ({
+  href: pathForSlug(locale, `${d.slug}/${p.data.slug}`),
+  title: p.data.title,
+}));
+---
+
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+  <div class="container hero">
+    {d.hero.eyebrow && <div class="eyebrow">{d.hero.eyebrow}</div>}
+    <h1 class="hero-h1">{d.hero.h1}</h1>
+  </div>
+
+  <Section gap={40}>
+    <LinkRows rows={rows} ariaLabel={t.projects.listLabel} />
+    <img src={d.logos.src} alt={d.logos.alt} width={d.logos.width} height={d.logos.height} class="logos" loading="lazy" />
+  </Section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-top: var(--section-y);
+    padding-bottom: clamp(16px, 2vw, 24px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .hero-h1 {
+    max-width: 960px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+  .logos {
+    width: 100%;
+    max-width: 877px;
+    height: auto;
+  }
+</style>

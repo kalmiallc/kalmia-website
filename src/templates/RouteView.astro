@@ -1,0 +1,36 @@
+---
+/** Izbere predlogo glede na vrsto poti in polje template strani. */
+import Home from './Home.astro';
+import Services from './Services.astro';
+import Guide from './Guide.astro';
+import LocalAi from './LocalAi.astro';
+import Teams from './Teams.astro';
+import Manufacturing from './Manufacturing.astro';
+import References from './References.astro';
+import ProjectsList from './ProjectsList.astro';
+import CaseDetail from './CaseDetail.astro';
+import ProjectDetail from './ProjectDetail.astro';
+import Legal from './Legal.astro';
+import type { RouteProps } from '@lib/routes';
+
+type Props = RouteProps;
+const route = Astro.props;
+
+const PAGE_TEMPLATES = {
+  home: Home,
+  storitve: Services,
+  vodnik: Guide,
+  'lokalna-ai': LocalAi,
+  ekipe: Teams,
+  proizvodnja: Manufacturing,
+  reference: References,
+  projekti: ProjectsList,
+} as const;
+
+const Template = route.kind === 'page' ? PAGE_TEMPLATES[route.entry.data.template] : null;
+---
+
+{route.kind === 'page' && Template && <Template locale={route.locale} entry={route.entry} />}
+{route.kind === 'case' && <CaseDetail locale={route.locale} entry={route.entry} listPage={route.listPage} />}
+{route.kind === 'project' && <ProjectDetail locale={route.locale} entry={route.entry} listPage={route.listPage} />}
+{route.kind === 'legal' && <Legal locale={route.locale} entry={route.entry} />}

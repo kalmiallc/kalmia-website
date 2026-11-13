@@ -1,0 +1,119 @@
+---
+/**
+ * Vrstice s povezavami v slogu kazala, siva različica hoverja (»Naslednji korak« na Vodniku,
+ * seznam EU projektov). Številka je prazen kvadratek, ob hoverju se obarva Lime.
+ */
+export interface LinkRow {
+  href: string;
+  title: string;
+  description?: string;
+}
+
+interface Props {
+  rows: LinkRow[];
+  ariaLabel: string;
+}
+
+const { rows, ariaLabel } = Astro.props;
+---
+
+<nav aria-label={ariaLabel} class="lr">
+  {
+    rows.map((r) => (
+      <a href={r.href} class="lr-row">
+        <span class="lr-numcol">
+          <span class="lr-num" aria-hidden="true" />
+        </span>
+        <span class="lr-main">
+          <span class="lr-title">
+            {r.title}
+            <span class="lr-arrow" aria-hidden="true">
+              →
+            </span>
+          </span>
+          {r.description && <span class="lr-desc">{r.description}</span>}
+        </span>
+      </a>
+    ))
+  }
+</nav>
+
+<style>
+  .lr {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid var(--ink);
+  }
+  .lr-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    align-items: baseline;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .lr-row:hover {
+    color: var(--ink);
+  }
+  .lr-numcol {
+    flex: 0 0 39px;
+  }
+  .lr-num {
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    border-radius: var(--radius-xs);
+    vertical-align: middle;
+    background: var(--chip);
+    transition: background-color 0.15s ease;
+  }
+  .lr-main {
+    flex: 3 1 360px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .lr-title {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.15;
+    transition: transform 0.25s ease;
+  }
+  .lr-arrow {
+    display: inline-block;
+    margin-left: 0.3em;
+    color: var(--royal);
+    opacity: 0;
+    transform: translateX(-7px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+  .lr-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--support);
+    transition: color 0.25s ease;
+  }
+  .lr-row:hover .lr-num,
+  .lr-row:focus-visible .lr-num {
+    background: var(--lime);
+  }
+  .lr-row:hover .lr-title,
+  .lr-row:focus-visible .lr-title {
+    transform: translateX(6px);
+  }
+  .lr-row:hover .lr-arrow,
+  .lr-row:focus-visible .lr-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .lr-row:hover .lr-desc,
+  .lr-row:focus-visible .lr-desc {
+    color: var(--ink);
+  }
+</style>

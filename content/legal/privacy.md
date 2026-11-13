@@ -1,5 +1,11 @@
 ---
 title: "Pravna politika"
+h1: "Zasebnost"
+slug: "zasebnost"
+translationKey: "privacy"
+# Besedilo je dobesedno s stare strani (v angleščini). Posodobitev pripravi Mateja.
+lang: "en"
+description: "Pravna politika spletne strani Kalmia: katere podatke zbiramo, kako jih uporabljamo, piškotki in vaše pravice."
 legacyUrl: "/sl/privacy"
 ---
 

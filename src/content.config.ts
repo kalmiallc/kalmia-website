@@ -98,7 +98,8 @@ const ctaTile = z.object({
   linkLabel: text.optional(),
 });
 
-const nextRow = z.object({ label: text, page: pageKey });
+/** Povezava »Naprej« na drugo stran. Naslov privzeto iz kazala (content/navigation.json). */
+const nextRow = z.object({ label: text, page: pageKey, title: text.optional() });
 
 /* ---------- Strani: ena shema na predlogo ---------- */
 
@@ -243,6 +244,18 @@ const referencesPage = pageBase.extend({
   cta,
 });
 
+const projectsListPage = pageBase.extend({
+  template: z.literal('projekti'),
+  hero: z.object({ eyebrow: text.optional(), h1: text }),
+  /** Trak z logotipi financerjev pod seznamom. */
+  logos: z.object({
+    src: z.string().startsWith('/images/'),
+    alt: text,
+    width: z.number().int().positive(),
+    height: z.number().int().positive(),
+  }),
+});
+
 const pages = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './content/pages', generateId }),
   schema: z.discriminatedUnion('template', [
@@ -253,6 +266,7 @@ const pages = defineCollection({
     teamsPage,
     manufacturingPage,
     referencesPage,
+    projectsListPage,
   ]),
 });
 
@@ -393,8 +407,15 @@ const projects = defineCollection({
 const legal = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './content/legal', generateId }),
   schema: z.object({
+    /** <title> (brez » | Kalmia«). */
     title: text,
-    description: text.max(155).optional(),
+    /** Naslov na strani (H1). */
+    h1: text,
+    slug: z.string().regex(/^[a-z0-9-]+$/),
+    translationKey: text,
+    description: text.max(155),
+    /** Jezik besedila, če se razlikuje od jezika strani. */
+    lang: z.enum(['sl', 'en']).optional(),
     legacyUrl: z.string().startsWith('/').optional(),
   }),
 });
