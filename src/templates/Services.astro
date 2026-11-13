@@ -12,6 +12,7 @@ import Faq from '@components/Faq.astro';
 import { getFaq, getTiles, pagePath, type PageEntry } from '@lib/content';
 import { inlineAccent } from '@lib/format';
 import type { Locale } from '@lib/i18n';
+import { absoluteUrl, faqLd, serviceLd } from '@lib/seo';
 
 interface Props {
   locale: Locale;
@@ -28,9 +29,18 @@ const deeper = d.hero.deeper
   ? { label: d.hero.deeper.label, links: await Promise.all(d.hero.deeper.links.map(async (l) => ({ label: l.label, href: await pagePath(locale, l.page, l.anchor) }))) }
   : null;
 const faq = await getFaq(locale, d.faq);
+const pageUrl = absoluteUrl(Astro.url.pathname);
+const jsonLd = [
+  ...groups.flatMap((g) =>
+    g.tiles.map((tile) =>
+      serviceLd({ name: tile.title, description: tile.description, url: tile.href ? absoluteUrl(tile.href) : `${pageUrl}#${g.id}`, category: g.title })
+    )
+  ),
+  ...(faq ? [faqLd(faq.items)] : []),
+];
 ---
 
-<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]} translationKey={`page:${d.translationKey}`} jsonLd={jsonLd}>
   <div class="container">
     <div class="hero">
       <div class="hero-copy">
@@ -81,7 +91,7 @@ const faq = await getFaq(locale, d.faq);
     </div>
   </DarkSection>
 
-  <Faq locale={locale} title={faq.title} items={faq.items} />
+  {faq && <Faq locale={locale} title={faq.title} items={faq.items} />}
 </BaseLayout>
 
 <style>

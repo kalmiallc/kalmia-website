@@ -10,6 +10,7 @@ import NextRow from '@components/NextRow.astro';
 import CtaSection from '@components/CtaSection.astro';
 import { pathForSlug, type CaseEntry, type PageEntry } from '@lib/content';
 import { ui, type Locale } from '@lib/i18n';
+import { absoluteUrl, articleLd } from '@lib/seo';
 
 interface Props {
   locale: Locale;
@@ -24,6 +25,15 @@ if (list.template !== 'reference') throw new Error('Napačna predloga.');
 const t = ui(locale);
 const listHref = pathForSlug(locale, list.slug);
 const listLabel = list.breadcrumb ?? list.hero.h1;
+const jsonLd = [
+  articleLd({
+    headline: c.title,
+    description: c.description,
+    url: absoluteUrl(Astro.url.pathname),
+    locale,
+    about: { '@type': 'Organization', name: c.title },
+  }),
+];
 ---
 
 <BaseLayout
@@ -31,6 +41,8 @@ const listLabel = list.breadcrumb ?? list.hero.h1;
   title={`${c.title}: ${listLabel} | Kalmia`}
   description={c.description}
   breadcrumbs={[{ label: listLabel, href: listHref }, { label: c.title }]}
+  translationKey={`case:${c.translationKey}`}
+  jsonLd={jsonLd}
 >
   <div class="container hero">
     <span class="hero-tag">{c.tag}</span>

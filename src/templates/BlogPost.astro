@@ -10,6 +10,7 @@ import { formatDate, isoDay } from '@lib/format';
 import { ui, type Locale } from '@lib/i18n';
 import { publicImageSize } from '../plugins/image-size.mjs';
 import { enhanceHtml } from '@lib/html';
+import { absoluteUrl, articleLd } from '@lib/seo';
 
 interface Props {
   locale: Locale;
@@ -29,9 +30,34 @@ const title = [...`${base} | Kalmia`].length <= 60 ? `${base} | Kalmia` : base;
 const cover = p.cover ? publicImageSize(p.cover) : null;
 if (p.cover && !cover) throw new Error(`content/blog/${entry.id}.md: naslovnica ${p.cover} ne obstaja v /public.`);
 const html = enhanceHtml(entry.rendered?.html ?? '', `content/blog/${entry.id}.md`);
+const jsonLd = [
+  articleLd({
+    type: 'BlogPosting',
+    headline: p.title,
+    description: p.description,
+    url: absoluteUrl(Astro.url.pathname),
+    locale,
+    datePublished: p.date,
+    dateModified: p.updated,
+    image: p.cover,
+    author: p.author,
+  }),
+];
 ---
 
-<BaseLayout locale={locale} title={title} description={p.description} breadcrumbs={[{ label: listLabel, href: listHref }]}>
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={p.description}
+  breadcrumbs={[{ label: listLabel, href: listHref }]}
+  pageName={p.title}
+  translationKey={`post:${p.translationKey}`}
+  ogType="article"
+  ogImage={p.cover}
+  publishedTime={p.date}
+  modifiedTime={p.updated}
+  jsonLd={jsonLd}
+>
   <article>
     <header class="container hero">
       <p class="meta">

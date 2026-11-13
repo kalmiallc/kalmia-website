@@ -16,7 +16,7 @@ const d = entry.data;
 const html = enhanceHtml(entry.rendered?.html ?? '', `content/legal/${entry.id}.md`);
 ---
 
-<BaseLayout locale={locale} title={`${d.title} | Kalmia`} description={d.description} breadcrumbs={[{ label: d.h1 }]}>
+<BaseLayout locale={locale} title={`${d.title} | Kalmia`} description={d.description} breadcrumbs={[{ label: d.h1 }]} translationKey={`legal:${d.translationKey}`}>
   <div class="container hero">
     <h1 class="hero-h1">{d.h1}</h1>
   </div>

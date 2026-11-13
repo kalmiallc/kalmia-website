@@ -10,6 +10,7 @@ import { getSources, pagePath, type PageEntry } from '@lib/content';
 import { indexRows } from '@lib/navigation';
 import { formatDate, isoDay } from '@lib/format';
 import { ui, type Locale } from '@lib/i18n';
+import { absoluteUrl, articleLd } from '@lib/seo';
 
 interface Props {
   locale: Locale;
@@ -38,9 +39,12 @@ const nextRows = await Promise.all(
   })
 );
 const sources = await getSources(locale, d.sources.key);
+const jsonLd = [
+  articleLd({ headline: d.hero.h1, description: d.description, url: absoluteUrl(Astro.url.pathname), locale, datePublished: d.date, dateModified: d.updated }),
+];
 ---
 
-<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]}>
+<BaseLayout locale={locale} title={d.title} description={d.description} breadcrumbs={[{ label: d.breadcrumb ?? d.hero.h1 }]} translationKey={`page:${d.translationKey}`} ogType="article" publishedTime={d.date} modifiedTime={d.updated} jsonLd={jsonLd}>
   <div class="container hero">
     <div class="hero-copy">
       {d.hero.eyebrow && <div class="eyebrow">{d.hero.eyebrow}</div>}
