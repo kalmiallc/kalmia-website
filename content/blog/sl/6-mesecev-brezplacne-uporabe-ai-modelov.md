@@ -20,7 +20,7 @@ Rezultat? Stroške prvih petih ali šestih mesecev uporabe AI modelov pokrijemo 
 
 Če si želite učinkovitejšega poslovanja z [AI asistentom](/lokalna-ai-infrastruktura) ali integracijo AI Agentov v vaše podjetje in doseči resničen prihranek časa, je sedaj najboljši čas za začetek.
 
-Predvsem pa - najcenejši.
+Predvsem pa: najcenejši.
 
 ## Skriti strošek AI projektov, o katerem se premalo govori
 
@@ -38,7 +38,7 @@ Eden ključnih stroškov AI rešitve niso ure razvoja, temveč AI modeli, ki:
 
 Strošek teh modelov ni malenkost. Je razlog, da veliko podjetij AI uvede prepozno. Ali pa nikoli.
 
-Naša aktualna ponudba ta izziv odstrani iz enačbe - vsaj v prvih mesecih, ko še raziskujete, ali AI v podjetju res naredi razliko.
+Naša aktualna ponudba ta izziv odstrani iz enačbe, vsaj v prvih mesecih, ko še raziskujete, ali AI v podjetju res naredi razliko.
 
 ## Kaj dejansko pomeni brezplačna uporaba AI modelov?
 
@@ -52,7 +52,7 @@ Kalmia do konca aprila 2026 podarja:
 - 6 mesecev brezplačnih Google AI kreditov za AI modele, ki bodo poganjali vašega AI asistenta ali agenta, razvitega v sklopu Kalmie,
 - ponudba velja za projekte, ki se uradno začnejo še v aprilu 2026.
 
-To je najvarnejši način, da preverite, ali AI asistenti dejansko rešujejo vaše težave - brez finančnega tveganja ob začetku.
+To je najvarnejši način, da preverite, ali AI asistenti dejansko rešujejo vaše težave, brez finančnega tveganja ob začetku.
 
 ## Kakšne koristi lahko podjetje občuti že v prvih tednih?
 
@@ -64,12 +64,12 @@ AI asistenti podjetjem pogosto prinesejo:
 
 - Manj iskanja, več dela: Zaposleni dobijo odgovore iz interne dokumentacije v sekundah, ne minutah.
 - Manj e-mailov in prekinitev: Ponavljajoča vprašanja rešuje asistent, podporni oddelki pa delujejo hitreje.
-- Hitrejši onboarding: Novi zaposleni dobijo jasne razlage postopkov - brez brskanja po priročnikih in PDF-jih.
+- Hitrejši onboarding: Novi zaposleni dobijo jasne razlage postopkov, brez brskanja po priročnikih in PDF-jih.
 - Manj napak: AI asistent preverja korake, razlaga parametre, opozarja na odstopanja. To je še posebej pomembno v proizvodnji, logistiki in administraciji.
 
 V nekaj tednih podjetje opazi, ali AI pomaga, ovira… ali pa odpira povsem nove možnosti.
 
-In ravno to obdobje je v aktualni ponudbi brezplačno - ker stroškov z uporabo AI modelov še ni.
+In ravno to obdobje je v aktualni ponudbi brezplačno, ker stroškov z uporabo AI modelov še ni.
 
 ## Kdo naj izkoristi Kalmiino ponudbo?
 
@@ -87,7 +87,7 @@ Ponudba bo najbolj koristila podjetjem, ki:
 
 Če se v podjetju zanimate za AI, pa si ne more privoščiti dragih napak, je to najvarnejša točka za začetek: razvoj AI asistenta in 6 mesecev brezplačne uporabe AI modelov.
 
-Prijavite se na brezplačno AI svetovanje - skupaj bomo preverili vaš primer in rezervirali vaše mesto v kvoti Google kreditov.
+Prijavite se na brezplačno AI svetovanje, skupaj bomo preverili vaš primer in rezervirali vaše mesto v kvoti Google kreditov.
 
 • [Katero AI rešitev izbrati za vaše poslovanje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)
 

@@ -18,7 +18,7 @@ Ste se že zalotili pri čakanju, da se kompleksna tabela sploh odpre? Se sooča
 
 V takšnih trenutkih se podjetniki pogosto ustrašijo: »Ali moram zdaj investirati deset tisoče evrov v okoren ERP sistem?«Odgovor je: Ne. Obstaja pot, ki digitalizira vaše poslovanje brez bolečin in omogoči znaten prihranek časa.
 
-Vas zanima odpravljanje ozkih grl s pomočjo umetne inteligence - preberite [Umetna inteligenca v proizvodnji: 3 načini za največji prihranek časa](/blog/ai-v-proizvodnji-odstranite-ozka-grla)
+Vas zanima odpravljanje ozkih grl s pomočjo umetne inteligence. Preberite [Umetna inteligenca v proizvodnji: 3 načini za največji prihranek časa](/blog/ai-v-proizvodnji-odstranite-ozka-grla)
 
 ## Kaj je rešitev Sheets2App?
 
@@ -69,4 +69,4 @@ Naj vaša tehnologija končno dohiteva vašo vizijo.
 Preberite tudi:
 
 - [95% podjetij, ki uvaja umetno inteligenco, ne zazna večjih izboljšav. Kako postane del 5%?](/blog/lokalni-vs-generativni-ai-poslovni-ucinek)
-- [Chatbot, AI asistent ali AI agnet - znate izbrati pravo pomoč za vaše podjetje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)
+- [Chatbot, AI asistent ali AI agnet: znate izbrati pravo pomoč za vaše podjetje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)

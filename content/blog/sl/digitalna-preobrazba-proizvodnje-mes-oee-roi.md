@@ -81,4 +81,4 @@ Vas zanima, kakšen ROI bi Kalmia MES prinesel vašemu podjetju? [Kontaktirajte 
 Preberite tudi:
 
 - [Kako prepoznati delovne zastoje in jih pretvoriti v konkretne, varne AI procese](/blog/erp-ozka-grla-in-ai-resitve)
-- [OpenClaw,](/blog/openclaw-ai-agent-varnost) [nov tip AI Agenta - ali je lahko varen?](/blog/openclaw-ai-agent-varnost)
+- [OpenClaw,](/blog/openclaw-ai-agent-varnost) [nov tip AI Agenta: ali je lahko varen?](/blog/openclaw-ai-agent-varnost)

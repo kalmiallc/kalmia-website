@@ -54,4 +54,4 @@ Preberite tudi:
 
 • [Kako je ORO s podatki in AI asistentom spremenil proizvodne procese](/reference/oro-orodjarna)
 
-• [AI v proizvodnji - 3 načini, kako podjetja dosegajo merljiv prihranek časa](/blog/ai-v-proizvodnji-odstranite-ozka-grla)
+• [AI v proizvodnji: 3 načini, kako podjetja dosegajo merljiv prihranek časa](/blog/ai-v-proizvodnji-odstranite-ozka-grla)

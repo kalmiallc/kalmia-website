@@ -60,4 +60,4 @@ Preberite tudi:
 
 • Zakaj večina chatbotov izgubi uporabnika po treh odgovorih in kako to popraviti?
 
-• [Murai chatbot: kako do hotelskih rezervacij preko pogovora - in ne obrazca?](/blog/pamenti-bot-hoteli)
+• [Murai chatbot: kako do hotelskih rezervacij preko pogovora in ne obrazca?](/blog/pamenti-bot-hoteli)

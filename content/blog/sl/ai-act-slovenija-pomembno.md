@@ -86,4 +86,4 @@ Preberite tudi:
 
 • [Kako ISO 42001 pomaga podjetjem urediti AI in zmanjšati tveganja](/blog/ai-varnost-manj-tveganja-iso42001)
 
-• [Kaj prinese dobro AI svetovanje - in kako prepreči drage napake](/blog/ai-svetovanje-5-kljucnih-nasvetov)
+• [Kaj prinese dobro AI svetovanje in kako prepreči drage napake](/blog/ai-svetovanje-5-kljucnih-nasvetov)

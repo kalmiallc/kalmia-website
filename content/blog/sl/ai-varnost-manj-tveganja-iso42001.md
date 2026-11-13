@@ -37,7 +37,7 @@ Skupaj tvorijo celovit sistem, ki podjetjem pomaga graditi zaupanje, preglednost
 
 ISO 42001 ni vezan na velikost podjetja, temveč na nivo odgovornosti, ki jo AI prevzema v vaših procesih. Tudi če v vašem podjetju uporabljate AI zgolj pri podpori strankam, kadrovskih procesih ali analizi prepostih podatkov, je odgovor da.
 
-Prav tako ni pomembno, ali ste razvili svoj AI model ali uporabljate rešitev drugih. Pomembno vprašanje je le, ali AI sodeluje pri vašem odločanju - in zavedanje, da ste vi tisti, ki odgovornost nosite.
+Prav tako ni pomembno, ali ste razvili svoj AI model ali uporabljate rešitev drugih. Pomembno vprašanje je le, ali AI sodeluje pri vašem odločanju in zavedanje, da ste vi tisti, ki odgovornost nosite.
 
 Standard velja za:
 
@@ -48,7 +48,7 @@ Standard velja za:
 
 ## Kaj lahko (poleg mirne vesti) pridobite s skladnostjo?
 
-Skladnost ni le birokratska kljukica, je orodje za urejeno rast podjetja tako navzven kot navznoter. Pomaga vam graditi zaupanje strank, partnerjev in regulatorjev ter zagotavlja manj tveganja pri uporabi AI - predvsem z vidika pristranskosti rezultatov.
+Skladnost ni le birokratska kljukica, je orodje za urejeno rast podjetja tako navzven kot navznoter. Pomaga vam graditi zaupanje strank, partnerjev in regulatorjev ter zagotavlja manj tveganja pri uporabi AI, predvsem z vidika pristranskosti rezultatov.
 
 Pomembno prednost lahko pridobite tudi na javnih EU razpisih, kjer postaja skladnost s standardi pomemben del pri ocenjevanju prijav. Nenazadnje pa lahko prihranite precej časa in sivih las, če se na zakonodajo, ki bo regulacijo AI verjetno še zaostrila, pripravite že danes.
 
@@ -56,7 +56,7 @@ Jasno definirani procesi AI sistemov pa pomagajo tudi interni usklajenosti: odgo
 
 ## Kalmia olajša prehod v AI poslovanje?
 
-Pri Kalmii že vrsto let svetujemo pri digitalni transformaciji, avtomatizaciji in uvajanju umetne inteligence v podjetja - zato natančno razumemo, kaj skladnost pomeni v praksi.
+Pri Kalmii že vrsto let svetujemo pri digitalni transformaciji, avtomatizaciji in uvajanju umetne inteligence v podjetja, zato natančno razumemo, kaj skladnost pomeni v praksi.
 
 Pomagamo vam postaviti zdrave temelje in se osredotočiti na:
 

@@ -20,7 +20,7 @@ Težava ni dostop do razpisov.
 
 Težava je vaš čas.
 
-Pregledovanje razpisov redko sodi med prioritete dneva. Najprej so na vrsti operativne naloge, roki, stranke, interni sestanki. Razpis ostane odprt v zavihku - pogosto pa tudi pozabljen.
+Pregledovanje razpisov redko sodi med prioritete dneva. Najprej so na vrsti operativne naloge, roki, stranke, interni sestanki. Razpis ostane odprt v zavihku, pogosto pa tudi pozabljen.
 
 In čez nekaj mesecev izveste, da je projekt dobil vaš konkurent.
 
@@ -32,7 +32,7 @@ In čez nekaj mesecev izveste, da je projekt dobil vaš konkurent.
 - odlašanje: “Bom pogledal popoldne”,
 - utrujenost in strah, da boste kaj spregledali.
 
-Večina podjetij nima osebe, ki bi se izključno ukvarjala z javnimi razpisi. Odgovornost je razdeljena med več ljudi - direktorja, vodjo prodaje, administracijo ali finance.
+Večina podjetij nima osebe, ki bi se izključno ukvarjala z javnimi razpisi. Odgovornost je razdeljena med več ljudi: direktorja, vodjo prodaje, administracijo ali finance.
 
 Težava ni v tem, da razpisov ne bi znali brati.
 
@@ -146,9 +146,9 @@ Z AI agentom namesto občutka “upam, da nismo česa spregledali” dobite stru
 
 To ni zgolj optimizacija, je zmanjševanje poslovnega tveganja.
 
-Če razmišljate o temeljitejšem pristopu k razpisom, je prvi korak analiza - na brezplačnem posvetu skupaj pregledamo vaš trenutni proces spremljanja razpisov in ocenimo, kje lahko z AI agentom povečate odzivnost in zmanjšate tveganje izgubljenih poslov.
+Če razmišljate o temeljitejšem pristopu k razpisom, je prvi korak analiza: na brezplačnem posvetu skupaj pregledamo vaš trenutni proces spremljanja razpisov in ocenimo, kje lahko z AI agentom povečate odzivnost in zmanjšate tveganje izgubljenih poslov.
 
 Preberite tudi:
 
 - [Kako prepoznati delovne zastoje in jih pretvoriti v konkretne, varne AI procese](/blog/erp-ozka-grla-in-ai-resitve)
-- [OpenClaw, nov tip AI Agenta - ali je lahko varen?](/blog/openclaw-ai-agent-varnost)
+- [OpenClaw, nov tip AI Agenta: ali je lahko varen?](/blog/openclaw-ai-agent-varnost)

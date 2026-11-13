@@ -42,4 +42,4 @@ Preberite tudi:
 
 • [Kako je ORO s povezavo sistemov in AI povečal učinkovitost proizvodnje](/blog/lokalni-vs-generativni-ai-poslovni-ucinek)
 
-• [Generativni ali lokalni AI - kateri pristop MSP-jem prinese večje rezultate](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)
+• [Generativni ali lokalni AI: kateri pristop MSP-jem prinese večje rezultate](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)

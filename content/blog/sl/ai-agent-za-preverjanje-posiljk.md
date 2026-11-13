@@ -24,7 +24,7 @@ Vsaka ura, porabljena za ponavljajoča preverjanja, je ura, ki je ne vlagate v:
 - analizo pogostih težav in optimizacijo procesa,
 - proaktivno komunikacijo z večjimi kupci.
 
-Vprašanje je, kaj vse bi vaša ekipa lahko naredila bolj kakovostno, če tega ne bi več počela ročno - in ali je čas, da ta ponavljajoči proces prevzame AI agent.
+Vprašanje je, kaj vse bi vaša ekipa lahko naredila bolj kakovostno, če tega ne bi več počela ročno in ali je čas, da ta ponavljajoči proces prevzame AI agent.
 
 ## Zakaj ta problem nikoli ne izgine?
 
@@ -56,7 +56,7 @@ Preko varne povezave znotraj omrežja pridobi aktualen status pošiljke.
 
 - Korak 4: Upoštevanje zunanjih dejavnikov
 
-Preveri morebitne vplive na dostavo - zapore cest, vremenske razmere, stavke ali druge izredne dogodke - in jih poveže z dostavno linijo.
+Preveri morebitne vplive na dostavo: zapore cest, vremenske razmere, stavke ali druge izredne dogodke in jih poveže z dostavno linijo.
 
 - Korak 5: Priprava odgovora
 
@@ -95,7 +95,7 @@ Podjetje dobi:
 
 Kupci pa dobijo nekaj, kar je danes redko: hiter odgovor, ki ni avtomatski odzivnik ali tipsko sporočilo.
 
-Namesto generičnega “vaša pošiljka je v tranzitu” prejmejo kontekst - zakaj je prišlo do zamude, kaj to pomeni in kdaj lahko pričakujejo dostavo.
+Namesto generičnega “vaša pošiljka je v tranzitu” prejmejo kontekst: zakaj je prišlo do zamude, kaj to pomeni in kdaj lahko pričakujejo dostavo.
 
 Rezultat ni le hitrejši email. Rezultat je bolj učinkovita podpora in več zadovoljnih strank.
 
@@ -103,7 +103,7 @@ Rezultat ni le hitrejši email. Rezultat je bolj učinkovita podpora in več zad
 
 Pomembno je razumeti, da AI agent ni nujno popolnoma avtonomen sistem. Lahko deluje kot pomočnik, ki pripravi osnutek, predlaga odgovor ali opozori na odstopanja, končno odločitev pa še vedno sprejme človek.
 
-Pri enostavnih primerih, kjer je proces jasen in ponovljiv, pa lahko pa prevzame celoten tok - če se podjetje tako odloči.
+Pri enostavnih primerih, kjer je proces jasen in ponovljiv, pa lahko pa prevzame celoten tok, če se podjetje tako odloči.
 
 Ključno je, da je zasnovan varno:
 

@@ -81,6 +81,6 @@ Podjetja, ki sledijo tem trendom, si bodo pridobila ključno konkurenčno predno
 
 Preberite tudi:
 
-• [Spoznajte Murai - pametni chatbot, ki zna več kot le odgovarjati](/blog/spoznajte-murai-pametni-chatbot)
+• [Spoznajte Murai, pametni chatbot, ki zna več kot le odgovarjati](/blog/spoznajte-murai-pametni-chatbot)
 
-• Zakaj večina chatbotov izgubi uporabnika po treh odgovorih - in kako to popraviti
+• Zakaj večina chatbotov izgubi uporabnika po treh odgovorih in kako to popraviti

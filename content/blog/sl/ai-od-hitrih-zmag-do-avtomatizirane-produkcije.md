@@ -31,7 +31,7 @@ Pri uvajanju AI rešitev ne smemo preskakovati korakov. Zaupanje se gradi postop
 
 ### 2. Proof of Concept (PoC) za hitre zmage
 
-- Problem: Osredotočimo se na konkretno opravilo, npr. - upravljanje administracije in potnih nalogov vključuje ogromno ponavljajočega se dela, kar viša stroške in znižuje motivacijo zaposlenih.
+- Problem: Osredotočimo se na konkretno opravilo, npr. upravljanje administracije in potnih nalogov vključuje ogromno ponavljajočega se dela, kar viša stroške in znižuje motivacijo zaposlenih.
 - Rešitev: Izvedba omejenega PoC projekta, na primer uvedba AI agenta za obdelavo dokumentov potnih nalogov, s čimer dokažemo delovanje v praksi.
 - Rezultat: Dokazana operativna učinkovitost in pridobljeno zaupanje zaposlenih, preden se rešitev nadgradi z vsemi varnostnimi ukrepi za produkcijo.
 - Preberite več: [AI agent za potne naloge](/blog/ai-agent-potni-nalogi)

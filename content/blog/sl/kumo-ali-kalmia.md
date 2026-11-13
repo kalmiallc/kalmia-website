@@ -56,8 +56,6 @@ Klasični modeli odlično prepoznavajo zgodovinske trende, popolnoma pa odpovejo
 
 ## Finančni vpliv in primerjava stroškov (Build vs. Buy)
 
-Da bi lažje razumeli finančni vidik in prag donosnosti med najemom SaaS platforme ter uporabo namenske rešitve Kalmia, si oglejte podroben triletni model skupnih stroškov lastništva (TCO), prilagojen realnim stroškovnim okvirjem razvoja.
-
 - Stroškovna kategorija · SaaS Enterpise platforma (Najem / Buy) · Rešitev Kalmia (Izgradnja / Build) · Finančna utemeljitev in opis postavk
 - Licenčnina / Naročnina · 120.000 EUR / leto · 0 EUR · Kumo.ai zahteva fiksno letno plačilo; Kalmia temelji na odprtokodnih knjižnicah brez zunanjih licenc.
 - Leto 1: Hitra postavitev namenskega ogrodja in zagon prvega napovednega modela, ki že takoj opraviči investicijo.
