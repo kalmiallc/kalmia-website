@@ -1,7 +1,11 @@
 ---
 title: "AI agent za preverjanje zamude pošiljk: hitrejši odgovori in manj negotovosti za kupce"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "AI agent za preverjanje zamude pošiljk"
 description: "Avtomatizirajte preverjanje zamud pošiljk z AI agentom in sprostite kapaciteto ekipe za zahtevnejše primere."
-date: "TODO"
+date: 2026-03-17
+cover: "/images/blog/ai-agent-za-preverjanje-posiljk/naslovna.webp"
+coverAlt: "AI agent za preverjanje zamude pošiljk: hitrejši odgovori in manj negotovosti za kupce"
 author: "Kalmia"
 tags: ["AI", "AI agenti", "avtomatizacija", "podpora strankam", "logistika", "dostava", "pošiljke", "zamude pošiljk", "sledenje pošiljk", "customer support", "optimizacija procesov", "uporabniška izkušnja", "operativna učinkovitost", "digitalizacija"]
 translationKey: "blog-ai-agent-za-preverjanje-posiljk"
@@ -20,7 +24,7 @@ Vsaka ura, porabljena za ponavljajoča preverjanja, je ura, ki je ne vlagate v:
 - analizo pogostih težav in optimizacijo procesa,
 - proaktivno komunikacijo z večjimi kupci.
 
-Vprašanje je, kaj vse bi vaša ekipa lahko naredila bolj kakovostno, če tega ne bi več počela ročno - in ali je čas, da ta ponavljajoči proces prevzame AI agent.
+Vprašanje je, kaj vse bi vaša ekipa lahko naredila bolj kakovostno, če tega ne bi več počela ročno in ali je čas, da ta ponavljajoči proces prevzame AI agent.
 
 ## Zakaj ta problem nikoli ne izgine?
 
@@ -52,7 +56,7 @@ Preko varne povezave znotraj omrežja pridobi aktualen status pošiljke.
 
 - Korak 4: Upoštevanje zunanjih dejavnikov
 
-Preveri morebitne vplive na dostavo - zapore cest, vremenske razmere, stavke ali druge izredne dogodke - in jih poveže z dostavno linijo.
+Preveri morebitne vplive na dostavo: zapore cest, vremenske razmere, stavke ali druge izredne dogodke in jih poveže z dostavno linijo.
 
 - Korak 5: Priprava odgovora
 
@@ -62,7 +66,7 @@ Zaposleni, odgovoren za ta delovni proces, pa predlog potrdi ali ga dopolni in n
 
 ## Zakaj tega ne zmore chatbot ali AI asistent?
 
-Chatbot odgovori na vprašanje. AI asistent pomaga najti informacijo znotraj internih baz.
+[Chatbot](https://murai.ai/) odgovori na vprašanje. [AI asistent](/lokalna-ai-infrastruktura) pomaga najti informacijo znotraj internih baz.
 
 Oba reagirata.
 
@@ -91,7 +95,7 @@ Podjetje dobi:
 
 Kupci pa dobijo nekaj, kar je danes redko: hiter odgovor, ki ni avtomatski odzivnik ali tipsko sporočilo.
 
-Namesto generičnega “vaša pošiljka je v tranzitu” prejmejo kontekst - zakaj je prišlo do zamude, kaj to pomeni in kdaj lahko pričakujejo dostavo.
+Namesto generičnega “vaša pošiljka je v tranzitu” prejmejo kontekst: zakaj je prišlo do zamude, kaj to pomeni in kdaj lahko pričakujejo dostavo.
 
 Rezultat ni le hitrejši email. Rezultat je bolj učinkovita podpora in več zadovoljnih strank.
 
@@ -99,7 +103,7 @@ Rezultat ni le hitrejši email. Rezultat je bolj učinkovita podpora in več zad
 
 Pomembno je razumeti, da AI agent ni nujno popolnoma avtonomen sistem. Lahko deluje kot pomočnik, ki pripravi osnutek, predlaga odgovor ali opozori na odstopanja, končno odločitev pa še vedno sprejme človek.
 
-Pri enostavnih primerih, kjer je proces jasen in ponovljiv, pa lahko pa prevzame celoten tok - če se podjetje tako odloči.
+Pri enostavnih primerih, kjer je proces jasen in ponovljiv, pa lahko pa prevzame celoten tok, če se podjetje tako odloči.
 
 Ključno je, da je zasnovan varno:
 
@@ -124,5 +128,5 @@ Ne gre za tehnološki eksperiment, temveč racionalno optimizacijo procesa, ki s
 
 Preberite tudi:
 
-- Kako prepoznati operativne zastoje in jih pretvoriti v konkretne, varne AI procese
-- Razlika med iskanjem po internih bazah in avtomatizacijo celotnega procesa
+- [Kako prepoznati operativne zastoje in jih pretvoriti v konkretne, varne AI procese](/blog/ai-v-proizvodnji-del-2)
+- [Razlika med iskanjem po internih bazah in avtomatizacijo celotnega procesa](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)

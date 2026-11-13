@@ -1,16 +1,20 @@
 ---
-title: "Zakaj ponuja AI asistent več kot copilot - in prava izbira za podjetja, ki mislijo resno?"
+title: "Zakaj ponuja AI asistent več kot copilot in prava izbira za podjetja, ki mislijo resno?"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Zakaj AI asistent ponuja več kot Copilot"
 description: "Beseda copilot je v zadnjem času postala sinonim za uporabo AI v podjetjih."
-date: "TODO"
+date: 2025-09-29
+cover: "/images/blog/ai-asistent-vec-kot-ms-copilot/naslovna.webp"
+coverAlt: "Zakaj ponuja AI asistent več kot copilot in prava izbira za podjetja, ki mislijo resno?"
 author: "Kalmia"
 tags: []
 translationKey: "blog-ai-asistent-vec-kot-ms-copilot"
 legacyUrl: "/sl/blog/ai-asistent-vec-kot-ms-copilot"
 ---
 
-Beseda copilot je v zadnjem času postala sinonim za uporabo AI v podjetjih. Najbolj znan je Microsoft Copilot v okolju 365, izraz pa se vse pogosteje uporablja tudi širše - kot oznaka za vsak AI pomočnik, ki sedi na sovoznikovem sedežu: ne prevzame vožnje, temveč usmerja, predlaga in prihrani čas.
+Beseda copilot je v zadnjem času postala sinonim za uporabo AI v podjetjih. Najbolj znan je Microsoft Copilot v okolju 365, izraz pa se vse pogosteje uporablja tudi širše, kot oznaka za vsak AI pomočnik, ki sedi na sovoznikovem sedežu: ne prevzame vožnje, temveč usmerja, predlaga in prihrani čas.
 
-Ključno vprašanje je: kakšnega AI pomočnika vaše podjetje zares potrebuje? Takšnega, ki je vezan na en sam ekosistem - ali takšen interni AI pomočnik, ki razume vaš jezik, slovensko zakonodajo in se poveže z vašim obstoječim sistemom dela?
+Ključno vprašanje je: kakšnega AI pomočnika vaše podjetje zares potrebuje? Takšnega, ki je vezan na en sam ekosistem ali takšen interni AI pomočnik, ki razume vaš jezik, slovensko zakonodajo in se poveže z vašim obstoječim sistemom dela?
 
 Ne odločate se zgolj za orodje, temveč za partnerstvo, ki bo vplivalo na učinkovitost vaših procesov tudi v prihodnjih letih.
 
@@ -28,21 +32,21 @@ V vsakem podjetju so področja, kjer lahko copilot naredi veliko razliko v učin
 
 Če v podjetju dobivate veliko povpraševanj, ki zahtevajo pisanje standardnih ponudb, bo AI asistent predizpolnil dokument, ki ga nato pregledate in zaključite sami. Če imate arhiv v SharePointu, Domino ali na lokalnem strežniku, bo na vašo željo poiskal dokument, ga analiziral in pripravil osnutek nove pogodbe ali ponudbe.
 
-Gre za pomočnika, ki ni omejen na en sam tip nalog. Deluje kot asistent v različnih delih podjetja - tam, kjer rutinske informacije upočasnjujejo delo, AI asistent odpre prostor za hitrejše odločitve.
+Gre za pomočnika, ki ni omejen na en sam tip nalog. Deluje kot asistent v različnih delih podjetja, tam, kjer rutinske informacije upočasnjujejo delo, AI asistent odpre prostor za hitrejše odločitve.
 
-## Kalmiin slovenski AI asistent – odprt, varen, po meri
+## Kalmiin slovenski AI asistent: odprt, varen, po meri
 
 Njegova posebnost ni le v tem, da prevzame vlogo copilota, ampak da to počne na način, ki je prilagojen slovenskemu okolju.
 
 - Z jezikom: razume in odgovarja v slovenščini, pozna poslovni kontekst in lokalno zakonodajo.
 - Z varnostjo: deluje lahko tudi on-premise, kar pomeni, da podatki ostanejo znotraj podjetja. Skladnost z GDPR in novimi evropskimi regulativami ni dodatna storitev, temveč osnovno izhodišče.
-- Z odprtostjo: ne omeji se zgolj na eno programsko okolje (kot npr. Microsoft Copilot v okolju Microsoft 365), ampak se poveže z vašimi obstoječimi sistemi - od računovodskih in CRM programov do dokumentnih arhivov ali celo starejših rešitev. S tem se ne zanašate na enega samega ponudnika, ampak dobite asistenta, ki raste skupaj z vašo infrastrukturo.
+- Z odprtostjo: ne omeji se zgolj na eno programsko okolje (kot npr. Microsoft Copilot v okolju Microsoft 365), ampak se poveže z vašimi obstoječimi sistemi, od računovodskih in CRM programov do dokumentnih arhivov ali celo starejših rešitev. S tem se ne zanašate na enega samega ponudnika, ampak dobite asistenta, ki raste skupaj z vašo infrastrukturo.
 
 ## Zakaj Microsoft Copilot pogosto ni dovolj?
 
-Najbolj izpostavljeno orodje zadnjega leta je nedvomno Microsoft Copilot - pomočnik, ki se udomači v Wordu, Excelu in Teamsih. Tam ponuja priročne bližnjice in resno skrajša delo z dokumenti. A večina podjetij uporablja mešanico sistemov: večina se nahaja v oblaku, nekaj na lokalnih strežnikih, kaj malega v starejših arhivih. Tam Copilot hitro pokaže svoje omejitve.
+Najbolj izpostavljeno orodje zadnjega leta je nedvomno Microsoft Copilot, pomočnik, ki se udomači v Wordu, Excelu in Teamsih. Tam ponuja priročne bližnjice in resno skrajša delo z dokumenti. A večina podjetij uporablja mešanico sistemov: večina se nahaja v oblaku, nekaj na lokalnih strežnikih, kaj malega v starejših arhivih. Tam Copilot hitro pokaže svoje omejitve.
 
-Kalmiin interni AI asistent ponuja vse, kar pričakujete od copilota - predloge, povzetke, hitrejše delo - a to razširi na širše okolje. Dodaja varnost, saj podatki ne zapustijo podjetja. Dodaja slovenščino, saj vas razume v jeziku, ki ga res uporabljate. In dodaja fleksibilnost, ker se poveže z vašimi sistemi, ne glede na to, kje “živijo”.
+Kalmiin interni AI asistent ponuja vse, kar pričakujete od copilota: predloge, povzetke, hitrejše delo, a to razširi na širše okolje. Dodaja varnost, saj podatki ne zapustijo podjetja. Dodaja slovenščino, saj vas razume v jeziku, ki ga res uporabljate. In dodaja fleksibilnost, ker se poveže z vašimi sistemi, ne glede na to, kje “živijo”.
 
 ## Strateška odločitev, ne le nakup AI orodja
 
@@ -50,10 +54,10 @@ Pri uvajanju umetne inteligence v podjetje ne gre le za to, kaj zna AI narediti 
 
 Vas zanima, kako bi interni AI pomočnik deloval na vaših dokumentih? Prijavite se na brezplačen posvet, mi pa vam pokažemo razliko med generičnim copilotom in Kalmiinim AI asistentom, ki dela za vas v vseh fazah in okoljih poslovanja.
 
-Prijavite se na brezplačni posvet ali se nam oglasite na info@kalmia.si.
+Prijavite se na brezplačni posvet ali se nam oglasite na [info@kalmia.si](mailto:info@kalmia.si).
 
 Preberite tudi:
 
-• Chatbot, AI asistent ali AI agent - znate izbrati pravo rešitev za vaše poslovanje?
+• [Chatbot, AI asistent ali AI agent: znate izbrati pravo rešitev za vaše poslovanje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)
 
-• AI v proizvodnji - 3 načini za največji prihranek časa
+• [AI v proizvodnji: 3 načini za največji prihranek časa](/blog/ai-v-proizvodnji-odstranite-ozka-grla)

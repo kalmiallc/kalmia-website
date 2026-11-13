@@ -1,16 +1,20 @@
 ---
 title: "Kako AI agenti že danes spreminjajo poslovanje: od prodaje do financ"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "Kako AI agenti že danes spreminjajo poslovanje"
 description: "Pregled praktične uporabe AI agentov v podjetjih: od prodaje, podpore strankam in financ do HR in dobavne verige."
-date: "TODO"
+date: 2026-05-20
+cover: "/images/blog/ai-agenti-v-podjetjih/naslovna.webp"
+coverAlt: "Kako AI agenti že danes spreminjajo poslovanje: od prodaje do financ"
 author: "Kalmia"
 tags: ["digitalna preobrazba", "avtomatizacija", "digitalizacija", "AI agenti", "prodaja", "finance", "logistika", "HR", "optimizacija poslovanja"]
 translationKey: "blog-ai-agenti-v-podjetjih"
 legacyUrl: "/sl/blog/ai-agenti-v-podjetjih"
 ---
 
-Umetna inteligenca ni več eksperimentalna tehnologija – postaja operativno orodje, ki podjetjem pomaga optimizirati procese, zmanjšati stroške in povečati učinkovitost. Danes govorimo o AI agentih. To niso le programi, ampak vaši novi digitalni sodelavci, ki znajo samostojno opraviti celotne naloge, sprejemati odločitve in vam prihraniti ure dolgočasnega dela.
+Umetna inteligenca ni več eksperimentalna tehnologija. Postaja operativno orodje, ki podjetjem pomaga optimizirati procese, zmanjšati stroške in povečati učinkovitost. Danes govorimo o AI agentih. To niso le programi, ampak vaši novi digitalni sodelavci, ki znajo samostojno opraviti celotne naloge, sprejemati odločitve in vam prihraniti ure dolgočasnega dela.
 
-Umetna inteligenca ni več le igrača za programerje – postala je orodje, s katerim podjetja delajo hitreje, ceneje in z manj napakami.
+Umetna inteligenca ni več le igrača za programerje. Postala je orodje, s katerim podjetja delajo hitreje, ceneje in z manj napakami.
 
 ## Kje v podjetju AI agenti ustvarjajo največ vrednosti?
 
@@ -22,7 +26,7 @@ Poglejmo si praktične primere, kje vam ti digitalni pomočniki že danes lahko 
 - Rešitev: AI agent namesto vas "prečeše" splet, izloči tisto, kar vas ne zanima, in vam na mizo dostavi le najboljše priložnosti.
 - Rezultat: Hitrejša odzivnost in več dobljenih poslov.
 
-Več: AI agent za analizo javnih razpisov
+Več: [AI agent za analizo javnih razpisov](/blog/ai-agent-za-javne-razpise)
 
 2. Podpora strankam (Customer Support)
 
@@ -30,7 +34,7 @@ Več: AI agent za analizo javnih razpisov
 - Rešitev: AI agent se poveže z vašim skladiščem in stranki v sekundi odgovori s točno informacijo.
 - Rezultat: Zadovoljne stranke in razbremenjena ekipa.
 
-Več: AI agent za preverjanje zamude pošiljk
+Več: [AI agent za preverjanje zamude pošiljk](/blog/ai-agent-za-preverjanje-posiljk)
 
 ### 3. Pisarna in administracija
 
@@ -38,7 +42,7 @@ Več: AI agent za preverjanje zamude pošiljk
 - Rešitev: Agentu samo poveste ključne podatke, on pa sam izpolni in pripravi vso potrebno dokumentacijo.
 - Rezultat: Manj papirja, več časa za resno delo.
 
-Več: AI agent za potne naloge
+Več: [AI agent za potne naloge](/blog/ai-agent-potni-nalogi)
 
 ### 4. Prodaja
 
@@ -64,7 +68,7 @@ Več: AI agent za potne naloge
 - Rešitev: AI agent bdi nad vsemi pošiljkami in vas takoj opozori, če gre kaj narobe.
 - Rezultat: Manj zastojev in bolj predvidljivo poslovanje.
 
-Več: Logistika na avtopilotu
+Več: [Logistika na avtopilotu](/blog/ai-agent-optimizacija-logistike)
 
 ## Kakšen je finančni učinek?
 
@@ -75,7 +79,7 @@ Ena ključnih prednosti AI agentov je njihov merljiv vpliv na poslovanje. Podjet
 - Povečanje rasti (1. leto): Naredite več z isto ekipo. Ljudje so bolj produktivni, ker jim AI pomaga.
 - Eksponentna rast (5 let): Podjetje lahko raste v nedogled, ne da bi morali za vsako novo stranko zaposliti novega človeka.
 
-Primer: Agent za pomoč pri komunikaciji s strankami - izračun prihranka v prvem letu, v primeru, da nam agent zmanjša število zaposlenih za 30%. Predpostavke:
+Primer: Agent za pomoč pri komunikaciji s strankami: izračun prihranka v prvem letu, v primeru, da nam agent zmanjša število zaposlenih za 30%. Predpostavke:
 
 - Povprečen zaposlen obdela 50 zahtevkov na dan.
 - Izračun je narejen za 30 delovnih dni v mesecu.
@@ -84,16 +88,14 @@ Primer: Agent za pomoč pri komunikaciji s strankami - izračun prihranka v prve
 - Število mesečnih zahtevkov · 15000 · 15000
 - Število zaposlenih (FTE) v podpori · 10 · 7
 - Letni strošek dela (skupaj) · € 264.000,00 · € 184.800,00
-- Strošek vzpostavitve AI agenta · / · € 30.000,00
-- Letni prihranek · / · € 49.200,00
 
-AI agenti niso le še ena tehnološka novost, ampak ključ do podjetja, ki deluje hitreje, pametneje in brez nepotrebnega izgubljanja časa na rutinskih nalogah. Njihova prava moč ni v tem, da zamenjajo ljudi, temveč v tem, da vašo ekipo osvobodijo administrativnih bremen in ji omogočijo, da se končno posveti tistemu, kar zares šteje – strateškemu razvoju in odnosom.
+AI agenti niso le še ena tehnološka novost, ampak ključ do podjetja, ki deluje hitreje, pametneje in brez nepotrebnega izgubljanja časa na rutinskih nalogah. Njihova prava moč ni v tem, da zamenjajo ljudi, temveč v tem, da vašo ekipo osvobodijo administrativnih bremen in ji omogočijo, da se končno posveti tistemu, kar zares šteje: strateškemu razvoju in odnosom.
 
-Svet se spreminja hitro in prednost bodo imeli tisti, ki bodo tehnologijo posvojili prvi. Podjetja, ki bodo pravočasno prepoznala potencial AI agentov, bodo imela pomembno konkurenčno prednost – ne le v učinkovitosti, ampak tudi v sposobnosti prilagajanja in rasti.
+Svet se spreminja hitro in prednost bodo imeli tisti, ki bodo tehnologijo posvojili prvi. Podjetja, ki bodo pravočasno prepoznala potencial AI agentov, bodo imela pomembno konkurenčno prednost, ne le v učinkovitosti, ampak tudi v sposobnosti prilagajanja in rasti.
 
-V Kalmii podjetjem pomagamo pri celotnem ciklu vpeljave - od pregleda procesov do izvedbe.
+V Kalmii podjetjem pomagamo pri celotnem ciklu vpeljave, od pregleda procesov do izvedbe.
 
 Preberite tudi:
 
-- Chatbot, asistent ali agent: Katera stopnja umetne inteligence je tista, ki bo zares transformirala vaše poslovanje?
-- OpenClaw, nov tip AI Agenta - ali gre za vročo inovacijo ali varnostno tveganje?
+- [Chatbot, asistent ali agent: Katera stopnja umetne inteligence je tista, ki bo zares transformirala vaše poslovanje?](/blog/izbira-chatbot-ai-asistent-ai-agent-podjetje)
+- [OpenClaw, nov tip AI Agenta: ali gre za vročo inovacijo ali varnostno tveganje?](/blog/openclaw-ai-agent-varnost)

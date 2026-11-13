@@ -13,12 +13,14 @@ import type { CollectionEntry } from 'astro:content';
 
 export type ProjectEntry = CollectionEntry<'projects'>;
 export type LegalEntry = CollectionEntry<'legal'>;
+export type BlogEntry = CollectionEntry<'blog'>;
 
 export type RouteProps =
   | { kind: 'page'; locale: Locale; entry: PageEntry }
   | { kind: 'case'; locale: Locale; entry: CaseEntry; listPage: PageEntry }
   | { kind: 'project'; locale: Locale; entry: ProjectEntry; listPage: PageEntry }
-  | { kind: 'legal'; locale: Locale; entry: LegalEntry };
+  | { kind: 'legal'; locale: Locale; entry: LegalEntry }
+  | { kind: 'post'; locale: Locale; entry: BlogEntry; listPage: PageEntry };
 
 export interface Route {
   params: { slug: string | undefined };
@@ -59,6 +61,16 @@ export async function routesFor(locale: Locale): Promise<Route[]> {
     }
   }
 
+  const blogList = pages.find((p) => p.data.template === 'blog');
+  if (blogList) {
+    for (const entry of await getPosts(locale)) {
+      routes.push({
+        params: { slug: `${blogList.data.slug}/${postSlug(entry)}` },
+        props: { kind: 'post', locale, entry, listPage: blogList },
+      });
+    }
+  }
+
   const legal = await getCollection('legal', (e) => entryLocale(e) === locale);
   for (const entry of legal) {
     routes.push({ params: { slug: entry.data.slug }, props: { kind: 'legal', locale, entry } });
@@ -72,4 +84,15 @@ export async function casePath(locale: Locale, caseSlug: string): Promise<string
   const list = (await getPages(locale)).find((p) => p.data.template === 'reference' && !p.data.draft);
   if (!list) return null;
   return `${locale === 'en' ? '/en' : ''}/${list.data.slug}/${caseSlug}`;
+}
+
+/** Slug zapisa je ime datoteke (content/blog/<jezik>/<slug>.md). */
+export function postSlug(entry: BlogEntry): string {
+  return entry.id.split('/').pop()!;
+}
+
+/** Objavljeni zapisi za jezik, najnovejši prvi. */
+export async function getPosts(locale: Locale): Promise<BlogEntry[]> {
+  const all = await getCollection('blog', (e) => entryLocale(e) === locale && !e.data.draft);
+  return all.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 }

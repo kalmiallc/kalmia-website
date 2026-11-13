@@ -1,7 +1,11 @@
 ---
 title: "Implementacija AI v velikih podjetjih: Od hitrih zmag do varne in avtomatizirane produkcije"
+# Krajši naslov za <title> in iskalnike (do 60 znakov); naslov na strani ostane title.
+seoTitle: "AI v velikih podjetjih: od hitrih zmag do produkcije"
 description: "Spoznajte, kako varno integrirati AI v obstoječe poslovne sisteme."
-date: "TODO"
+date: 2026-08-06
+cover: "/images/blog/ai-od-hitrih-zmag-do-avtomatizirane-produkcije/naslovna.webp"
+coverAlt: "Implementacija AI v velikih podjetjih: Od hitrih zmag do varne in avtomatizirane produkcije"
 author: "Kalmia"
 tags: ["Umetna inteligenca", "AI v poslovanju", "Avtomatizacija procesov", "Digitalna transformacija", "Proof of Concept (PoC)", "Integracija ERP", "Varnost podatkov", "AI agenti", "Optimizacija poslovanja", "Kalmia AI"]
 translationKey: "blog-ai-od-hitrih-zmag-do-avtomatizirane-produkcije"
@@ -23,21 +27,21 @@ Pri uvajanju AI rešitev ne smemo preskakovati korakov. Zaupanje se gradi postop
 - Problem: Podjetja pogosto ne vedo, kje in kako varno integrirati AI rešitve v svoje obstoječe ERP sisteme brez motenj pri delu.
 - Rešitev: Strukturirana "discovery faza", kjer z naročnikom pregledamo procese in natančno določimo ozka grla, ki jih je mogoče najlažje avtomatizirati.
 - Rezultat: Jasen načrt implementacije, ki minimizira tveganja in se osredotoča izključno na procese z najvišjim ROI.
-- Preberite več: ERP ozka grla in AI rešitve
+- Preberite več: [ERP ozka grla in AI rešitve](/blog/erp-ozka-grla-in-ai-resitve)
 
 ### 2. Proof of Concept (PoC) za hitre zmage
 
-- Problem: Osredotočimo se na konkretno opravilo, npr. - upravljanje administracije in potnih nalogov vključuje ogromno ponavljajočega se dela, kar viša stroške in znižuje motivacijo zaposlenih.
+- Problem: Osredotočimo se na konkretno opravilo, npr. upravljanje administracije in potnih nalogov vključuje ogromno ponavljajočega se dela, kar viša stroške in znižuje motivacijo zaposlenih.
 - Rešitev: Izvedba omejenega PoC projekta, na primer uvedba AI agenta za obdelavo dokumentov potnih nalogov, s čimer dokažemo delovanje v praksi.
 - Rezultat: Dokazana operativna učinkovitost in pridobljeno zaupanje zaposlenih, preden se rešitev nadgradi z vsemi varnostnimi ukrepi za produkcijo.
-- Preberite več: AI agent za potne naloge
+- Preberite več: [AI agent za potne naloge](/blog/ai-agent-potni-nalogi)
 
 ### 3. Človek v zanki (Human-in-the-loop) in učenje modela
 
 - Problem: Popolna avtomatizacija v prvem koraku prinaša varnostna tveganja in strah pred izgubo nadzora nad procesi.
 - Rešitev: V prvi fazi implementacije uvedemo sistem, kjer umetna inteligenca opravi glavno delo, končno potrditev pa izvede človek, kar zagotavlja kakovostne povratne informacije za nadaljnje učenje modela.
 - Rezultat: Zanesljiva in varna integracija, kjer se model skozi čas izboljšuje, dokler človek sistema le še ne nadzoruje prek poročil.
-- Preberite več: AI agent za preverjanje pošiljk
+- Preberite več: [AI agent za preverjanje pošiljk](/blog/ai-agent-za-preverjanje-posiljk)
 
 ## Kakšen je finančni vpliv strateške implementacije tehnologije?
 
@@ -53,14 +57,12 @@ Spodnja tabela prikazuje merljivo razliko pri avtomatizaciji tipičnega ponavlja
 - Število mesečnih zahtevkov · 1.000 ročno obdelanih · 1.000 avtonomno obdelanih
 - Potrebni FTE (polni delovni čas) · 3 zaposleni · 0,5 zaposlenega (samo nadzor)
 - Letni strošek dela · 90.000 € · 15.000 €
-- Strošek implementacije tehnologije · 0 € · 25.000 € (enkratno + vzdrževanje)
-- Letni prihranki · 0 € · 45.000 €+
 
 ## Konkurenčna prednost je v hitrosti prilagajanja
 
-Podjetja, ki razumejo, da je umetna inteligenca predvsem operativno orodje za reševanje konkretnih izzivov, že danes ustvarjajo občutno konkurenčno prednost. Zgodnje sprejemanje in postopna, varna implementacija – ob upoštevanju starih sistemov in upravljanja s podatki – ekipam omogoča, da se osredotočijo na strateške naloge, medtem ko AI prevzame rutino.
+Podjetja, ki razumejo, da je umetna inteligenca predvsem operativno orodje za reševanje konkretnih izzivov, že danes ustvarjajo občutno konkurenčno prednost. Zgodnje sprejemanje in postopna, varna implementacija, ob upoštevanju starih sistemov in upravljanja s podatki, ekipam omogoča, da se osredotočijo na strateške naloge, medtem ko AI prevzame rutino.
 
 Preberite tudi:
 
-- AI in ERP: 3 ozka grla, ki jih lahko rešimo z AI asistentom
-- AI agent: Optimizacija logistike in povečanje učinkovitosti
+- [AI in ERP: 3 ozka grla, ki jih lahko rešimo z AI asistentom](/blog/erp-ozka-grla-in-ai-resitve)
+- [AI agent: Optimizacija logistike in povečanje učinkovitosti](/blog/ai-agent-optimizacija-logistike)

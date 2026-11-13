@@ -1,7 +1,9 @@
 ---
 title: "Kaj prinaša AI Act in kaj je pomembno?"
 description: "Slovenija je pred kratkim sprejela nacionalni predlog zakona za izvajanje Evropskega AI Acta, prve celovite zakonodaje, ki ureja uporabo umetne…"
-date: "TODO"
+date: 2025-08-29
+cover: "/images/blog/ai-act-slovenija-pomembno/naslovna.webp"
+coverAlt: "Kaj prinaša AI Act in kaj je pomembno?"
 author: "Kalmia"
 tags: []
 translationKey: "blog-ai-act-slovenija-pomembno"
@@ -10,20 +12,20 @@ legacyUrl: "/sl/blog/AI-act-slovenija-pomembno"
 
 ## AI postaja regulirana
 
-Slovenija je pred kratkim sprejela nacionalni predlog zakona za izvajanje Evropskega AI Acta, prve celovite zakonodaje, ki ureja uporabo umetne inteligence. Namen akta je postaviti jasna pravila igre: kako razvijati in uporabljati AI tako, da prinaša koristi, a hkrati varuje človekove pravice, varnost in zaupanje uporabnikov. Za podjetja to pomeni izziv – hkrati pa priložnost, da digitalne rešitve postanejo ne le inovativne, ampak tudi skladne s prihodnjo regulativo.
+Slovenija je pred kratkim sprejela nacionalni predlog zakona za izvajanje Evropskega AI Acta, prve celovite zakonodaje, ki ureja uporabo umetne inteligence. Namen akta je postaviti jasna pravila igre: kako razvijati in uporabljati AI tako, da prinaša koristi, a hkrati varuje človekove pravice, varnost in zaupanje uporabnikov. Za podjetja to pomeni izziv, hkrati pa priložnost, da digitalne rešitve postanejo ne le inovativne, ampak tudi skladne s prihodnjo regulativo.
 
 ### Zakaj AI potrebuje regulacijo
 
-V zadnjih letih je razvoj umetne inteligence pospešil – od generativnih modelov, kot so ChatGPT in podobni, do naprednih sistemov za analitiko podatkov v zdravstvu, proizvodnji ali logistiki. Skupaj s priložnostmi pa prihajajo tudi tveganja: pristranski algoritmi, nepojasnjeni rezultati, nevarnosti za zasebnost ali celo manipulacije informacij.AI Act zato uvaja mehanizme, ki zmanjšujejo tveganja in zahtevajo od ponudnikov tehnologije, da zagotovijo varnost, zanesljivost, preglednost in skladnost.
+V zadnjih letih je razvoj umetne inteligence pospešil: od generativnih modelov, kot so ChatGPT in podobni, do naprednih sistemov za analitiko podatkov v zdravstvu, proizvodnji ali logistiki. Skupaj s priložnostmi pa prihajajo tudi tveganja: pristranski algoritmi, nepojasnjeni rezultati, nevarnosti za zasebnost ali celo manipulacije informacij.AI Act zato uvaja mehanizme, ki zmanjšujejo tveganja in zahtevajo od ponudnikov tehnologije, da zagotovijo varnost, zanesljivost, preglednost in skladnost.
 
 ## Kako je AI Act zasnovan
 
 Osnovna logika akta je razvrščanje AI sistemov glede na tveganje:
 
-- Nesprejemljivo tveganje – AI, ki bi lahko škodoval človekovim pravicam (npr. socialni krediti, manipulacija vedenja), je prepovedan.
-- Visoko tveganje – AI, ki se uporablja v kritičnih sektorjih (zdravstvo, promet, izobraževanje, zaposlovanje, varnost), je strogo reguliran in mora izpolnjevati jasne zahteve glede testiranja, dokumentacije in nadzora.
-- Omejeno tveganje – AI, ki se uporablja za komunikacijo z uporabniki (npr. chatbot), mora jasno označevati, da gre za umetno inteligenco.
-- Minimalno tveganje – AI, ki nima večjih posledic za ljudi, ostaja skoraj nereguliran.
+- Nesprejemljivo tveganje: AI, ki bi lahko škodoval človekovim pravicam (npr. socialni krediti, manipulacija vedenja), je prepovedan.
+- Visoko tveganje: AI, ki se uporablja v kritičnih sektorjih (zdravstvo, promet, izobraževanje, zaposlovanje, varnost), je strogo reguliran in mora izpolnjevati jasne zahteve glede testiranja, dokumentacije in nadzora.
+- Omejeno tveganje: AI, ki se uporablja za komunikacijo z uporabniki (npr. chatbot), mora jasno označevati, da gre za umetno inteligenco.
+- Minimalno tveganje: AI, ki nima večjih posledic za ljudi, ostaja skoraj nereguliran.
 
 Tak pristop omogoča, da zakonodaja ne zavira inovacij, ampak hkrati ščiti tisto, kar je v družbi najbolj dragoceno: varnost in zaupanje.
 
@@ -76,12 +78,12 @@ Podpora pri skladnosti
 - sodelovanje s podjetji pri uvajanju varnih in preglednih rešitev,
 - zagotovljena skladnost z novo zakonodajo.
 
-Kalmia tako ne ponuja le tehnologije, ampak zanesljivega partnerja, ki podjetjem pomaga razumeti in uresničiti zahteve za varno uporabo umetne inteligence – ter hkrati zgraditi konkurenčno prednost z modernimi, zaupanja vrednimi rešitvami.
+Kalmia tako ne ponuja le tehnologije, ampak zanesljivega partnerja, ki podjetjem pomaga razumeti in uresničiti zahteve za varno uporabo umetne inteligence ter hkrati zgraditi konkurenčno prednost z modernimi, zaupanja vrednimi rešitvami.
 
 Borut Terpinc
 
 Preberite tudi:
 
-• Kako ISO 42001 pomaga podjetjem urediti AI in zmanjšati tveganja
+• [Kako ISO 42001 pomaga podjetjem urediti AI in zmanjšati tveganja](/blog/ai-varnost-manj-tveganja-iso42001)
 
-• Kaj prinese dobro AI svetovanje - in kako prepreči drage napake
+• [Kaj prinese dobro AI svetovanje in kako prepreči drage napake](/blog/ai-svetovanje-5-kljucnih-nasvetov)

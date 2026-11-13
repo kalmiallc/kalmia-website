@@ -1,7 +1,9 @@
 ---
 title: "AI v podjetjih: večja varnost in manj tveganja z ISO 42001"
 description: "AI v podjetjih izboljšuje odzivnost, pospešuje procese in znižuje stroške."
-date: "TODO"
+date: 2025-09-16
+cover: "/images/blog/ai-varnost-manj-tveganja-iso42001/naslovna.webp"
+coverAlt: "AI v podjetjih: večja varnost in manj tveganja z ISO 42001"
 author: "Kalmia"
 tags: []
 translationKey: "blog-ai-varnost-manj-tveganja-iso42001"
@@ -27,7 +29,7 @@ Med drugim odpira vprašanja, kot so:
 
 Standard je zasnovan za podjetja, ki želijo jasno vedeti, kaj so uvedli, zakaj in kako s tem upravljajo. Tudi če certifikat (še) ni obvezen, so načela ISO 42001 temelj dobre prakse pri uporabi umetne inteligence.
 
-Zelo dobro se dopolnjuje z obstoječimi standardi, kot npr. ISO 27001 (informacijska varnost), ISO 9001 (vodenje kakovosti) ter z zakonodajo, kot je GDPR (zlasti kadar AI obdeluje osebne podatke), in AI Act (akt o umetni inteligenci, o katerem lahko več preberete tukaj).
+Zelo dobro se dopolnjuje z obstoječimi standardi, kot npr. ISO 27001 (informacijska varnost), ISO 9001 (vodenje kakovosti) ter z zakonodajo, kot je GDPR (zlasti kadar AI obdeluje osebne podatke), in AI Act (akt o umetni inteligenci, o katerem lahko več preberete [tukaj](/blog/ai-act-slovenija-pomembno)).
 
 Skupaj tvorijo celovit sistem, ki podjetjem pomaga graditi zaupanje, preglednost in odpornost, tudi v dobi hitrega tehnološkega razvoja.
 
@@ -35,7 +37,7 @@ Skupaj tvorijo celovit sistem, ki podjetjem pomaga graditi zaupanje, preglednost
 
 ISO 42001 ni vezan na velikost podjetja, temveč na nivo odgovornosti, ki jo AI prevzema v vaših procesih. Tudi če v vašem podjetju uporabljate AI zgolj pri podpori strankam, kadrovskih procesih ali analizi prepostih podatkov, je odgovor da.
 
-Prav tako ni pomembno, ali ste razvili svoj AI model ali uporabljate rešitev drugih. Pomembno vprašanje je le, ali AI sodeluje pri vašem odločanju - in zavedanje, da ste vi tisti, ki odgovornost nosite.
+Prav tako ni pomembno, ali ste razvili svoj AI model ali uporabljate rešitev drugih. Pomembno vprašanje je le, ali AI sodeluje pri vašem odločanju in zavedanje, da ste vi tisti, ki odgovornost nosite.
 
 Standard velja za:
 
@@ -46,15 +48,15 @@ Standard velja za:
 
 ## Kaj lahko (poleg mirne vesti) pridobite s skladnostjo?
 
-Skladnost ni le birokratska kljukica, je orodje za urejeno rast podjetja tako navzven kot navznoter. Pomaga vam graditi zaupanje strank, partnerjev in regulatorjev ter zagotavlja manj tveganja pri uporabi AI - predvsem z vidika pristranskosti rezultatov.
+Skladnost ni le birokratska kljukica, je orodje za urejeno rast podjetja tako navzven kot navznoter. Pomaga vam graditi zaupanje strank, partnerjev in regulatorjev ter zagotavlja manj tveganja pri uporabi AI, predvsem z vidika pristranskosti rezultatov.
 
 Pomembno prednost lahko pridobite tudi na javnih EU razpisih, kjer postaja skladnost s standardi pomemben del pri ocenjevanju prijav. Nenazadnje pa lahko prihranite precej časa in sivih las, če se na zakonodajo, ki bo regulacijo AI verjetno še zaostrila, pripravite že danes.
 
-Jasno definirani procesi AI sistemov pa pomagajo tudi interni usklajenosti – odgovornosti so bolj jasne, odločitve sledljive, člani ekipe pa lahko sprejemajo bolj informirane odločitve.
+Jasno definirani procesi AI sistemov pa pomagajo tudi interni usklajenosti: odgovornosti so bolj jasne, odločitve sledljive, člani ekipe pa lahko sprejemajo bolj informirane odločitve.
 
 ## Kalmia olajša prehod v AI poslovanje?
 
-Pri Kalmii že vrsto let svetujemo pri digitalni transformaciji, avtomatizaciji in uvajanju umetne inteligence v podjetja - zato natančno razumemo, kaj skladnost pomeni v praksi.
+Pri Kalmii že vrsto let svetujemo pri digitalni transformaciji, avtomatizaciji in uvajanju umetne inteligence v podjetja, zato natančno razumemo, kaj skladnost pomeni v praksi.
 
 Pomagamo vam postaviti zdrave temelje in se osredotočiti na:
 
@@ -67,10 +69,10 @@ Pomagamo vam postaviti zdrave temelje in se osredotočiti na:
 
 Skupaj lahko preverimo, kje vam AI lahko še dodatno koristi, tako da ostanemo znotraj meja skladnosti z zakonskimi predlogi, ki trenutno urejajo polje umetne inteligence.
 
-Prijavite se na brezplačni posvet ali se nam oglasite na info@kalmia.si.
+Prijavite se na brezplačni posvet ali se nam oglasite na [info@kalmia.si](mailto:info@kalmia.si).
 
 Preberite tudi:
 
-• Kaj AI Act dejansko pomeni za podjetja v praksi?
+• [Kaj AI Act dejansko pomeni za podjetja v praksi?](/blog/ai-act-slovenija-pomembno)
 
-• Ne zaupajte AI svetovalcem, ki vam ne znajo odgovoriti na teh 5 vprašanj
+• [Ne zaupajte AI svetovalcem, ki vam ne znajo odgovoriti na teh 5 vprašanj](/blog/ai-svetovanje-5-kljucnih-nasvetov)

@@ -160,7 +160,11 @@ for (const file of htmlFiles) {
   }
   // Izjema: strani EU projektov navajajo vrednost in sofinanciranje (obvezno obveščanje javnosti).
   const isEuProject = /^\/(en\/projects|projekti)\//.test(url);
-  if (!isEuProject && /(€\s?\d|\d\s?€|\d\s?EUR\b)/.test(text)) err('stran vsebuje znesek');
+  // Blog: zneski v primerih so dovoljeni, cene Kalmie ne. Zato samo opozorilo za ročni pregled.
+  const isBlogPost = /^\/(en\/)?blog\/./.test(url);
+  const amount = text.match(/.{0,40}(€\s?\d|\d\s?€|\d\s?EUR\b).{0,20}/);
+  if (amount && isBlogPost) warn(`znesek v zapisu (preveri, da ni cena Kalmie): »${amount[0].trim()}«`);
+  else if (amount && !isEuProject) err('stran vsebuje znesek');
   const dash = text.match(/.{0,30}\s[—–]\s.{0,30}/);
   if (dash) warn(`pomišljaj v besedilu: »${dash[0].trim()}«`);
 

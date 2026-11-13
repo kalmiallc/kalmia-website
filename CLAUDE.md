@@ -23,7 +23,7 @@ Trajna pravila za delo na spletni strani kalmia.si. Velja za vsako sejo, tudi ko
 - Kalmia se sklanja brez j: Kalmia, Kalmie, Kalmii, Kalmio, pri Kalmii, s Kalmio.
 - »nerazvijalci« pisano skupaj.
 - Odstotki s presledkom: 40 %, ne 40%.
-- Na strani NI cen in zneskov. Kategorije stroškov brez zneskov so dovoljene. Izjema: strani EU projektov (`/projekti/...`) navajajo vrednost projekta in višino sofinanciranja, ker je to del obveznega obveščanja javnosti.
+- Na strani NI cen in zneskov. Kategorije stroškov brez zneskov so dovoljene. Izjema: strani EU projektov (`/projekti/...`) navajajo vrednost projekta in višino sofinanciranja, ker je to del obveznega obveščanja javnosti. Blog zapisi ne navajajo cen storitev Kalmie; drugi zneski v primerih (npr. plače v izračunu, cene v primeru pogovora) so dovoljeni.
 - Malo marketinškega besedila. Konkretno, kratko, preverljivo.
 - Kartice in seznami, nikoli široke tabele z več stolpci.
 - Pri angleških prevodih ohrani isti ton: neposredno, brez pretiravanja, brez »revolutionize«, »unlock« in podobnih fraz.
@@ -53,7 +53,7 @@ Ko je naloga vsebinska (nov blog zapis, popravek besedila, nova referenca, sprem
 ## Blog zapis
 
 - Datoteka: `content/blog/sl/<slug>.md` (in kasneje `content/blog/en/<slug>.md`).
-- Obvezni podatki v frontmatter: `title`, `description` (do 155 znakov), `date`, `author`, `tags`, `translationKey`. Neobvezno: `updated`, `cover`, `coverAlt`, `draft`, `legacyUrl` (stari URL za preusmeritev).
+- Obvezni podatki v frontmatter: `title`, `description` (do 155 znakov), `date`, `author`, `tags`, `translationKey`. Neobvezno: `seoTitle` (krajši naslov za iskalnike, do 60 znakov; obvezen, če je `title` daljši od 60 znakov), `updated`, `cover` (pot v `/images/blog/<slug>/`), `coverAlt`, `draft`, `legacyUrl` (stari URL za preusmeritev).
 - Slug: male črke, brez šumnikov, besede ločene z vezajem (npr. `lokalni-ai-modeli-v-praksi`).
 - En H1 (naslov iz frontmatter), v besedilu H2 in H3.
 - Če zapis navaja številke ali raziskave, dodaj vire s povezavami na koncu.

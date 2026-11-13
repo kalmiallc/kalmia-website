@@ -256,6 +256,13 @@ const projectsListPage = pageBase.extend({
   }),
 });
 
+const blogListPage = pageBase.extend({
+  template: z.literal('blog'),
+  hero,
+  /** Poziv na dnu vsakega zapisa. */
+  cta,
+});
+
 const pages = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './content/pages', generateId }),
   schema: z.discriminatedUnion('template', [
@@ -267,6 +274,7 @@ const pages = defineCollection({
     manufacturingPage,
     referencesPage,
     projectsListPage,
+    blogListPage,
   ]),
 });
 
@@ -351,25 +359,27 @@ const sources = defineCollection({
 
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './content/blog', generateId }),
-  schema: ({ image }) =>
-    z.object({
-      title: text,
-      description: text.max(155),
-      /**
-       * Datum objave. "TODO" je dovoljen le začasno, dokler v fazi 4 ne prenesemo
-       * datumov s stare strani; takšen zapis se ne objavi.
-       */
-      date: z.union([isoDate, z.literal('TODO')]),
-      updated: isoDate.optional(),
-      author: text,
-      tags: z.array(text).default([]),
-      translationKey: text,
-      cover: image().optional(),
-      coverAlt: text.optional(),
-      draft: z.boolean().default(false),
-      /** Stari URL (npr. /sl/blog/...) za 301 preusmeritev. */
-      legacyUrl: z.string().startsWith('/').optional(),
-    }).refine((d) => !d.cover || d.coverAlt, { message: 'cover potrebuje coverAlt', path: ['coverAlt'] }),
+  schema: z.object({
+    /** Naslov zapisa (H1). */
+    title: text,
+    /** Krajši naslov za <title> in iskalnike, do 60 znakov. Če ga ni, se uporabi title. */
+    seoTitle: text.max(60).optional(),
+    description: text.max(155),
+    /** Datum objave (LLLL-MM-DD). */
+    date: isoDate,
+    /** Datum vsebinske posodobitve (LLLL-MM-DD). */
+    updated: isoDate.optional(),
+    author: text,
+    tags: z.array(text).default([]),
+    translationKey: text,
+    /** Naslovna slika v /public/images/blog/<slug>/. */
+    cover: z.string().startsWith('/images/blog/').optional(),
+    coverAlt: text.optional(),
+    /** true: zapis se ne objavi. */
+    draft: z.boolean().default(false),
+    /** Stari URL (npr. /sl/blog/...) za 301 preusmeritev. */
+    legacyUrl: z.string().startsWith('/').optional(),
+  }).refine((d) => !d.cover || d.coverAlt, { message: 'cover potrebuje coverAlt', path: ['coverAlt'] }),
 });
 
 /* ---------- EU projekti ---------- */
