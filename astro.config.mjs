@@ -23,6 +23,24 @@ export default defineConfig({
       VERCEL_ENV: envField.string({ context: 'server', access: 'public', optional: true }),
     },
   },
+  // Blog in projekti nimajo kode; Shiki uporablja vstavljene sloge, ki niso združljivi s CSP.
+  markdown: { syntaxHighlight: false },
+  // CSP: Astro v <meta> doda zgoščene vrednosti (hash) za vse vstavljene skripte in sloge.
+  // Direktive, ki jih <meta> ne podpira (frame-ancestors), so v glavah v vercel.json.
+  security: {
+    csp: {
+      directives: [
+        "default-src 'self'",
+        "img-src 'self' data:",
+        "font-src 'self'",
+        "connect-src 'self'",
+        "object-src 'none'",
+        "base-uri 'self'",
+        "form-action 'none'",
+        'upgrade-insecure-requests',
+      ],
+    },
+  },
   i18n: {
     defaultLocale: 'sl',
     locales: ['sl', 'en'],

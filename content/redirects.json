@@ -322,12 +322,12 @@
       "status": 302
     },
     {
-      "from": "/sl/blog/AI-v-proizvodnji-del-2",
+      "from": "/sl/blog/ai-v-proizvodnji-del-2",
       "to": "/blog/ai-v-proizvodnji-del-2",
       "status": 301
     },
     {
-      "from": "/sl/blog/AI-act-slovenija-pomembno",
+      "from": "/sl/blog/ai-act-slovenija-pomembno",
       "to": "/blog/ai-act-slovenija-pomembno",
       "status": 301
     }

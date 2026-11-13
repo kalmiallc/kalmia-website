@@ -3,14 +3,14 @@
 interface Props {
   items: { title: string; text: string }[];
   /** Najmanjša širina kartice v px. */
-  min?: number;
+  min?: 240 | 300;
   tone?: 'surface' | 'white';
 }
 
 const { items, min = 240, tone = 'surface' } = Astro.props;
 ---
 
-<div class="nc" style={`--nc-min: ${min}px`}>
+<div class:list={['nc', `nc-min-${min}`]}>
   {
     items.map((x, i) => (
       <div class:list={['nc-card', `nc-card--${tone}`]}>
@@ -27,8 +27,13 @@ const { items, min = 240, tone = 'surface' } = Astro.props;
 <style>
   .nc {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--nc-min)), 1fr));
     gap: 16px;
+  }
+  .nc-min-240 {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+  .nc-min-300 {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   }
   .nc-card {
     display: flex;
