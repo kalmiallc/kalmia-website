@@ -38,7 +38,7 @@ const home = homePath(locale);
         <a href={home} aria-label={t.header.homeLabel} class="hdr-logo">
           <img src={site.logo} alt="Kalmia" width="141" height="16" />
         </a>
-        <BookingLink locale={locale} size="header" label={t.header.cta} />
+        <BookingLink locale={locale} size="header" label={t.header.cta} shortLabel={t.header.ctaShort} />
       </div>
     </header>
   ) : (
@@ -73,7 +73,7 @@ const home = homePath(locale);
           <a href={`${home}#kazalo`} class="kz-trigger" aria-controls="kz-panel" data-kz-trigger>
             {t.header.indexButton} <span class="kz-caret" aria-hidden="true" data-kz-caret>▾</span>
           </a>
-          <BookingLink locale={locale} size="header" label={t.header.cta} />
+          <BookingLink locale={locale} size="header" label={t.header.cta} shortLabel={t.header.ctaShort} />
         </div>
       </div>
       <div class="kz-panel" id="kz-panel" data-kz-panel data-open="false">
